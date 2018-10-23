@@ -1,0 +1,7 @@
+{
+  "name": "visitor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
