@@ -6,11 +6,29 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SignupPage } from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
+import { CheckpointsPage } from "../pages/checkpoints/checkpoints";
+import { FlatnoPage } from '../pages/flatno/flatno';
+import { FlatownerPage } from '../pages/flatowner/flatowner';
+import { GuestformPage } from "../pages/guestform/guestform";
+import { SocietydetailsPage } from "../pages/societydetails/societydetails";
+import { UploadimagePage } from "../pages/uploadimage/uploadimage";
+
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SignupPage,
+    LoginPage,
+    CheckpointsPage,
+    FlatnoPage,
+    FlatownerPage,
+    GuestformPage,
+    SocietydetailsPage,
+    UploadimagePage
   ],
   imports: [
     BrowserModule,
@@ -19,7 +37,15 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SignupPage,
+    LoginPage,
+    CheckpointsPage,
+    FlatnoPage,
+    FlatownerPage,
+    GuestformPage,
+    SocietydetailsPage,
+    UploadimagePage
   ],
   providers: [
     StatusBar,

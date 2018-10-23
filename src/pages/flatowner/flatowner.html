@@ -1,0 +1,32 @@
+
+<ion-header>
+
+    <ion-navbar color="navcolour">
+        <button ion-button menuToggle icon-only>
+            <ion-icon name='menu'></ion-icon>
+        </button>
+      <ion-title>
+          <h3>Flat No. A1-12</h3>
+        
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <ion-card class="c-padding">
+    <ion-list no-lines>
+      <ion-item text-wrap class="font-pading" (click) = "goToModal()">
+        <ion-avatar item-start class="avt-size">
+          <img src = "../../assets/imgs/owner.png"/>
+        </ion-avatar>
+        <h3>Vikram Sahni</h3>
+        <p>Capgemini</p>
+        <button ion-button clear item-end>
+          <ion-icon ios="ios-call" md="md-call"></ion-icon>
+        </button>
+       
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

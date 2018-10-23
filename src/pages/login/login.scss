@@ -1,0 +1,65 @@
+page-login {
+ h1 {
+        font-family: Georgia, serif;
+        color: #fff;
+        font-weight: 600;
+        padding-bottom: 20px;
+        margin-top: -10px;
+      }
+    .s-color {
+        font-family: Georgia, serif;
+        color: #2E2E26;
+        font-weight: 600;
+        
+      }
+
+    .f-text{
+        font-size: 36px;
+    }
+
+    h6{
+        color: #fff;
+        font-family: Georgia, serif;
+    }
+
+    ion-content{
+        .scroll-content{
+          background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
+        }
+    
+      }
+    
+    .item{
+      background: transparent;
+      }
+
+    .logo{
+        font-size: 25vh;
+        margin-top: 25px;
+        
+      }
+    
+    .rowStyle {
+        background-color: white;
+        padding-left: 10px;
+        border-radius: 30px;
+        margin-top: 12px;
+    
+        ion-icon {
+          margin-top: 12px;
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+
+    ion-input {
+        ::placeholder{
+            color:rgb(72, 72, 77) !important;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            
+           
+                 }
+
+    }
+}

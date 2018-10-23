@@ -1,0 +1,80 @@
+
+
+
+<ion-content no-padding>
+	<ion-grid class = "upperbg" no-padding>
+	    <ion-item text-center no-lines class="logo">
+	      <img src="../../assets/imgs/guard-6.png"> 
+	    </ion-item>
+
+	    <ion-item text-center no-lines>
+	      <h1><span class="f-text">V</span>ISITORS <span class="s-color"><span class="f-text">C</span>HECK</span></h1>
+	      <h6>Fill in the details below</h6>
+	    </ion-item>
+	</ion-grid>
+
+    <ion-grid class="form-bg" no-padding  style="width: 75%;">
+
+    	<!-- <form>
+    		<ion-row>
+    			<ion-col col-12>
+				<ion-list>
+					
+					<ion-item class="textinput">
+						
+					    <ion-label>Name</ion-label>
+					    <ion-input type="text" name="name" [(ngModel)] = "name"></ion-input>
+					</ion-item>
+					<ion-item class="textinput">
+					    <ion-label>Password</ion-label>
+					    <ion-input type="password" name="password" [(ngModel)] = "password"></ion-input>
+				    </ion-item>
+					<ion-item class="fileinput">
+					    <ion-label>Upload Image</ion-label>
+					    <ion-input type="file" name="image" [(ngModel)] = "image"></ion-input>
+				    </ion-item>
+
+				</ion-list>
+			</ion-col>
+			</ion-row>
+    		<ion-row padding>
+    			<ion-col col-12>
+    			<button ion-button block class="btnsubmit" (click)=	"onSignup()">Submit</button>
+    		</ion-col>
+		    </ion-row>
+    	</form> -->
+ 
+    	<form>
+    		 
+	      <ion-row class="rowStyle">
+	        <ion-icon name="contact" color="danger"></ion-icon>
+	        <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
+		  </ion-row>
+
+		  <ion-row class="rowStyle">
+	        <ion-icon ios="ios-mail" md="md-mail" color="danger"></ion-icon>
+	        <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+		  </ion-row>
+
+		  <ion-row class="rowStyle">
+	        <ion-icon ios="ios-call" md="md-call" color="danger"></ion-icon>
+	        <ion-input type="number" placeholder="Mobile (Optional)" name="mobile" [(ngModel)]="mobile"></ion-input>
+		  </ion-row>
+
+	      <ion-row class="rowStyle">
+	        <ion-icon name="key" color="danger"></ion-icon>
+	        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password"></ion-input>
+	      </ion-row>
+
+	      <!-- <ion-row class="rowStylefile fileinput">
+			<ion-label>Upload Photo</ion-label>
+			<ion-input type="file" name="image" [(ngModel)] = "image"></ion-input>
+					     
+		 </ion-row> -->
+	      <ion-row text-center>
+	        <button ion-button block round color="danger" class="btnsubmit" (click)="getImage()">Sign Up</button>
+	        <h6 id="bottomtext">Already have an account? <span class="loginbtn" (click) = "onLogin()">LOGIN</span> </h6>
+	      </ion-row>
+    	</form>
+    </ion-grid>
+</ion-content>

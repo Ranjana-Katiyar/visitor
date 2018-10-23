@@ -1,0 +1,73 @@
+page-checkpoints {
+ h3 {
+        font-family: Georgia, serif;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    .s-color {
+        font-family: Georgia, serif;
+        color: #2E2E26;
+        font-weight: 600;
+      }
+
+    .f-text{
+        font-size: 25px;
+    }
+
+    ion-content{
+        .scroll-content{
+            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+        }
+    
+     }
+    
+      
+    .colmclass{
+        border-left: 5px solid #FF6600;
+        border-style: inset;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 2px 2px fff;
+    }
+
+    ion-row{
+        padding: 10px 10px;
+    }
+
+    .colmclass{
+        margin-left: 8px;
+        margin-right: 0%;
+        margin-top: 15px;
+        
+    }
+    .colmclass img{
+        height: 60px;
+        width: 60px;
+        margin: 10px 0px;
+    }
+
+    .colmclass h3{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px 5px;
+        margin: 5px 0px;
+       color: #fff ;
+
+    }
+
+    .textbg{
+        width: 109%;
+        position: relative;
+        top: 9%;
+        right: 0%;
+        left: -4%;
+        background: linear-gradient(to bottom, #FF9900 0%, #FF6600 100%);
+        opacity: 0.9;
+    }
+
+    .midcolm{
+        padding: 10px 10px;
+    }
+
+}

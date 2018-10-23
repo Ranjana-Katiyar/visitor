@@ -1,0 +1,45 @@
+
+ 
+<ion-header>
+
+  <ion-navbar color="navcolour">
+      <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+      </button>
+    <ion-title>
+        <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+       
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item text-center no-lines class="logo">
+      <img src="../../assets/imgs/guard-6.png"> 
+    </ion-item>
+
+    <ion-item text-center no-lines>
+      <h1><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h1>
+       
+    </ion-item>
+
+    <ion-grid style="width: 75%;">
+      <ion-row class="rowStyle">
+        <ion-icon name="contact" color="danger"></ion-icon>
+        <ion-input type="text" placeholder="Your Email/Mobile" [(ngModel)]="name"></ion-input>
+
+      </ion-row>
+
+      <ion-row class="rowStyle">
+        <ion-icon name="key" color="danger"></ion-icon>
+        <ion-input type="password" placeholder="Your Password" [(ngModel)]="password"></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="onLogin()">Login</button>
+      </ion-row>
+
+  </ion-grid>
+</ion-content>
