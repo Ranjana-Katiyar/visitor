@@ -1,5 +1,5 @@
-page-signup {
-h1{
+page-watchmanregistration {
+ h1{
         font-family: Georgia, serif;
         color: #fff;
         font-weight: 600;
@@ -16,6 +16,10 @@ h1{
 
     .f-text{
         font-size: 36px;
+    }
+
+    .w-text{
+      font-size: 20px;
     }
 
     h6{
@@ -90,8 +94,8 @@ h1{
       }
 
       #bottomtext{
-      padding-left:10px;
-      color: #424242 !important; 
+      padding-left:5px;
+      color:#424242 !important; 
       }
 
       .rowStylefile{
@@ -102,8 +106,7 @@ h1{
       }
 
       .loginbtn{
-      color: #f53d3d;
-      font-weight: 800;
+      color: blue;
       }
 
     ion-input {
@@ -115,12 +118,4 @@ h1{
            
                  }
             }
-
-    .alertDanger{
-      background-color: black;
-      color: #f53d3d;
-      button{
-          color: #f53d3d;
-      }
-    }
 }

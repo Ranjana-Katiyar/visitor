@@ -28,7 +28,7 @@
     <ion-grid style="width: 75%;">
       <ion-row class="rowStyle">
         <ion-icon name="contact" color="danger"></ion-icon>
-        <ion-input type="text" placeholder="Your Email/Mobile" [(ngModel)]="name"></ion-input>
+        <ion-input type="email" placeholder="Your Email" [(ngModel)]="email"></ion-input>
 
       </ion-row>
 
@@ -38,8 +38,8 @@
       </ion-row>
 
       <ion-row>
-        <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="onLogin()">Login</button>
+        <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="login()">Login</button>
       </ion-row>
-
+      <h6 id="bottomtext">Already have an account? <span class="signupbtn" (click) = "onsignup()">SIGN UP</span> </h6>
   </ion-grid>
 </ion-content>

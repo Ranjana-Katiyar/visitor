@@ -15,35 +15,6 @@
 
     <ion-grid class="form-bg" no-padding  style="width: 75%;">
 
-    	<!-- <form>
-    		<ion-row>
-    			<ion-col col-12>
-				<ion-list>
-					
-					<ion-item class="textinput">
-						
-					    <ion-label>Name</ion-label>
-					    <ion-input type="text" name="name" [(ngModel)] = "name"></ion-input>
-					</ion-item>
-					<ion-item class="textinput">
-					    <ion-label>Password</ion-label>
-					    <ion-input type="password" name="password" [(ngModel)] = "password"></ion-input>
-				    </ion-item>
-					<ion-item class="fileinput">
-					    <ion-label>Upload Image</ion-label>
-					    <ion-input type="file" name="image" [(ngModel)] = "image"></ion-input>
-				    </ion-item>
-
-				</ion-list>
-			</ion-col>
-			</ion-row>
-    		<ion-row padding>
-    			<ion-col col-12>
-    			<button ion-button block class="btnsubmit" (click)=	"onSignup()">Submit</button>
-    		</ion-col>
-		    </ion-row>
-    	</form> -->
- 
     	<form>
     		 
 	      <ion-row class="rowStyle">
@@ -66,15 +37,12 @@
 	        <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password"></ion-input>
 	      </ion-row>
 
-	      <!-- <ion-row class="rowStylefile fileinput">
-			<ion-label>Upload Photo</ion-label>
-			<ion-input type="file" name="image" [(ngModel)] = "image"></ion-input>
-					     
-		 </ion-row> -->
 	      <ion-row text-center>
-	        <button ion-button block round color="danger" class="btnsubmit" (click)="getImage()">Sign Up</button>
-	        <h6 id="bottomtext">Already have an account? <span class="loginbtn" (click) = "onLogin()">LOGIN</span> </h6>
+	        <button ion-button block round color="danger" class="btnsubmit" (click)="signup()">Sign Up</button>
+	        
 	      </ion-row>
+	      <h6 id="bottomtext">Already have an account? <span class="loginbtn" (click) = "onLogin()">LOGIN</span> </h6>
     	</form>
+
     </ion-grid>
 </ion-content>

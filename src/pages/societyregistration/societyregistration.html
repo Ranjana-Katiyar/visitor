@@ -1,0 +1,58 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    
+    <ion-title>
+        
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+ -->
+
+<ion-content no-padding>
+  <ion-grid class = "upperbg" no-padding>
+      <ion-item text-center no-lines class="logo">
+          <img src="../../assets/imgs/guard-6.png"> 
+      </ion-item>
+
+      <ion-item text-center no-lines>
+            <h1><span class="f-text">S</span>OCIETY <span class="s-color"><span class="f-text">R</span>EGISTRATION</span></h1>
+            <h6>Fill in the details below</h6>
+      </ion-item>
+  </ion-grid>
+
+  <ion-grid class="form-bg" no-padding  style="width: 75%;">
+    <form>
+        <ion-row class="rowStyle">
+            <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <ion-input type="text" placeholder="Society Name" name="s_name" [(ngModel)]="societyName"></ion-input>
+        </ion-row>
+
+        <ion-row class="rowStyle">
+            <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <ion-input type="text" placeholder="Address Line 1" name="address1" [(ngModel)]="societyAddress1"></ion-input>
+        </ion-row>
+
+        <ion-row class="rowStyle">
+            <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <ion-input type="text" placeholder="Address Line 2" name="address2" [(ngModel)]="societyAddress2"></ion-input>
+        </ion-row>
+
+        <ion-row class="rowStyle">
+            <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <ion-input type="text" placeholder="Postal Code" name="p_code" [(ngModel)]="postalCode"></ion-input>
+        </ion-row>
+
+        <ion-row class="rowStyle">
+            <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <ion-input type="text" placeholder="Society Description" name="s_description" [(ngModel)]="societyDescription"></ion-input>
+        </ion-row>
+
+        <ion-row text-center>
+            <button ion-button block round color="danger" class="btnsubmit" (click)="postSocietyDetail()">Submit</button>
+        </ion-row>
+    </form>
+  </ion-grid>
+
+</ion-content>
