@@ -1,18 +1,24 @@
-<!--
-  Generated template for the UploadimagePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>uploadimage</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding>
 
+<ion-content no-padding>
+	<ion-grid class = "upperbg" no-padding>
+	    <!-- <ion-item text-center no-lines class="logo">
+	      <img src="../../assets/imgs/guard-6.png"> 
+	    </ion-item> -->
+
+	    <ion-item text-center no-lines>
+	      <h1><span class="f-text">V</span>ISITORS <span class="s-color"><span class="f-text">C</span>HECK</span></h1>
+	      <h6>Upload Image</h6>
+	    </ion-item>
+	</ion-grid>
+
+    <ion-grid class="form-bg" no-padding  style="width: 75%;">
+	    <ion-row class="rowStyle">
+	    	<ion-col>
+		        <ion-icon name="contact" color="danger"></ion-icon>
+		        <ion-input type="file" name="file" [(ngModel)]="file"></ion-input>
+	    	</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>

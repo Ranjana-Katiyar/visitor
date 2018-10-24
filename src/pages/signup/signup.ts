@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
-import { SignupverifyPage } from "../signupverify/signupverify";
+import { UploadimagePage } from "../uploadimage/uploadimage";
+import { LoginPage } from "../login/login";
 
 import firebase from 'firebase';
 
@@ -30,7 +31,9 @@ export class SignupPage {
                     console.log(data) 
                     let newUser: firebase.User = data.user;
                     newUser.updateProfile({
-                      displayName: this.name, photoURL: ""
+                      displayName: this.name, 
+                      photoURL: "", 
+                      phoneNumber: this.mobile
 
                     })
                     .then(()=>{
@@ -43,7 +46,7 @@ export class SignupPage {
                                   duration: 1000
                                 }).present();
 
-                                 this.navCtrl.setRoot(SignupverifyPage);
+                                 this.navCtrl.setRoot(UploadimagePage);
 
 
                                 
@@ -64,11 +67,6 @@ export class SignupPage {
                   }).present();
     })
   }
-
-  //getImage
-  //(){
-  //	this.navCtrl.push(UploadimagePage);
-  //}
 
   onLogin(){
   this.navCtrl.push(LoginPage);
