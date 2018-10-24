@@ -23,31 +23,31 @@
         <form>
             <ion-row class="rowStyle">
                 <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="First Name" name="f_name"></ion-input>
+                <ion-input type="text" placeholder="First Name" name="f_name" [(ngModel)]="firstName"></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="Last Name" name="l_name"></ion-input>
+                <ion-input type="text" placeholder="Last Name" name="l_name" [(ngModel)]="lastName"></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="Phone Number" name="p_number"></ion-input>
+                <ion-input type="text" placeholder="Phone Number" name="p_number" [(ngModel)]="phoneNumber"></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="Registered Organization" name="r_organization"></ion-input>
+                <ion-input type="text" placeholder="Registered Organization" name="r_organization" [(ngModel)]="registeredOrganization"></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="Aadhar Number" name="a_number"></ion-input>
+                <ion-input type="text" placeholder="Aadhar Number" name="a_number" [(ngModel)]="aadharNumber"></ion-input>
             </ion-row>
     
             <ion-row text-center>
-                <button ion-button block round color="danger" class="btnsubmit">Submit</button>
+                <button ion-button block round color="danger" class="btnsubmit" (click)="postWatchmanDetail()">Submit</button>
             </ion-row>
         </form>
       </ion-grid>
