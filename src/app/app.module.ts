@@ -14,21 +14,25 @@ import { FlatownerPage } from '../pages/flatowner/flatowner';
 import { GuestformPage } from "../pages/guestform/guestform";
 import { SocietydetailsPage } from "../pages/societydetails/societydetails";
 import { UploadimagePage } from "../pages/uploadimage/uploadimage";
-import { SignupverifyPage } from "../pages/signupverify/signupverify";
+
+import firebase from 'firebase';
 import { SocietyregistrationPage } from '../pages/societyregistration/societyregistration';
 import { WatchmanregistrationPage } from '../pages/watchmanregistration/watchmanregistration';
 
-
-import firebase from 'firebase';
 var config = {
-    apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
-    authDomain: "visitorauth.firebaseapp.com",
-    databaseURL: "https://visitorauth.firebaseio.com",
-    projectId: "visitorauth",
-    storageBucket: "visitorauth.appspot.com",
-    messagingSenderId: "1082078380676"
-  };
-  firebase.initializeApp(config);
+  apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
+  authDomain: "visitorauth.firebaseapp.com",
+  databaseURL: "https://visitorauth.firebaseio.com",
+  projectId: "visitorauth",
+  storageBucket: "visitorauth.appspot.com",
+  messagingSenderId: "1082078380676"
+};
+
+firebase.initializeApp(config);
+firebase.firestore().settings({
+  timestampsInSnapshots: true
+});
+
 
 
 @NgModule({
@@ -43,7 +47,6 @@ var config = {
     GuestformPage,
     SocietydetailsPage,
     UploadimagePage,
-    SignupverifyPage,
     SocietyregistrationPage,
     WatchmanregistrationPage
   ],
@@ -63,7 +66,6 @@ var config = {
     GuestformPage,
     SocietydetailsPage,
     UploadimagePage,
-    SignupverifyPage,
     SocietyregistrationPage,
     WatchmanregistrationPage
   ],
