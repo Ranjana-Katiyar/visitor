@@ -18,6 +18,8 @@ import { UploadimagePage } from "../pages/uploadimage/uploadimage";
 import firebase from 'firebase';
 import { SocietyregistrationPage } from '../pages/societyregistration/societyregistration';
 import { WatchmanregistrationPage } from '../pages/watchmanregistration/watchmanregistration';
+import { VisitorformPage } from "../pages/visitorform/visitorform";
+import { FlatownerregistrationPage } from "../pages/flatownerregistration/flatownerregistration";
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -48,7 +50,9 @@ firebase.firestore().settings({
     SocietydetailsPage,
     UploadimagePage,
     SocietyregistrationPage,
-    WatchmanregistrationPage
+    WatchmanregistrationPage,
+    VisitorformPage,
+    FlatownerregistrationPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,9 @@ firebase.firestore().settings({
     SocietydetailsPage,
     UploadimagePage,
     SocietyregistrationPage,
-    WatchmanregistrationPage
+    WatchmanregistrationPage,
+    VisitorformPage,
+    FlatownerregistrationPage
   ],
   providers: [
     StatusBar,
