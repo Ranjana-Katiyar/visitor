@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the WingsandflatPage page.
+ * Generated class for the CitiesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-wingsandflat',
-  templateUrl: 'wingsandflat.html',
+  selector: 'page-cities',
+  templateUrl: 'cities.html',
 })
-export class WingsandflatPage {
+export class CitiesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WingsandflatPage');
+    console.log('ionViewDidLoad CitiesPage');
   }
 
 }

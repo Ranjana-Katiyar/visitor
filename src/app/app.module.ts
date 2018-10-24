@@ -20,7 +20,7 @@ import { SocietyregistrationPage } from '../pages/societyregistration/societyreg
 import { WatchmanregistrationPage } from '../pages/watchmanregistration/watchmanregistration';
 import { VisitorformPage } from "../pages/visitorform/visitorform";
 import { FlatownerregistrationPage } from "../pages/flatownerregistration/flatownerregistration";
-import { WingsandflatPage } from "../pages/wingsandflat/wingsandflat";
+import { CitiesPage } from "../pages/cities/cities";
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -54,7 +54,7 @@ firebase.firestore().settings({
     WatchmanregistrationPage,
     VisitorformPage,
     FlatownerregistrationPage,
-    WingsandflatPage
+    CitiesPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +76,7 @@ firebase.firestore().settings({
     WatchmanregistrationPage,
     VisitorformPage,
     FlatownerregistrationPage,
-    WingsandflatPage
+    CitiesPage
   ],
   providers: [
     StatusBar,
