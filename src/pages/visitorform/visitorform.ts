@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
