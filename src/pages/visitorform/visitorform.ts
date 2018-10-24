@@ -18,29 +18,29 @@ export class VisitorformPage {
   meeting: string="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+   
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VisitorformPage');
   }
   visitorInfo(){
-    firebase.firestore().collection("visitors").add({
-     
-        : firebase.auth().currentUser.displayName,
-      created : firebase.firestore.FieldValue.serverTimestamp(),
-      ame: this.name,
-      Email : this.email,
-      Mobile : this.mobile,
-      Date : this.Date,
-      vehicle: this.vehicle,
-      meeting : this.meeting
-      
-    }).then((data) => {
-      console.log(data);
-    }).catch((err) => {
-      console.log(err);
-    })
+    let db = firebase.firestore();
+    db.collection("visitors").add({
+      name: this.name,
+      created: firebase.firestore.FieldValue.serverTimestamp(),
+      Email: this.email,
+      Mobile: this.mobile,
+      Meeting: this.meeting,
+      Vehicle: this.vehicle,
+      Date:this.Date
+    }).then((data)=>{
+      console.log(data)
+    }).catch((err)=>{
+      console.log(err)
+      })
+    }
   }
-}
 
- 
+
+
