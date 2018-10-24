@@ -14,10 +14,12 @@
 	</ion-grid>
 
     <ion-grid class="form-bg" no-padding  style="width: 75%;">
-	    <ion-row class="rowStyle">
-	    	<ion-col>
-		        <ion-icon name="contact" color="danger"></ion-icon>
-		        <ion-input type="file" name="file" [(ngModel)]="file"></ion-input>
+	    <ion-row>
+	    	<ion-col col-8>
+		     	<button ion-button (click) = "takePicture()">Take Picture</button>
+	    	</ion-col>
+	    	<ion-col col-4>
+	    		<ion-icon name="contact" color="danger"></ion-icon>
 	    	</ion-col>
 		</ion-row>
 	</ion-grid>

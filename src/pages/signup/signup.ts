@@ -32,9 +32,7 @@ export class SignupPage {
                     let newUser: firebase.User = data.user;
                     newUser.updateProfile({
                       displayName: this.name, 
-                      photoURL: "", 
-                      phoneNumber: this.mobile
-
+                      photoURL: ""
                     })
                     .then(()=>{
                                 console.log("Profile Updated") 
