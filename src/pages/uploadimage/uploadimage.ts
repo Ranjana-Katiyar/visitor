@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Camera, CameraOptions } from '@ionic-native/camera';
  
 @IonicPage()
 @Component({
@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UploadimagePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera) {
   }
 
   ionViewDidLoad() {
@@ -27,12 +27,12 @@ export class UploadimagePage {
     }
 
     this.camera.getPicture(options).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
+     let base64Image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
       console.log(err);
     });
   }
 
-  this.takePicture(1);
+  //this.takePicture(1);
 
 }
