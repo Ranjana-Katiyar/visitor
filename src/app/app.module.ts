@@ -19,8 +19,9 @@ import firebase from 'firebase';
 import { SocietyregistrationPage } from '../pages/societyregistration/societyregistration';
 import { WatchmanregistrationPage } from '../pages/watchmanregistration/watchmanregistration';
 import { VisitorformPage } from "../pages/visitorform/visitorform";
-import { FlatownerregistrationPage } from "../pages/flatownerregistration/flatownerregistration";
+import { OwnerregistrationPage } from "../pages/ownerregistration/ownerregistration";
 import { CitiesPage } from "../pages/cities/cities";
+import { FileChooser } from '@ionic-native/file-chooser';
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -53,7 +54,7 @@ firebase.firestore().settings({
     SocietyregistrationPage,
     WatchmanregistrationPage,
     VisitorformPage,
-    FlatownerregistrationPage,
+    OwnerregistrationPage,
     CitiesPage
   ],
   imports: [
@@ -75,12 +76,13 @@ firebase.firestore().settings({
     SocietyregistrationPage,
     WatchmanregistrationPage,
     VisitorformPage,
-    FlatownerregistrationPage,
+    OwnerregistrationPage,
     CitiesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    FileChooser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

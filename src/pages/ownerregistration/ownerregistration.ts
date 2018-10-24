@@ -10,16 +10,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-flatownerregistration',
-  templateUrl: 'flatownerregistration.html',
+  selector: 'page-ownerregistration',
+  templateUrl: 'ownerregistration.html',
 })
-export class FlatownerregistrationPage {
+export class OwnerregistrationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FlatownerregistrationPage');
-  }
+  
 
 }
