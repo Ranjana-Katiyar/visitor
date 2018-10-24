@@ -1,60 +1,55 @@
 
-<ion-header>
+<ion-content no-padding>
+	<ion-grid class = "upperbg" no-padding>
+	    <ion-item text-center no-lines class="logo">
+	      <img src="../../assets/imgs/guard-6.png"> 
+	    </ion-item>
 
-  <ion-navbar color="navcolour">
-    <button ion-button menuToggle icon-only>
-        <ion-icon name='menu'></ion-icon>
-    </button>
-  <ion-title>
-      <h3><span class="f-text-h">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text-h">C</span>HECK</span></h3>
-    
-  </ion-title>
-</ion-navbar>
+	    <ion-item text-center no-lines>
+	      <h1><span class="f-text">V</span>ISITOR <span class="s-color"><span class="f-text">D</span>ETAILS</span></h1>
+	      <h6>Fill in the details below</h6>
+	    </ion-item>
+	</ion-grid>
 
-</ion-header>
-
-
-<ion-content padding>
-  <ion-grid>
+  <ion-grid class="form-bg" no-padding  style="width: 75%;">
     <ion-row text-center>
       <ion-col>
-        <h2>Visitor<span class="span-color"> Details</span></h2>
+         
         <form> 
-          <ion-list>
+            <ion-row class="rowStyle">
+              <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
+            </ion-row>
 
-              <ion-item class = "bg-transparent">
-                <ion-label>Full Name</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-            
-              <ion-item class = "bg-transparent">
-                <ion-label>Email</ion-label>
-                <ion-input type="email"></ion-input>
-              </ion-item>
+            <ion-row class="rowStyle">
+              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+            </ion-row>
 
-              <ion-item class = "bg-transparent">
-                  <ion-label>Mobile Number</ion-label>
-                  <ion-input type="number"></ion-input>
-              </ion-item>
+            <ion-row class="rowStyle">
+              <ion-input type="number" placeholder="Mobile" name="mobile" [(ngModel)]="mobile"></ion-input>
+            </ion-row>
 
-              <ion-item class = "bg-transparent">
-                  <ion-label>In Date</ion-label>
-                  <ion-input type="date"></ion-input>
-              </ion-item>
+            <ion-row class="rowStyle">
+              <ion-input type="date" placeholder="Date" name="Date" [(ngModel)]="Date"></ion-input>
+            </ion-row>
 
-              <ion-item class = "bg-transparent">
-                      <ion-label>Vehicle Number</ion-label>
-                      <ion-input type="text"></ion-input>
-              </ion-item>
+            <ion-row class="rowStyle">
+              <ion-input type="text" placeholder="Vehicle Number" name="vehicle" [(ngModel)]="vehicle"></ion-input>
+            </ion-row>
 
-              <ion-item class = "bg-transparent">
-                  <ion-label>Purpose of Meeting</ion-label>
-                  <ion-input type="text"></ion-input>
-              </ion-item>
-            
-            </ion-list>
-            <button ion-button block color="danger" class="btnsubmit" medium>Submit</button>
-          </form>
+            <ion-row class="rowStyle">
+              <ion-input type="text" placeholder="Purpose of Meeting" name="meeting" [(ngModel)]="meeting"></ion-input>
+            </ion-row>
+
+            <ion-row>
+              <button ion-button block round outline color="dark" class="btnsubmit" (click)="takePhoto()">Upload Photo</button>
+            </ion-row>
+
+            <ion-row text-center>
+              <button ion-button block round color="danger" class="btnsubmit" (click)="visitorInfo()">Submit</button>
+            </ion-row>
+
+
+        </form>
       </ion-col>
     </ion-row>
   </ion-grid>
