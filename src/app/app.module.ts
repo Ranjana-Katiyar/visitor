@@ -22,6 +22,7 @@ import { VisitorformPage } from "../pages/visitorform/visitorform";
 import { OwnerregistrationPage } from "../pages/ownerregistration/ownerregistration";
 import { CitiesPage } from "../pages/cities/cities";
 import { FileChooser } from '@ionic-native/file-chooser';
+import { File } from '@ionic-native/file';
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -83,6 +84,7 @@ firebase.firestore().settings({
     StatusBar,
     SplashScreen,
     FileChooser,
+    File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
 import firebase from 'firebase';
 import { FileChooser } from '@ionic-native/file-chooser';
+import { File } from '@ionic-native/file';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ export class VisitorformPage {
   meeting: string="";
   picture: string="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fileChooser: FileChooser) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fileChooser: FileChooser, private file: File) {
     
   }
 
@@ -47,12 +48,35 @@ export class VisitorformPage {
     takePhoto(){
      this.fileChooser.open()
       .then((uri) =>{
-        console.log(uri);
+        alert(uri);
         
+        this.file.resolveLocalFilesystemUrl(uri).then((newurl)=>{
+          alert(JSON.stringify(newurl));
+
+          let dirpath = newurl.nativeURL;
+          let dirpathsegments = dirpath.split('/');
+          dirpathsegments.pop();
+          dirpath = dirpathsegments.join('/');
+          this.file.readAsArrayBuffer(dirpath, newurl.name).then(async (buffer)=>{
+            await this.upload(buffer, newurl.name);
+          })
+        })
+
       })
       .catch((e) => {
         console.log(e)
       });
+    }
+
+    async upload(buffer, name){
+      let blob = new Blob([buffer], {type: "image/jpeg"});
+      let storage = firebase.storage();
+      storage.ref('images/' + name).put(blob).then((d)=>{
+        alert("Done");
+
+      }).catch((error)=>{
+        alert(JSON.stringify(error))
+      })
     }
 
   }
