@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the CitiesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CitiesPage {
 
+  cities: any[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.itemSelected();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CitiesPage');
+  itemSelected() {
+    firebase.firestore().collection("cities").get({
+
+    }).then((docs) => {
+      docs.forEach((doc) => {
+        this.cities.push(doc);
+      })
+
+      console.log(this.cities);
+    }).catch((err) => {
+      console.log(err);
+    })
   }
+
 
 }
