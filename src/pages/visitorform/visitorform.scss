@@ -1,3 +1,54 @@
 page-visitorform {
+ 	h3{
+        font-family: Georgia, serif;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    .s-color {
+        font-family: Georgia, serif;
+        color: #2E2E26;
+        font-weight: 600;
+      }
 
+    .f-text-h{
+        font-size: 25px;
+    }   
+
+    ion-content{
+    .scroll-content{
+        background: url('../../assets/imgs/bg3.png');
+                     }
+
+    }
+
+    h2{
+        margin-top: 30px;
+        margin-bottom: 25px; 
+        font-family: Georgia, serif;
+        color: #2E2E26;
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+   .span-color{
+        color: #585856;
+   }
+
+    ion-label{
+        font-size: 17px;
+         font-family: Georgia, serif;
+    }
+
+    .bg-transparent{
+        background: #fff;
+        padding-left:10px;
+        margin:15px 0px;
+        border-radius: 4px;
+   }
+
+    ion-item{
+        padding: 10px;
+        
+    }
 }
