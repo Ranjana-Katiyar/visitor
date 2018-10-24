@@ -11,10 +11,10 @@ import firebase from 'firebase';
 export class SocietyregistrationPage {
 
   societyName : string = "";
-  societyAddress1 : string = "";
-  societyAddress2 : string = "";
+  address : string = "";
   postalCode : string = "";
-  societyDescription : string = "";
+  city : string = "";
+  state : string = ""
   authoraties: any={};
   //owner : boolean;
 
@@ -30,10 +30,11 @@ export class SocietyregistrationPage {
       owner_name: firebase.auth().currentUser.displayName,
       created: firebase.firestore.FieldValue.serverTimestamp(),
       societyName: this.societyName,
-      societyAddress1: this.societyAddress1,
-      societyAddress2: this.societyAddress2,
+      address: this.address,
       postalCode: this.postalCode,
-      societyDescription: this.societyDescription
+      city: this.city,
+      state: this.state
+      
     }).then((doc) => {
       console.log(doc);
     }).catch((err) => {
