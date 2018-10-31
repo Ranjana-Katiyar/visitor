@@ -8,8 +8,11 @@
   <ion-list no-padding> 
       <ion-grid no-padding style="width: 75%; position: relative;">
           <ion-row no-padding>
-                <ion-col col-12 no-padding>
-                  <button ion-button block color="primary" large (click)="signup()">SignUp</button>
+                <ion-col col-6 no-padding>
+                  <button ion-button block color="primary" large (click)="selectCategory()">Owner</button>
+                </ion-col>
+                 <ion-col col-6 no-padding>
+                  <button ion-button block color="navcolour" large (click)="selectCategory()">Watchman</button>
                 </ion-col>
                 
           </ion-row>

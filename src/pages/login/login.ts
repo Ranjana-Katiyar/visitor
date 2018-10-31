@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { SignupPage } from "../signup/signup";
+import { CitiesPage } from "../cities/cities";
 
 import firebase from 'firebase';
  
@@ -30,6 +30,7 @@ export class LoginPage {
         message: "Login Successful",
         duration: 3000
       }).present();
+      this.navCtrl.setRoot(CitiesPage);
 
     })
     .catch((err)=>{
@@ -43,8 +44,8 @@ export class LoginPage {
     })
   }
 
-  onsignup(){
-   this.navCtrl.push(SignupPage);
-  }
+  //onsignup(){
+  // this.navCtrl.push(SignupPage);
+  //}
 
 }
