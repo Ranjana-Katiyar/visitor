@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
@@ -19,7 +19,7 @@ export class VisitorformPage {
   meeting: string="";
   picture: string="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fileChooser: FileChooser, private file: File) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fileChooser: FileChooser, private file: File, private toastCtrl: ToastController) {
     
   }
 
@@ -39,6 +39,10 @@ export class VisitorformPage {
       Date: this.Date,
       Picture: this.picture
     }).then((data)=>{
+       this.toastCtrl.create({
+          message: "Information Filled Successfully",
+          duration: 1000
+       }).present();
       console.log(data)
     }).catch((err)=>{
       console.log(err)
