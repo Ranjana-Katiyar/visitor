@@ -12,7 +12,7 @@ export class HomePage {
 
   }
 
-  signup(){
+  selectCategory(){
    this.navCtrl.push(SignupPage);
   }
 
