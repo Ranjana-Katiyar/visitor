@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
+import { CheckpointsPage } from "../checkpoints/checkpoints";
 
 
 
@@ -16,7 +17,7 @@ export class WatchmanregistrationPage {
   registeredOrganization : string = "";
   aadharNumber : string = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
    postWatchmanDetail() {
      firebase.firestore().collection("watchmans").add({
@@ -30,9 +31,19 @@ export class WatchmanregistrationPage {
        aadharNumber : this.aadharNumber
      }).then((doc) => {
        console.log(doc);
-     }).catch((err) => {
-       console.log(err);
-     })
+       this.toastCtrl.create({
+        message: "Registration Successfull",
+        duration: 1000
+      }).present();
+      this.navCtrl.setRoot(CheckpointsPage);
+     }).catch((err)=>{ 
+      console.log(err)
+        this.toastCtrl.create({
+          message: err.message,
+          duration: 3000
+        }).present();
+    })
+  
    }
 
 }

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FlatownerregistrationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import firebase from 'firebase';
+import { UploadimagePage } from "../uploadimage/uploadimage";
 
 @IonicPage()
 @Component({
@@ -15,9 +10,39 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OwnerregistrationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  f_name:string = "";
+	l_name:string = "";
+	p_number:string = "";
+  email:string ="";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
-  
+  ownerRegister(){
+    firebase.firestore().collection("owners").add({
+      owner_id : firebase.auth().currentUser.uid,
+      owner_name : firebase.auth().currentUser.displayName,
+      created : firebase.firestore.FieldValue.serverTimestamp(),
+      firstName : this.f_name,
+      lastName : this.l_name,
+      phoneNumber : this.p_number,
+      email: this.email
+    }).then((doc) => {
+      console.log(doc);
+      this.toastCtrl.create({
+       message: "Registration Successfull",
+       duration: 1000
+     }).present();
+     this.navCtrl.push(UploadimagePage);
+  }).catch((err)=>{ 
+    console.log(err)
+      this.toastCtrl.create({
+        message: err.message,
+        duration: 3000
+      }).present();
+  })
+
+ }
 
 }
+
