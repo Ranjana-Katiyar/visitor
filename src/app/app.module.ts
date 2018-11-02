@@ -15,7 +15,7 @@ import { FlatownerPage } from '../pages/flatowner/flatowner';
 import { GuestformPage } from "../pages/guestform/guestform";
 import { SocietydetailsPage } from "../pages/societydetails/societydetails";
 import { UploadimagePage } from "../pages/uploadimage/uploadimage";
-import { CategoryPage } from "../pages/category/category";
+import { OwnerdashboardPage } from "../pages/ownerdashboard/ownerdashboard";
 
 import firebase from 'firebase';
 import { SocietyregistrationPage } from '../pages/societyregistration/societyregistration';
@@ -59,7 +59,7 @@ firebase.firestore().settings({
     VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
-    CategoryPage
+    OwnerdashboardPage
   ],
   imports: [
     BrowserModule,
@@ -82,7 +82,7 @@ firebase.firestore().settings({
     VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
-    CategoryPage
+    OwnerdashboardPage
   ],
   providers: [
     StatusBar,

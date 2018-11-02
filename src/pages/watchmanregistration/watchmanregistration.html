@@ -22,29 +22,34 @@
     <ion-grid class="form-bg" no-padding  style="width: 75%;">
         <form>
             <ion-row class="rowStyle">
-                <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="First Name" name="f_name" [(ngModel)]="firstName" required></ion-input>
+                <ion-icon name="contact" color="danger"></ion-icon>  
+                <ion-input type="text" placeholder="Name" name="f_name" [(ngModel)]="firstName" required></ion-input>
             </ion-row>
     
-            <ion-row class="rowStyle">
-                <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+            <!-- <ion-row class="rowStyle">
+                <ion-icon ios="ios-person-add" md="md-person-add" color="danger"></ion-icon>
                 <ion-input type="text" placeholder="Last Name" name="l_name" [(ngModel)]="lastName" required></ion-input>
-            </ion-row>
+            </ion-row> -->
     
             <ion-row class="rowStyle">
-                <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+                <ion-icon ios="ios-call" md="md-call" color="danger"></ion-icon>
                 <ion-input type="text" placeholder="Phone Number" name="p_number" [(ngModel)]="phoneNumber" required></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
-                <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
+                <ion-icon ios="ios-podium" md="md-podium" color="danger"></ion-icon>
                 <ion-input type="text" placeholder="Registered Organization" name="r_organization" [(ngModel)]="registeredOrganization" required></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
-                <!-- <ion-icon name="contact" color="danger"></ion-icon> -->
-                <ion-input type="text" placeholder="Aadhar Number" name="a_number" [(ngModel)]="aadharNumber" required></ion-input>
+                <ion-icon ios="ios-barcode" md="md-barcode" color="danger"></ion-icon>
+                <ion-input type="text" placeholder="Organization Id" name="a_number" [(ngModel)]="aadharNumber" required></ion-input>
             </ion-row>
+
+            <ion-row class="rowStyle">
+                    <ion-icon name="key" color="danger"></ion-icon>
+                    <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password"></ion-input>
+                  </ion-row>
     
             <ion-row text-center>
                 <button ion-button block round color="danger" class="btnsubmit" (click)="postWatchmanDetail()">Submit</button>

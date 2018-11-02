@@ -19,31 +19,36 @@ export class WatchmanregistrationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
-   postWatchmanDetail() {
-     firebase.firestore().collection("watchmans").add({
-       owner_id : firebase.auth().currentUser.uid,
-       owner_name : firebase.auth().currentUser.displayName,
-       created : firebase.firestore.FieldValue.serverTimestamp(),
-       firstName : this.firstName,
-       lastName : this.lastName,
-       phoneNumber : this.phoneNumber,
-       registeredOrganization : this.registeredOrganization,
-       aadharNumber : this.aadharNumber
-     }).then((doc) => {
-       console.log(doc);
-       this.toastCtrl.create({
-        message: "Registration Successfull",
-        duration: 1000
-      }).present();
-      this.navCtrl.setRoot(CheckpointsPage);
-     }).catch((err)=>{ 
-      console.log(err)
-        this.toastCtrl.create({
-          message: err.message,
-          duration: 3000
-        }).present();
-    })
+  //  postWatchmanDetail() {
+  //    firebase.firestore().collection("watchmans").add({
+  //      owner_id : firebase.auth().currentUser.uid,
+  //      owner_name : firebase.auth().currentUser.displayName,
+  //      created : firebase.firestore.FieldValue.serverTimestamp(),
+  //      firstName : this.firstName,
+  //      lastName : this.lastName,
+  //      phoneNumber : this.phoneNumber,
+  //      registeredOrganization : this.registeredOrganization,
+  //      aadharNumber : this.aadharNumber
+  //    }).then((doc) => {
+  //      console.log(doc);
+  //      this.navCtrl.setRoot(CheckpointsPage);
+  //      this.toastCtrl.create({
+  //       message: "Registration Successfull",
+  //       duration: 1000
+  //     }).present();
+     
+  //    }).catch((err)=>{ 
+  //     console.log(err)
+  //       this.toastCtrl.create({
+  //         message: err.message,
+  //         duration: 3000
+  //       }).present();
+  //   })
   
-   }
+  //  }
+
+  postWatchmanDetail() {
+    this.navCtrl.setRoot(CheckpointsPage);
+  }
 
 }

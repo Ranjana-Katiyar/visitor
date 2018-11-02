@@ -1,55 +1,59 @@
 
 <ion-header>
 
-  <ion-navbar color="navcolour">
-      <button ion-button menuToggle icon-only>
-          <ion-icon name='menu'></ion-icon>
-      </button>
-    <ion-title>
-        <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
-       
-    </ion-title>
-  </ion-navbar>
-
-</ion-header>
+    <ion-navbar color="navcolour">
+      
+        <ion-title>
+            <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+        </ion-title>
+  
+        <ion-buttons end>
+            <button ion-button icon-only clear (click) = "logOut()">
+              <ion-icon name="log-out"></ion-icon>
+            </button>
+        </ion-buttons>
+      
+    </ion-navbar>
+  
+  </ion-header>
 
 
 <ion-content no-padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
-          <img src="../../assets/imgs/guest--in.png">
+      <ion-col col-5 class = "colmclass">
+          <img src="../../assets/imgs/guest--in.png" (click) = "goToVisitor()">
           <div class = "textbg"><h3>GUEST IN</h3></div>
       </ion-col>
       <ion-col col-1 class="midcolm">
       </ion-col>
-      <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
+      <ion-col col-5 class = "colmclass">
           <img src="../../assets/imgs/guest--out.png">
           <div class = "textbg"><h3>GUEST OUT</h3></div>
         </ion-col>
     </ion-row>
 
     <ion-row>
-        <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
+        <ion-col col-5 class = "colmclass">
           <img src="../../assets/imgs/helper--in.png">
           <div class = "textbg"><h3>HELPER IN</h3></div>
         </ion-col>
         <ion-col col-1 class="midcolm">
           </ion-col>
-        <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
+        <ion-col col-5 class = "colmclass">
             <img src="../../assets/imgs/helper--out.png">
             <div class = "textbg"><h3>HELPER OUT</h3></div>
           </ion-col>
       </ion-row>
 
       <ion-row>
-          <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
+          <ion-col col-5 class = "colmclass">
             <img src="../../assets/imgs/cab-.png">
             <div class = "textbg"><h3>CAB DRIVER</h3></div>
           </ion-col>
           <ion-col col-1 class="midcolm">
             </ion-col>
-          <ion-col col-5 class = "colmclass" (click) = "goToFlat()">
+          <ion-col col-5 class = "colmclass">
               <img src="../../assets/imgs/parcel-.png">
               <div class = "textbg"><h3>YOUR PARCEL</h3></div>
             </ion-col>

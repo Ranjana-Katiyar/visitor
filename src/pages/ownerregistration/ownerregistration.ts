@@ -10,9 +10,8 @@ import { UploadimagePage } from "../uploadimage/uploadimage";
 })
 export class OwnerregistrationPage {
 
-  f_name:string = "";
-	l_name:string = "";
-	p_number:string = "";
+  name:string = "";
+  p_number:string = "";
   email:string ="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
@@ -23,8 +22,7 @@ export class OwnerregistrationPage {
       owner_id : firebase.auth().currentUser.uid,
       owner_name : firebase.auth().currentUser.displayName,
       created : firebase.firestore.FieldValue.serverTimestamp(),
-      firstName : this.f_name,
-      lastName : this.l_name,
+      Name : this.name,
       phoneNumber : this.p_number,
       email: this.email
     }).then((doc) => {

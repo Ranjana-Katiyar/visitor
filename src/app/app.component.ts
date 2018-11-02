@@ -2,24 +2,26 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
 <<<<<<< HEAD
+import { HomePage } from '../pages/home/home';
+=======
+
 
 import { UploadimagePage } from '../pages/uploadimage/uploadimage';
-=======
-import { HomePage } from '../pages/home/home';
->>>>>>> 1d03e377a0dac11cb2534b735e9fc8a198d8fde1
+
+>>>>>>> 252cd0dad1a3f0066dd19ec29f34dcc2fc4a9070
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
 <<<<<<< HEAD
-  rootPage:any = UploadimagePage;
-=======
   rootPage:any = HomePage;
->>>>>>> 1d03e377a0dac11cb2534b735e9fc8a198d8fde1
+=======
+  rootPage:any = UploadimagePage;
+>>>>>>> 252cd0dad1a3f0066dd19ec29f34dcc2fc4a9070
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

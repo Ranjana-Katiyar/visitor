@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
-import { UploadimagePage } from "../uploadimage/uploadimage";
+import {SocietyregistrationPage } from "../societyregistration/societyregistration";
 import { LoginPage } from "../login/login";
 
 import firebase from 'firebase';
@@ -44,7 +44,7 @@ export class SignupPage {
                                   duration: 1000
                                 }).present();
 
-                                 this.navCtrl.setRoot(UploadimagePage);
+                                 this.navCtrl.push(SocietyregistrationPage);
 
 
                                 

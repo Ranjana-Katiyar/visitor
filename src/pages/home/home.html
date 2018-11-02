@@ -2,10 +2,10 @@
      <img src="../../assets/imgs/guard-6.png" class="guard-img"> 
      <br>
   <h1><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h1>
-     <h6>An app for visitor track</h6>
+     <!-- <h6>An app for visitor track</h6> -->
     <br>
 
-  <ion-list no-padding> 
+  <!-- <ion-list no-padding> 
       <ion-grid no-padding style="width: 75%; position: relative;">
           <ion-row no-padding>
                 <ion-col col-6 no-padding>
@@ -16,6 +16,19 @@
                 </ion-col>
                 
           </ion-row>
+         
       </ion-grid>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <ion-row no-padding>
+      <ion-col col-6 no-padding>
+        <button ion-button block color="primary" large (click)="ownerReg()">Owner</button>
+      </ion-col>
+      <ion-col col-6 no-padding>
+        <button ion-button block color="navcolour" large (click)="watchmanReg()">Watchman</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

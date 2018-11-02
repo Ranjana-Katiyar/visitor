@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
  
+import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
+ 
 
 @IonicPage()
 @Component({
@@ -36,6 +38,7 @@ export class SocietyregistrationPage {
       state: this.state
       
     }).then((doc) => {
+      this.navCtrl.push(OwnerdashboardPage);
       console.log(doc);
     }).catch((err) => {
       console.log(err);

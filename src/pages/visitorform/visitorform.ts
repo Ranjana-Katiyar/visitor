@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import firebase from 'firebase';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
+import { LoginPage } from "../login/login";
 
 @IonicPage()
 @Component({
@@ -39,10 +40,10 @@ export class VisitorformPage {
       Date: this.Date,
       Picture: this.picture
     }).then((data)=>{
-       this.toastCtrl.create({
-          message: "Information Filled Successfully",
-          duration: 1000
-       }).present();
+      //  this.toastCtrl.create({
+      //     message: "Information Filled Successfully",
+      //     duration: 1000
+      //  }).present();
       console.log(data)
     }).catch((err)=>{
       console.log(err)
@@ -81,6 +82,17 @@ export class VisitorformPage {
       }).catch((error)=>{
         alert(JSON.stringify(error))
       })
+    }
+
+    logOut(){
+      firebase.auth().signOut().then(()=>{
+        let toast = this.toastCtrl.create({
+          message: "Logged out  Successfully",
+          duration: 3000
+        }).present();
+  
+        this.navCtrl.setRoot(LoginPage);
+      });
     }
 
   }

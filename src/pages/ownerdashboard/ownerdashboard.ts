@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FlatnoPage } from '../flatno/flatno';
-
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { VisitorformPage } from '../visitorform/visitorform';
+import firebase from 'firebase';
+import { LoginPage } from "../login/login";
 
 
 
@@ -12,14 +13,27 @@ import { FlatnoPage } from '../flatno/flatno';
 })
 export class OwnerdashboardPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OwnerdashboardPage');
   }
 
-  goToFlat(){
-    this.navCtrl.push(FlatnoPage);
+  goToVisitor(){
+    this.navCtrl.push(VisitorformPage);
   }
+
+  logOut(){
+    firebase.auth().signOut().then(()=>{
+      let toast = this.toastCtrl.create({
+        message: "Logged out  Successfully",
+        duration: 3000
+      }).present();
+
+      this.navCtrl.setRoot(LoginPage);
+    });
+  }
+
+  
 }
