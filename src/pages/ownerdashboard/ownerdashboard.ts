@@ -20,9 +20,9 @@ export class OwnerdashboardPage {
     console.log('ionViewDidLoad OwnerdashboardPage');
   }
 
-  goToVisitor(){
-    this.navCtrl.push(VisitorformPage);
-  }
+  // goToVisitor(){
+  //   this.navCtrl.push(VisitorformPage);
+  // }
 
   logOut(){
     firebase.auth().signOut().then(()=>{

@@ -21,8 +21,8 @@
 <ion-content no-padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-5 class = "colmclass">
-          <img src="../../assets/imgs/guest--in.png" (click) = "goToVisitor()">
+      <ion-col col-5 class = "colmclass" (click) = "goToVisitor()">
+          <img src="../../assets/imgs/guest--in.png">
           <div class = "textbg"><h3>GUEST IN</h3></div>
       </ion-col>
       <ion-col col-1 class="midcolm">
@@ -34,7 +34,7 @@
     </ion-row>
 
     <ion-row>
-        <ion-col col-5 class = "colmclass">
+        <ion-col col-5 class = "colmclass" (click) = "goToVisitor()">
           <img src="../../assets/imgs/helper--in.png">
           <div class = "textbg"><h3>HELPER IN</h3></div>
         </ion-col>
