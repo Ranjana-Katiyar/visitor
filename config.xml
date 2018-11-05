@@ -86,4 +86,7 @@
     <plugin name="cordova-plugin-file" spec="6.0.1" />
     <plugin name="cordova-plugin-camera" spec="4.0.3" />
     <engine name="android" spec="^7.1.1" />
+    <plugin name="cordova-plugin-app-preferences" spec="0.99.3" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="5.4.1" />
+    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
 </widget>
