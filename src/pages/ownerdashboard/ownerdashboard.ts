@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
 import { LoginPage } from "../login/login";
-
+import { VehicledetailsPage } from "../vehicledetails/vehicledetails";
+import { DailyupdateslistPage } from "../dailyupdateslist/dailyupdateslist";
 
 
 @IonicPage()
@@ -35,5 +36,12 @@ export class OwnerdashboardPage {
     });
   }
 
+  addvehicles(){
+    this.navCtrl.push(VehicledetailsPage);
+  }
+
+  addUpdates(){
+    this.navCtrl.push(DailyupdateslistPage);
+  }
   
 }

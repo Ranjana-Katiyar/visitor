@@ -42,23 +42,23 @@
                   <ion-input type="number" placeholder="Mobile Number" name="mobile_number" [(ngModel)]="mobile_number"></ion-input>
               </ion-row>
 
-              <ion-row class="rowStyle">
-                  <ion-input type="" placeholder="Mobile Number" name="mobile_number" [(ngModel)]="mobile_number"></ion-input>
-              </ion-row>
-
               <ion-row class="rowStyle"> 
                   <ion-input type="text" placeholder="Company" name="company" [(ngModel)]="company"></ion-input>
               </ion-row>
-              
-              <ion-row class="rowStyle"> 
+
+              <!-- <ion-row class="rowStyle"> 
                    <ion-datetime displayFormat="HH:mm" name="intime" placeholder="In Time" [(ngModel)]="intime"></ion-datetime>
-              </ion-row>  
+              </ion-row>   -->
+
+              <ion-item class="itemStyle">
+                    <ion-label>In Time </ion-label>
+                    <ion-datetime pickerFormat="HH:mm" name="intime" [(ngModel)]="intime"></ion-datetime>
+              </ion-item>
               
               <ion-row>
                   <button ion-button block round outline color="dark" class="btnsubmit" (click)="takePhoto()">Upload Photo</button>
               </ion-row>
                
-    
               <ion-row text-center>
                   <button ion-button block round color="danger" class="btnsubmit">Submit</button>
               </ion-row>
