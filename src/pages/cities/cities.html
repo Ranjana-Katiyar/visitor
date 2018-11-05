@@ -9,8 +9,8 @@
 
 <ion-content no-padding>
 
-    <ion-list no-lines>
-        <button ion-item *ngFor="let city of cities" (click)="itemSelected(city)">
+    <ion-list>
+        <button ion-item *ngFor="let city of cities" (click)="itemSelected()">
           {{ city.data().cityName }}
         </button> 
       </ion-list>
