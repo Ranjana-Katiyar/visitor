@@ -20,13 +20,13 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
-<<<<<<< HEAD
+
     "@ionic-native/camera": "^4.17.0",
     "@ionic-native/core": "~4.15.0",
     "@ionic-native/date-picker": "^4.17.0",
     "@ionic-native/file": "^4.17.0",
     "@ionic-native/file-chooser": "^4.17.0",
-=======
+
     "@ionic-native/app-preferences": "^4.17.0",
     "@ionic-native/call-number": "^4.17.0",
     "@ionic-native/camera": "^4.16.0",
@@ -35,7 +35,7 @@
     "@ionic-native/file": "^4.16.0",
     "@ionic-native/file-chooser": "^4.16.0",
     "@ionic-native/social-sharing": "^4.17.0",
->>>>>>> 41280c0d2c0a0e9902a81aa909c2e8ce86c433ea
+
     "@ionic-native/splash-screen": "~4.15.0",
     "@ionic-native/status-bar": "~4.15.0",
     "@ionic/storage": "2.2.0",
@@ -51,13 +51,13 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
-<<<<<<< HEAD
+
     "firebase": "^5.5.7",
-=======
+
     "cordova-plugin-x-socialsharing": "5.4.1",
     "es6-promise-plugin": "4.2.2",
     "firebase": "^5.5.5",
->>>>>>> 41280c0d2c0a0e9902a81aa909c2e8ce86c433ea
+
     "ionic-angular": "3.9.2",
     "ionic-img-viewer": "^2.9.0",
     "ionicons": "3.0.0",
