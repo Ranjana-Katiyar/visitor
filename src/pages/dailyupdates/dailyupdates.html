@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar color="navcolour">
+
+    <ion-list no-lines color="navcolour">
+
+        <ion-item color="navcolour" style="margin-bottom: -15px;">
+
+          <button ion-button icon-only clear (click) = "goBack()" item-start>
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+          </button>
+
+          <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+       
+       
+          <button ion-button icon-only clear (click) = "logOut()" item-end >
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+
+        </ion-item>
+
+    </ion-list>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid style="width: 90%; padding-top: 30px; text-align: center;">
+      <h2>Cab Details</h2>
+      <form>
+          <ion-list no-padding>
+              <ion-item class="input-background">
+                  <ion-textarea placeholder="Daily Update" rows = "5" name = "message" ngModel></ion-textarea>
+              </ion-item>
+              
+              <button ion-button icon-start type="submit" item-end float-right style="margin-top: 10px;">
+                  <ion-icon ios="ios-send" md="md-send" class="btn-send icon-size"></ion-icon>
+              </button>
+          </ion-list>
+      </form>
+  </ion-grid>
+
+</ion-content>

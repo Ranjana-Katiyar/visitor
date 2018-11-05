@@ -26,7 +26,11 @@ import { CitiesPage } from "../pages/cities/cities";
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
 import { SocietieslistPage } from '../pages/societieslist/societieslist';
-
+import { DailyupdatesPage } from '../pages/dailyupdates/dailyupdates';
+import { DailyupdateslistPage } from '../pages/dailyupdateslist/dailyupdateslist';
+import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
+import { CabdetailsPage } from '../pages/cabdetails/cabdetails';
+import { ParceldetailsPage } from '../pages/parceldetails/parceldetails';
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
   authDomain: "visitorauth.firebaseapp.com",
@@ -61,7 +65,12 @@ firebase.firestore().settings({
     OwnerregistrationPage,
     CitiesPage,
     OwnerdashboardPage,
-    SocietieslistPage
+    SocietieslistPage,
+    DailyupdatesPage,
+    DailyupdateslistPage,
+    VehicledetailsPage,
+    CabdetailsPage,
+    ParceldetailsPage
   ],
   imports: [
     BrowserModule,
@@ -85,7 +94,12 @@ firebase.firestore().settings({
     OwnerregistrationPage,
     CitiesPage,
     OwnerdashboardPage,
-    SocietieslistPage
+    SocietieslistPage,
+    DailyupdatesPage,
+    DailyupdateslistPage,
+    VehicledetailsPage,
+    CabdetailsPage,
+    ParceldetailsPage
   ],
   providers: [
     StatusBar,
