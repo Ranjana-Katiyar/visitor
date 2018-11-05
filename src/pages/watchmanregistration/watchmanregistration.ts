@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import firebase from 'firebase';
+//import firebase from 'firebase';
 import { CheckpointsPage } from "../checkpoints/checkpoints";
 
 

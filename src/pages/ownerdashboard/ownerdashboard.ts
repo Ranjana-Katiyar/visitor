@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { VisitorformPage } from '../visitorform/visitorform';
 import firebase from 'firebase';
 import { LoginPage } from "../login/login";
 
@@ -29,7 +28,8 @@ export class OwnerdashboardPage {
       let toast = this.toastCtrl.create({
         message: "Logged out  Successfully",
         duration: 3000
-      }).present();
+      });
+      toast.present();
 
       this.navCtrl.setRoot(LoginPage);
     });

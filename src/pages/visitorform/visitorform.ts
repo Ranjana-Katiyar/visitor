@@ -89,7 +89,8 @@ export class VisitorformPage {
         let toast = this.toastCtrl.create({
           message: "Logged out  Successfully",
           duration: 3000
-        }).present();
+        });
+        toast.present();
   
         this.navCtrl.setRoot(LoginPage);
       });

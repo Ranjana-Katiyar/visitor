@@ -25,6 +25,7 @@ import { OwnerregistrationPage } from "../pages/ownerregistration/ownerregistrat
 import { CitiesPage } from "../pages/cities/cities";
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
+import { SocietieslistPage } from '../pages/societieslist/societieslist';
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -59,7 +60,8 @@ firebase.firestore().settings({
     VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
-    OwnerdashboardPage
+    OwnerdashboardPage,
+    SocietieslistPage
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,8 @@ firebase.firestore().settings({
     VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
-    OwnerdashboardPage
+    OwnerdashboardPage,
+    SocietieslistPage
   ],
   providers: [
     StatusBar,
