@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
+import { CitiesPage } from '../cities/cities';
+
+//import firebase from 'firebase';
  
 @IonicPage()
 @Component({
@@ -11,6 +13,7 @@ import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
 export class UploadimagePage {
 
     image: string;
+    imageSrc: string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
       private camera: Camera, public toastCtrl: ToastController) {
@@ -25,6 +28,11 @@ export class UploadimagePage {
       this.launchCamera();
     }
 
+    uploadPicture() {
+      this.openGallery();
+    }
+
+    //Function to launch Camera
     launchCamera() {
       let options: CameraOptions = {
         quality: 100,
@@ -43,19 +51,58 @@ export class UploadimagePage {
 
         this.image = "data:image/jpeg;base64," + base64Image;
 
-        }).then((doc) => {
-          console.log(doc);
-          this.toastCtrl.create({
-          message: "Image Uploaded Successfully",
-          duration: 1000
-            }).present();
-            this.navCtrl.push(OwnerdashboardPage);
-            }).catch((err) => {
+        }).catch((err) => {
           console.log(err);
           })
     }
 
+    //Function to open gallery
+    openGallery() {
+      let CameraOptions: CameraOptions = {
+        quality: 100,
+        sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+        destinationType: this.camera.DestinationType.FILE_URI,
+        encodingType: this.camera.EncodingType.JPEG,
+        correctOrientation: true,
+        targetHeight: 512,
+        targetWidth: 512
+      }
+
+      this.camera.getPicture(CameraOptions).then((file_uri) => {
+        console.log(file_uri);
+
+        this.imageSrc = file_uri;
+
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
+
+
+    // // Upload Image in Fire Storage for launchCamera() function
+    // upload(name:string) {
+    //   let ref = firebase.storage().ref("postImages/" + name);
+
+    //   let uploadTask = ref.putString(this.image.split(',')[1], "base64");
+
+    //   uploadTask.on("state_changed", (taskSnapshot) => {
+    //     console.log(taskSnapshot)
+    //   }), (error) => {
+    //     console.log(error)
+    //   }, () => {
+    //     console.log("The upload is completed");
+
+    //     uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+    //       console.log(url);
+    //     })
+    //   }
+    // }
+
     goToNextpage(){
-      this.navCtrl.push(OwnerdashboardPage);
+      this.navCtrl.push(CitiesPage);
+    }
+
+    goToNext() {
+      this.navCtrl.push(CitiesPage);
     }
 }

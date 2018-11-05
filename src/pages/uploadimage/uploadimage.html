@@ -21,14 +21,42 @@
 
 	<ion-grid class="bg1" no-padding  style="width: 75%;">
 	    <ion-row>
-	    	<ion-col col-6>
-		     	<button ion-button large (click)="takePhoto()">Take Picture</button>
-	    	</ion-col>
-	    	<ion-col col-6>
-	    		<ion-icon name="contact" color="danger"></ion-icon>
-	    	</ion-col>
-	    	<img  [src]="base64Image" alt="Select Image"/>
-		</ion-row>
+		     	<button ion-button medium (click)="takePhoto()">Take Picture</button>
+					<h6>Please Open Your Camera</h6>
+					
+			</ion-row>
+			<ion-row>
+				<button ion-button medium (click)="uploadPicture()">Upload Picture</button>
+				<h6>Please Open Your Gallery</h6>
+			</ion-row>
+
+			<ion-row margin *ngIf="image">
+				<ion-card>
+					<img [src]="image">
+				</ion-card>
+			</ion-row>
+
+			<ion-row margin *ngIf="imageSrc">
+				<ion-card>
+					<img [src] ="imageSrc">
+				</ion-card>
+			</ion-row>
 	</ion-grid>
-	
+
 </ion-content>
+
+<ion-footer no-shadow>
+		<ion-toolbar position="bottom">
+			<ion-row no-padding>
+				<ion-col col-12 no-padding>
+					<button ion-button block color="primary" medium (click)="goToNext()">Submit</button>
+				</ion-col>
+				<!-- <ion-col col-6 no-padding>
+					<button ion-button block color="navcolour" large (click)="watchmanReg()">Watchman</button>
+				</ion-col> -->
+			</ion-row>
+		</ion-toolbar>
+	</ion-footer>
+
+
+	
