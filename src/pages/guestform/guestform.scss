@@ -11,44 +11,47 @@ page-guestform {
         font-weight: 600;
       }
 
-    .f-text-h{
-        font-size: 25px;
-    }   
+    .f-text{
+        font-size: 21px;
+    }
 
     ion-content{
-    .scroll-content{
-        background: url('../../assets/imgs/bg3.png');
-                     }
+        .scroll-content{
+            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+        }
+    
+     }
 
+   .rowStyle {
+        border: 1px solid #000;
+        padding-left: 10px;
+        border-radius: 30px;
+        margin: 12px 0px;
     }
 
-    h2{
-        margin-top: 30px;
-        margin-bottom: 25px; 
-        font-family: Georgia, serif;
-        color: #2E2E26;
-        font-weight: 600;
-        font-size: 30px;
+    ion-input {
+        ::placeholder{
+            color:rgb(72, 72, 77) !important;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            
+       
+             }
+        }
+
+    ion-label {
+            color:rgb(72, 72, 77) !important;
+            font-size: 15px !important;
+            font-family: Georgia, serif !important;
+            padding-left: 7px;
     }
 
-   .span-color{
-        color: #585856;
-   }
-
-    ion-label{
-        font-size: 17px;
-         font-family: Georgia, serif;
-    }
-
-    .bg-transparent{
-        background: #fff;
-        padding-left:10px;
-        margin:15px 0px;
-        border-radius: 4px;
-   }
-
-    ion-item{
-        padding: 10px;
-        
+    .itemStyle{
+        border: 1px solid #000;
+        padding-left: 10px;
+        border-radius: 30px;
+        margin: 12px 0px;
+        background: transparent;
+       
     }
 }

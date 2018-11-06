@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import { LoginPage } from "../login/login";
 import { VehicledetailsPage } from "../vehicledetails/vehicledetails";
 import { DailyupdateslistPage } from "../dailyupdateslist/dailyupdateslist";
+import { HelperPage } from "../helper/helper";
 
 
 @IonicPage()
@@ -44,4 +45,7 @@ export class OwnerdashboardPage {
     this.navCtrl.push(DailyupdateslistPage);
   }
   
+  addHelper(){
+    this.navCtrl.push(HelperPage);
+  }
 }

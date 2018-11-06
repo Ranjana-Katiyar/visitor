@@ -2,65 +2,63 @@
 <ion-header>
 
   <ion-navbar color="navcolour">
-    <button ion-button menuToggle icon-only>
-        <ion-icon name='menu'></ion-icon>
-    </button>
-  <ion-title>
-      <h3><span class="f-text-h">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text-h">C</span>HECK</span></h3>
-    
-  </ion-title>
-</ion-navbar>
+
+    <ion-list no-lines color="navcolour">
+
+        <ion-item color="navcolour" style="margin-bottom: -15px;">
+
+          <button ion-button icon-only clear (click) = "goBack()" item-start>
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+          </button>
+
+          <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+       
+       
+          <button ion-button icon-only clear (click) = "logOut()" item-end >
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+
+        </ion-item>
+
+    </ion-list>
+     
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-grid>
-    <ion-row text-center>
-      <ion-col>
-        <h2>Guest In<span class="span-color"> Details</span></h2>
-        <form> 
-          <ion-list>
+  <ion-grid no-padding  style="width: 75%; padding-top: 30px; text-align: center;">
+    <h2>Guest Details</h2>
+      <form>
+          <ion-row class="rowStyle">
+              <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
+          </ion-row>
 
-              <ion-item class = "bg-transparent">
-                <ion-label>Full Name</ion-label>
-                <ion-input type="text" value=""></ion-input>
-              </ion-item>
-            
-              <ion-item class = "bg-transparent">
-                <ion-label>Email</ion-label>
-                <ion-input type="email"></ion-input>
-              </ion-item>
+          <ion-row class="rowStyle">
+              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+          </ion-row>
+          
+          <ion-row class="rowStyle">
+              <ion-input type="number" placeholder="Mobile Number" name="mobile_number" [(ngModel)]="mobile_number"></ion-input>
+          </ion-row>
 
-              <ion-item class = "bg-transparent">
-                  <ion-label>Mobile Number</ion-label>
-                  <ion-input type="number"></ion-input>
-              </ion-item>
+          <ion-row class="rowStyle"> 
+            <ion-input type="text" placeholder="Vehicle Number" name="vehicle_number" [(ngModel)]="vehicle_number"></ion-input>
+          </ion-row>
 
-              <ion-item class = "bg-transparent">
-                  <ion-label>In Date</ion-label>
-                  <ion-input type="date"></ion-input>
-              </ion-item>
+          <ion-row class="rowStyle"> 
+            <ion-input type="text" placeholder="Purpose of Meeting" name="meeting" [(ngModel)]="meeting"></ion-input>
+          </ion-row>
 
-               <ion-item class = "bg-transparent">
-                  <ion-label>Out Date</ion-label>
-                  <ion-input type="date"></ion-input>
-              </ion-item>
+          <ion-item class="itemStyle">
+              <ion-label>In Date </ion-label>
+              <ion-datetime pickerFormat="DD/MM/YY" name="indate" [(ngModel)]="indate"></ion-datetime>
+          </ion-item>
 
-              <ion-item class = "bg-transparent">
-                      <ion-label>Vehicle Number</ion-label>
-                      <ion-input type="text"></ion-input>
-              </ion-item>
-
-              <ion-item class = "bg-transparent">
-                  <ion-label>Purpose of Meeting</ion-label>
-                  <ion-input type="text"></ion-input>
-              </ion-item>
-            
-            </ion-list>
-            <button ion-button block outline medium color="dark">Submit</button>
-          </form>
-      </ion-col>
-    </ion-row>
+          <ion-row text-center>
+             <button ion-button block round color="danger" class="btnsubmit">Submit</button>
+          </ion-row>
+      </form>
   </ion-grid>
 </ion-content>

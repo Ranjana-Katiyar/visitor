@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 
 import firebase from 'firebase';
 import { LoginPage } from "../login/login";
-import { VisitorformPage } from "../visitorform/visitorform";
+import { GuestformPage } from "../guestform/guestform";
 import { CabdetailsPage } from "../cabdetails/cabdetails";
 import { ParceldetailsPage } from "../parceldetails/parceldetails";
  
@@ -38,8 +38,8 @@ export class CheckpointsPage {
     });
   }
 
-  goToVisitor(){
-    this.navCtrl.push(VisitorformPage);
+  guestDetails(){
+    this.navCtrl.push(GuestformPage);
   }
 
   cabDetails(){
