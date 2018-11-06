@@ -32,6 +32,9 @@ import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { CabdetailsPage } from '../pages/cabdetails/cabdetails';
 import { ParceldetailsPage } from '../pages/parceldetails/parceldetails';
 import { HelperPage } from '../pages/helper/helper';
+import {WingslistPage} from "../pages/wingslist/wingslist";
+import {FlatlistPage} from "../pages/flatlist/flatlist";
+
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
   authDomain: "visitorauth.firebaseapp.com",
@@ -72,7 +75,9 @@ firebase.firestore().settings({
     VehicledetailsPage,
     CabdetailsPage,
     ParceldetailsPage,
-    HelperPage
+    HelperPage,
+      WingslistPage,
+      FlatlistPage
   ],
   imports: [
     BrowserModule,
@@ -102,7 +107,9 @@ firebase.firestore().settings({
     VehicledetailsPage,
     CabdetailsPage,
     ParceldetailsPage,
-    HelperPage
+    HelperPage,
+      WingslistPage,
+      FlatlistPage
   ],
   providers: [
     StatusBar,

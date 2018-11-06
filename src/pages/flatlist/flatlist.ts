@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import firebase from 'firebase';
+import {OwnerdashboardPage} from "../ownerdashboard/ownerdashboard";
 
 /**
  * Generated class for the FlatlistPage page.
@@ -15,11 +17,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FlatlistPage {
 
+  flats: any[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.items();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FlatlistPage');
+
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad FlatlistPage');
+  // }
+
+  items() {
+    firebase.firestore().collection("flats").get().then((docs) => {
+      docs.forEach((doc) => {
+        this.flats.push(doc);
+      })
+        console.log(this.flats);
+
+    }).catch((err) => {
+      console.log(err);
+    })
   }
+
+    itemSelected() {
+    this.navCtrl.push(OwnerdashboardPage);
+    }
 
 }
