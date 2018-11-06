@@ -32,6 +32,7 @@ import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { CabdetailsPage } from '../pages/cabdetails/cabdetails';
 import { ParceldetailsPage } from '../pages/parceldetails/parceldetails';
 import { HelperPage } from '../pages/helper/helper';
+
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
   authDomain: "visitorauth.firebaseapp.com",
