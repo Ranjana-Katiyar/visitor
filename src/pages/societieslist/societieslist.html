@@ -1,13 +1,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Societies List</ion-title>
+    <ion-title>Select Your Society</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
-
-
+<ion-content no-padding>
+  <ion-list>
+    <button ion-item *ngFor="let society of societies" (click)="itemSelected()">
+      {{ society.data().societyName }}
+    </button>
+  </ion-list>
 </ion-content>
