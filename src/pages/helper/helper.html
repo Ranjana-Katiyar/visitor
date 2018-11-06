@@ -38,6 +38,18 @@
               <ion-input type="number" placeholder="Mobile Number" name="mobile_number" [(ngModel)]="mobile_number"></ion-input>
           </ion-row>
 
+          <ion-row class="rowStyle">
+            <ion-input type="text" placeholder="Helper Type" name="helper_type" [(ngModel)]="helper_type"></ion-input>
+          </ion-row>
+
+          <ion-row class="rowStyle">
+            <ion-input type="text" placeholder="Wing" name="wing" [(ngModel)]="wing"></ion-input>
+          </ion-row>
+
+          <ion-row class="rowStyle">
+            <ion-input type="text" placeholder="Flat No" name="flat" [(ngModel)]="flat"></ion-input>
+          </ion-row>
+
           <ion-row>
             <button ion-button block round outline color="dark" class="btnsubmit" (click)="takePhoto()">Upload ID Proof</button>
           </ion-row>
@@ -46,11 +58,6 @@
             <button ion-button block round outline color="dark" class="btnsubmit" (click)="takePhoto()">Upload Photo</button>
           </ion-row>
 
-          <ion-item class="itemStyle">
-            <ion-label>In Time </ion-label>
-            <ion-datetime pickerFormat="HH:mm" name="intime" [(ngModel)]="intime"></ion-datetime>
-          </ion-item>
-          
           <ion-row text-center>
              <button ion-button block round color="danger" class="btnsubmit">Submit</button>
           </ion-row>

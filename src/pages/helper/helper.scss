@@ -21,4 +21,21 @@ page-helper {
         }
     
      }
+
+    .rowStyle {
+        border: 1px solid #000;
+        padding-left: 10px;
+        border-radius: 30px;
+        margin: 12px 0px;
+    }
+
+    ion-input {
+        ::placeholder{
+            color:rgb(72, 72, 77) !important;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            
+           
+                 }
+            }
 }

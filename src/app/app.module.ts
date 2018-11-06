@@ -32,11 +32,10 @@ import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { CabdetailsPage } from '../pages/cabdetails/cabdetails';
 import { ParceldetailsPage } from '../pages/parceldetails/parceldetails';
 import { HelperPage } from '../pages/helper/helper';
-<<<<<<< HEAD
-=======
 import {WingslistPage} from "../pages/wingslist/wingslist";
 import {FlatlistPage} from "../pages/flatlist/flatlist";
->>>>>>> 83b8e80da7da834c21b45c7ee2558914a5d1872d
+import { HelperdisplayPage } from "../pages/helperdisplay/helperdisplay";
+ 
 
 var config = {
   apiKey: "AIzaSyC0VtVC7j-dgosLEPhO85VbLjAtxP2JJ68",
@@ -80,7 +79,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage
+      FlatlistPage,HelperdisplayPage
   ],
   imports: [
     BrowserModule,
@@ -112,7 +111,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage
+      FlatlistPage,HelperdisplayPage
   ],
   providers: [
     StatusBar,
