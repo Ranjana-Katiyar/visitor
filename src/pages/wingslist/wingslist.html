@@ -1,18 +1,16 @@
-<!--
-  Generated template for the WingslistPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>wingslist</ion-title>
+    <ion-title>Select Your Wing</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content no-padding>
+  <ion-list>
+    <button ion-item *ngFor="let wing of wings" (click)="itemSelected()">
+      {{ wing.data().wingName }}
+    </button>
+  </ion-list>
 </ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import firebase from 'firebase';
+import {WingslistPage} from "../wingslist/wingslist";
 /**
  * Generated class for the SocietieslistPage page.
  *
@@ -37,5 +38,9 @@ export class SocietieslistPage {
       console.log(err);
     })
   }
+
+    itemSelected() {
+    this.navCtrl.push(WingslistPage);
+    }
 
 }
