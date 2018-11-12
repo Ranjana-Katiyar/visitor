@@ -1,7 +1,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Select Your City</ion-title>
+    <ion-list>
+        <ion-item>
+            <ion-title>Select Your City</ion-title>
+
+            <button ion-button icon-only clear (click) = "addSocieties()" item-end >
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-item>
+    </ion-list>
+
   </ion-navbar>
 
 </ion-header>
