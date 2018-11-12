@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {SocietyregistrationPage} from "../pages/societyregistration/societyregistration";
+import {UploadimagePage} from "../pages/uploadimage/uploadimage";
 
 
 @Component({
@@ -10,7 +10,7 @@ import {SocietyregistrationPage} from "../pages/societyregistration/societyregis
 })
 export class MyApp {
 
-  rootPage:any = SocietyregistrationPage;
+  rootPage:any = UploadimagePage;
 
 
 
