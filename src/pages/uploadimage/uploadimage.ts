@@ -50,11 +50,8 @@ export class UploadimagePage {
         console.log(base64Image);
 
         this.image = "data:image/jpeg;base64," + base64Image;
-
-          // if(this.image){
-          //   this.upload(base64Image);
-          // }
-
+ 
+        
         }).catch((err) => {
           console.log(err);
           })
@@ -76,11 +73,7 @@ export class UploadimagePage {
         console.log(file_uri);
         
         this.imageSrc = file_uri;
-
-        // if(this.image){
-        //  this.upload(file_uri);
-        // }
-
+ 
       }).catch((err) => {
         console.log(err);
       })
@@ -119,11 +112,15 @@ export class UploadimagePage {
  
 
     goToNextpage(){
+      
       this.navCtrl.push(CitiesPage);
       
     }
 
     goToNext() {
-      this.upload(name);
-    }
+         if(this.image){
+          this.upload(name);
+        }
+     
+  }
 }
