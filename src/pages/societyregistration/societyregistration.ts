@@ -16,8 +16,9 @@ export class SocietyregistrationPage {
   address : string = "";
   postalCode : string = "";
   city : string = "";
-  state : string = ""
-  authoraties: any={};
+  state : string = "";
+  authorities: any={};
+  cityList: any = {};
   //owner : boolean;
 
 
@@ -25,16 +26,23 @@ export class SocietyregistrationPage {
   }
 
   postSocietyDetail() {
-    this.authoraties[firebase.auth().currentUser.uid] = true;
+    this.authorities[firebase.auth().currentUser.uid] = true;
+    this.cityList = firebase.firestore().collection("cities").add({
+        cityName: this.city
+    }).then((doc) => {
+      console.log(doc);
+    }).catch((err) => {
+      console.log(err);
+    });
     firebase.firestore().collection("societies").add({
       //owner_id: firebase.auth().currentUser.uid,
-      authoraties: this.authoraties,
+      authorities: this.authorities,
       owner_name: firebase.auth().currentUser.displayName,
       created: firebase.firestore.FieldValue.serverTimestamp(),
       societyName: this.societyName,
       address: this.address,
       postalCode: this.postalCode,
-      city: this.city,
+      //city: this.cityList,
       state: this.state
     }).then((doc) => {
       this.navCtrl.push(OwnerdashboardPage);
