@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import firebase from 'firebase';
 import { SocietieslistPage } from '../societieslist/societieslist';
+import {SocietyregistrationPage} from "../societyregistration/societyregistration";
 
 @IonicPage()
 @Component({
@@ -35,6 +36,10 @@ export class CitiesPage {
   itemSelected() {
     this.navCtrl.push(SocietieslistPage);
   }
+
+  addSocieties() {
+    this.navCtrl.push(SocietyregistrationPage);
+    }
 
 
 

@@ -36,7 +36,6 @@ export class SocietyregistrationPage {
       postalCode: this.postalCode,
       city: this.city,
       state: this.state
-      
     }).then((doc) => {
       this.navCtrl.push(OwnerdashboardPage);
       console.log(doc);
@@ -44,5 +43,4 @@ export class SocietyregistrationPage {
       console.log(err);
     })
   }
-
 }
