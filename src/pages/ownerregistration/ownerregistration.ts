@@ -13,6 +13,7 @@ export class OwnerregistrationPage {
   name:string = "";
   p_number:string = "";
   email:string ="";
+  image: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
@@ -27,6 +28,9 @@ export class OwnerregistrationPage {
       email: this.email
     }).then((doc) => {
       console.log(doc);
+      if(this.image){
+        this.upload(doc.id);
+      }
       this.toastCtrl.create({
        message: "Registration Successfull",
        duration: 1000
@@ -41,6 +45,34 @@ export class OwnerregistrationPage {
   })
 
  }
+
+ // Upload Image in Fire Storage for launchCamera() function
+ upload(name:string) {
+
+  return new Promise((resolve, reject) =>{
+    let ref = firebase.storage().ref("Images/" + name);
+    let uploadTask = ref.putString(this.image.split(',')[1], "base64");
+    uploadTask.on("state_changed", (taskSnapshot) => {
+      console.log(taskSnapshot)
+    }, (error) => {
+      console.log(error)
+    }, () => {
+      console.log("The upload is completed");
+      uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+        console.log(url);
+        firebase.firestore().collection("owners").doc(name).update({
+          image: url
+        }).then(() =>{
+          resolve()
+        }).catch((err) =>{
+          reject()
+        })
+      }).catch((err) =>{
+        reject()
+      })
+    })
+  })
+}
 
 }
 
