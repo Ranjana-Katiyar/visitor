@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { CitiesPage } from '../cities/cities';
 
-//import firebase from 'firebase';
+import firebase from 'firebase';
  
 @IonicPage()
 @Component({
@@ -51,6 +51,10 @@ export class UploadimagePage {
 
         this.image = "data:image/jpeg;base64," + base64Image;
 
+          if(this.image){
+            await this.upload(base64Image);
+          }
+
         }).catch((err) => {
           console.log(err);
           })
@@ -70,33 +74,52 @@ export class UploadimagePage {
 
       this.camera.getPicture(CameraOptions).then((file_uri) => {
         console.log(file_uri);
-
+        
         this.imageSrc = file_uri;
+
+        if(this.image){
+         await this.upload(file_uri);
+        }
 
       }).catch((err) => {
         console.log(err);
       })
+
+      
     }
 
 
-    // // Upload Image in Fire Storage for launchCamera() function
-    // upload(name:string) {
-    //   let ref = firebase.storage().ref("postImages/" + name);
+    // Upload Image in Fire Storage for launchCamera() function
+    upload(name:string) {
 
-    //   let uploadTask = ref.putString(this.image.split(',')[1], "base64");
+      return new Promise((resolve, reject) =>{
+        let ref = firebase.storage().ref("postImages/" + name);
 
-    //   uploadTask.on("state_changed", (taskSnapshot) => {
-    //     console.log(taskSnapshot)
-    //   }), (error) => {
-    //     console.log(error)
-    //   }, () => {
-    //     console.log("The upload is completed");
+        let uploadTask = ref.putString(this.image.split(',')[1], "base64");
+  
+        uploadTask.on("state_changed", (taskSnapshot) => {
+          console.log(taskSnapshot)
+        }), (error) => {
+          console.log(error)
+        }, () => {
+          console.log("The upload is completed");
+  
+          uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+            console.log(url);
+            firebase.firestore().collection("owners").doc(name).update({
+              image: url
+            }).then(() => {
+              resolve()
+            }).catch((err) => {
+              reject()
+            })
+          }).catch((err) => {
+            reject()
+        }
+      })
 
-    //     uploadTask.snapshot.ref.getDownloadURL().then((url) => {
-    //       console.log(url);
-    //     })
-    //   }
-    // }
+      
+    }
 
     goToNextpage(){
       this.navCtrl.push(CitiesPage);
