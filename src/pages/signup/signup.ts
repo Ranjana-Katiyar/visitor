@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
-import {SocietyregistrationPage } from "../societyregistration/societyregistration";
 import { LoginPage } from "../login/login";
 
 import firebase from 'firebase';
+import {CitiesPage} from "../cities/cities";
 
 @IonicPage()
 @Component({
@@ -44,7 +44,7 @@ export class SignupPage {
                                   duration: 1000
                                 }).present();
 
-                                 this.navCtrl.push(SocietyregistrationPage);
+                                 this.navCtrl.push(CitiesPage);
 
 
                                 
