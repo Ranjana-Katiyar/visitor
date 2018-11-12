@@ -28,7 +28,8 @@ export class SocietyregistrationPage {
   postSocietyDetail() {
     this.authorities[firebase.auth().currentUser.uid] = true;
     this.cityList = firebase.firestore().collection("cities").add({
-        cityName: this.city
+        cityName: this.city,
+       //societyId: firebase.firestore().collection("societies").doc().id
     }).then((doc) => {
       console.log(doc);
     }).catch((err) => {
