@@ -51,9 +51,9 @@ export class UploadimagePage {
 
         this.image = "data:image/jpeg;base64," + base64Image;
 
-          if(this.image){
-            this.upload(base64Image);
-          }
+          // if(this.image){
+          //   this.upload(base64Image);
+          // }
 
         }).catch((err) => {
           console.log(err);
@@ -77,9 +77,9 @@ export class UploadimagePage {
         
         this.imageSrc = file_uri;
 
-        if(this.image){
-         this.upload(file_uri);
-        }
+        // if(this.image){
+        //  this.upload(file_uri);
+        // }
 
       }).catch((err) => {
         console.log(err);
@@ -93,7 +93,7 @@ export class UploadimagePage {
     upload(name:string) {
 
       return new Promise((resolve, reject) =>{
-        let ref = firebase.storage().ref("postImages/" + name);
+        let ref = firebase.storage().ref("Images/" + name);
         let uploadTask = ref.putString(this.image.split(',')[1], "base64");
         uploadTask.on("state_changed", (taskSnapshot) => {
           console.log(taskSnapshot)
@@ -120,9 +120,10 @@ export class UploadimagePage {
 
     goToNextpage(){
       this.navCtrl.push(CitiesPage);
+      
     }
 
     goToNext() {
-      this.navCtrl.push(CitiesPage);
+      this.upload(name);
     }
 }
