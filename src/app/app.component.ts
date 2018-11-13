@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {WingPage} from "../pages/wing/wing";
+import {HomePage} from "../pages/home/home";
 
 
 @Component({
@@ -10,7 +10,7 @@ import {WingPage} from "../pages/wing/wing";
 })
 export class MyApp {
 
-  rootPage:any = WingPage;
+  rootPage:any = HomePage;
 
 
 

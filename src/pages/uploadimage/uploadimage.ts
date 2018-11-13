@@ -15,6 +15,7 @@ export class UploadimagePage {
 
     image: string="";
     imageSrc: string="";
+    userId: string="";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
       private camera: Camera, public toastCtrl: ToastController) {
@@ -121,9 +122,14 @@ export class UploadimagePage {
     goToNext() {
         
       if(this.image){
-          
-          this.upload('image');
-        }
+          this.userId = firebase.auth().currentUser.uid;
+          console.log(this.userId);
+          this.upload(this.userId);
+      }
+        // else if(this.imageSrc){
+        //   let this.userId = firebase.auth().currentUser.uid;
+        //   this.upload(this.userId);
+        // }
      
   }
 }
