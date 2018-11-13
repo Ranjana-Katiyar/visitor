@@ -19,7 +19,7 @@ export class WingPage {
   {
     this.authorities[firebase.auth().currentUser.uid] = true;
     this.wingList = firebase.firestore().collection("wings").add({
-      WingName: this.wing,
+      wingName: this.wing,
       owner_id: firebase.auth().currentUser.uid
       
   }).then((doc) => {
