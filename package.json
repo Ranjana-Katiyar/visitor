@@ -46,6 +46,7 @@
     "cordova-plugin-x-socialsharing": "^5.4.1",
     "es6-promise-plugin": "^4.2.2",
     "firebase": "^5.5.5",
+    "firebase-admin": "^6.1.0",
     "ionic-angular": "3.9.2",
     "ionic-img-viewer": "^2.9.0",
     "ionicons": "3.0.0",

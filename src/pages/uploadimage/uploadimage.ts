@@ -122,7 +122,7 @@ export class UploadimagePage {
         
       if(this.image){
           
-          this.upload("image");
+          this.upload('image');
         }
      
   }
