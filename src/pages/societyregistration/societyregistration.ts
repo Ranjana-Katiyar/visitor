@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
- 
 import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
  
 
@@ -29,7 +28,7 @@ export class SocietyregistrationPage {
     this.authorities[firebase.auth().currentUser.uid] = true;
     this.cityList = firebase.firestore().collection("cities").add({
         cityName: this.city,
-       //societyId: firebase.firestore().collection("societies").doc().id
+       societyId: firebase.firestore().collection("societies").doc().id
     }).then((doc) => {
       console.log(doc);
     }).catch((err) => {
