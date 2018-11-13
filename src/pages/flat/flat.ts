@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
 import { OwnerdashboardPage } from "../ownerdashboard/ownerdashboard";
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 849aa8aa077391344391a72d8f808c6c27359742
 
 @IonicPage()
 @Component({
@@ -22,18 +18,11 @@ export class FlatPage {
   }  
     addNewInputField()
     {
-<<<<<<< HEAD
-=======
+
       this.authorities[firebase.auth().currentUser.uid] = true;
       this.flatList = firebase.firestore().collection("flats").add({
         FlatNumber: this.flat,
->>>>>>> 849aa8aa077391344391a72d8f808c6c27359742
-       
-        this.authorities[firebase.auth().currentUser.uid] = true;
-        this.flatList = firebase.firestore().collection("flats").add({
-          FlatNumber: this.flat,
-        
-          owner_id: firebase.auth().currentUser.uid
+        owner_id: firebase.auth().currentUser.uid
           
       }).then((doc) => {
         console.log(doc);
@@ -50,6 +39,7 @@ export class FlatPage {
     moveToDashboard(){
       this.navCtrl.push(OwnerdashboardPage);
     }
+    
     
     
 

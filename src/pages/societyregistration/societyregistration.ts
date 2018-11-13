@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
-import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
+import { WingPage } from '../wing/wing';
  
 
 @IonicPage()
@@ -45,7 +45,7 @@ export class SocietyregistrationPage {
       //city: this.cityList,
       state: this.state
     }).then((doc) => {
-      this.navCtrl.push(OwnerdashboardPage);
+      this.navCtrl.push(WingPage);
       console.log(doc);
     }).catch((err) => {
       console.log(err);

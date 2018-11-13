@@ -95,13 +95,22 @@ export class UploadimagePage {
         }, (error) => {
           console.log(error)
         }, () => {
+          this.toastCtrl.create({
+            message: "Photo Uploaded",
+            duration: 1000
+          }).present();
+
+          
+
           console.log("The upload is completed");
           uploadTask.snapshot.ref.getDownloadURL().then((url) => {
             console.log(url);
             firebase.firestore().collection("owners").doc(name).update({
               image: url
             }).then(() =>{
+              this.navCtrl.push(CitiesPage);
               resolve()
+              
             }).catch((err) =>{
               reject()
             })
