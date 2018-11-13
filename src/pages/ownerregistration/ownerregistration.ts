@@ -14,7 +14,7 @@ export class OwnerregistrationPage {
   p_number:string = "";
   email:string ="";
   password:string = "";
-	
+	myValue:string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     this.ownerRegister();
@@ -48,7 +48,7 @@ export class OwnerregistrationPage {
                                   email: this.email
                                 }).then((doc) => {
                                   console.log(doc);
-                                   
+                                  this.myValue=doc.id; 
                                   this.toastCtrl.create({
                                    message: "Registration Successfull",
                                    duration: 1000
@@ -84,6 +84,10 @@ export class OwnerregistrationPage {
 
  }
 
+
+  getMyValue() {
+    return this.myValue;
+  }
   
 
 }

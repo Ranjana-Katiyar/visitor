@@ -32,9 +32,11 @@ import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 import { CabdetailsPage } from '../pages/cabdetails/cabdetails';
 import { ParceldetailsPage } from '../pages/parceldetails/parceldetails';
 import { HelperPage } from '../pages/helper/helper';
-import {WingslistPage} from "../pages/wingslist/wingslist";
-import {FlatlistPage} from "../pages/flatlist/flatlist";
+import { WingslistPage } from "../pages/wingslist/wingslist";
+import { FlatlistPage } from "../pages/flatlist/flatlist";
 import { HelperdisplayPage } from "../pages/helperdisplay/helperdisplay";
+import { FlatPage } from "../pages/flat/flat";
+import { WingPage } from "../pages/wing/wing";
  
 
 var config = {
@@ -79,7 +81,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage
   ],
   imports: [
     BrowserModule,
@@ -111,7 +113,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage
   ],
   providers: [
     StatusBar,

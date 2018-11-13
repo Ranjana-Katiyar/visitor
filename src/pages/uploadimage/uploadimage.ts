@@ -2,18 +2,19 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { CitiesPage } from '../cities/cities';
-
+// import {OwnerregistrationPage} from "../ownerregistration/ownerregistration";
 import firebase from 'firebase';
  
 @IonicPage()
 @Component({
   selector: 'page-uploadimage',
   templateUrl: 'uploadimage.html',
+  
 })
 export class UploadimagePage {
 
-    image: string;
-    imageSrc: string;
+    image: string="";
+    imageSrc: string="";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
       private camera: Camera, public toastCtrl: ToastController) {
@@ -50,7 +51,7 @@ export class UploadimagePage {
         console.log(base64Image);
 
         this.image = "data:image/jpeg;base64," + base64Image;
- 
+        console.log(this.image.small);
         
         }).catch((err) => {
           console.log(err);
@@ -118,8 +119,10 @@ export class UploadimagePage {
     }
 
     goToNext() {
-         if(this.image){
-          this.upload(name);
+        
+      if(this.image){
+          
+          this.upload("image");
         }
      
   }
