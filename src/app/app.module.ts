@@ -10,7 +10,6 @@ import { HomePage } from '../pages/home/home';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { CheckpointsPage } from "../pages/checkpoints/checkpoints";
-import { FlatnoPage } from '../pages/flatno/flatno';
 import { FlatownerPage } from '../pages/flatowner/flatowner';
 import { GuestformPage } from "../pages/guestform/guestform";
 import { SocietydetailsPage } from "../pages/societydetails/societydetails";
@@ -62,7 +61,6 @@ firebase.firestore().settings({
     SignupPage,
     LoginPage,
     CheckpointsPage,
-    FlatnoPage,
     FlatownerPage,
     GuestformPage,
     SocietydetailsPage,
@@ -94,7 +92,6 @@ firebase.firestore().settings({
     SignupPage,
     LoginPage,
     CheckpointsPage,
-    FlatnoPage,
     FlatownerPage,
     GuestformPage,
     SocietydetailsPage,
