@@ -55,4 +55,8 @@ export class SocietyregistrationPage {
       console.log(err);
     })
   }
+
+  goBack(){
+    this.navCtrl.pop();
+  }
 }

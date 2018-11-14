@@ -3,12 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import firebase from 'firebase';
 import {WingslistPage} from "../wingslist/wingslist";
-/**
- * Generated class for the SocietieslistPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+ 
+
+
 
 @IonicPage()
 @Component({
@@ -41,6 +38,10 @@ export class SocietieslistPage {
 
     itemSelected() {
     this.navCtrl.push(WingslistPage);
+    }
+
+    goBack(){
+      this.navCtrl.pop();
     }
 
 }

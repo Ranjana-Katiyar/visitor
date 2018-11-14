@@ -3,7 +3,7 @@ page-dailyupdates {
         font-family: Georgia, serif;
         color: #fff;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 1em;
       }
     .s-color {
         font-family: Georgia, serif;
@@ -12,7 +12,7 @@ page-dailyupdates {
       }
 
     .f-text{
-        font-size: 21px;
+        font-size: 2em;
     }
 
     ion-content{
@@ -24,6 +24,7 @@ page-dailyupdates {
 
      h2{
         font-family: Georgia, serif;
+        padding-bottom: 10px;
     }
     
     .input-background{
@@ -36,6 +37,6 @@ page-dailyupdates {
     }
 
     .icon-size{
-        font-size: 25px;
+        font-size: 2em;
     }
 }

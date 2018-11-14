@@ -1,6 +1,32 @@
 
 <ion-header>
 
+    <ion-navbar color="navcolour">
+  
+      <ion-list no-lines color="navcolour">
+  
+          <ion-item color="navcolour" style="margin-bottom: -15px;">
+  
+            <button ion-button icon-only clear (click) = "goBack()" item-start>
+              <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+            </button>
+  
+            <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+         
+         
+            <button ion-button icon-only clear (click) = "goToNextpage()" item-end  style="padding-top: 5px;">
+								<h3>SKIP</h3>
+            </button>
+  
+          </ion-item>
+  
+      </ion-list>
+       
+    </ion-navbar>
+  
+  </ion-header>
+<!-- <ion-header>
+
 		<ion-navbar color="navcolour">
 		 	<ion-title>
 			  <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
@@ -13,20 +39,26 @@
 		  </ion-buttons>
 		</ion-navbar>
 
-</ion-header>
+</ion-header> -->
 	  
  
 
 <ion-content no-padding>
 
-	<ion-grid class="bg1" no-padding  style="width: 75%;">
+	<ion-grid class="bg1" no-padding  style="width: 100%;">
 	    <ion-row>
-		     	<button ion-button medium (click)="takePhoto()">Take Picture</button>
+				<ion-col col-12 (click)="takePhoto()">
+					<img src="../../assets/imgs/camera--.png" style="height: 80px; width: 80px;">
+				</ion-col>
+		     	<!-- <button ion-button medium (click)="takePhoto()">Take Picture</button> -->
 					<h6>Please Open Your Camera</h6>
 					
 			</ion-row>
-			<ion-row>
-				<button ion-button medium (click)="uploadPicture()">Upload Picture</button>
+			<ion-row style="margin-top: 15px;">
+					<ion-col col-12 (click)="uploadPicture()">
+							<img src="../../assets/imgs/gallery--.png" style="height: 80px; width: 80px;">
+						</ion-col>
+				<!-- <button ion-button medium (click)="uploadPicture()">Upload Picture</button> -->
 				<h6>Please Open Your Gallery</h6>
 			</ion-row>
 

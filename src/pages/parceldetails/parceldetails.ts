@@ -49,6 +49,12 @@ export class ParceldetailsPage {
       }).catch((err) => {
         console.log(err);
         })
+      
+   
+
+  }
+  goBack(){
+    this.navCtrl.pop();
   }
 
   // doRadio() {

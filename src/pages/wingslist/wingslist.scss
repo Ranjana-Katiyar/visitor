@@ -1,3 +1,30 @@
 page-wingslist {
+    h3 {
+        font-family: Georgia, serif;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1em;
+      }
+    .s-color {
+        font-family: Georgia, serif;
+        color: #2E2E26;
+        font-weight: 600;
+      }
 
+    .f-text{
+        font-size: 2em;
+    }
+
+    ion-content{
+        .scroll-content{
+            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+        }
+    
+     }
+
+     h2{
+        font-family: Georgia, serif;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
 }

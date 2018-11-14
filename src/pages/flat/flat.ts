@@ -29,6 +29,7 @@ export class FlatPage {
 
           
       }).then((doc) => {
+        this.flat = "";
         console.log(doc);
         this.toastCtrl.create({
           message: "Flat added successfully",
@@ -44,7 +45,9 @@ export class FlatPage {
       this.navCtrl.push(OwnerdashboardPage);
     }
     
-    
+    goBack(){
+      this.navCtrl.pop();
+    }
     
 
    

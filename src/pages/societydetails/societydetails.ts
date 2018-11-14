@@ -22,4 +22,8 @@ export class SocietydetailsPage {
     console.log('ionViewDidLoad SocietydetailsPage');
   }
 
+  goBack(){
+    this.navCtrl.pop();
+  }
+
 }

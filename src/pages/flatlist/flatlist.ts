@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
 import {OwnerdashboardPage} from "../ownerdashboard/ownerdashboard";
-
-/**
- * Generated class for the FlatlistPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+ 
 @IonicPage()
 @Component({
   selector: 'page-flatlist',
@@ -44,4 +37,7 @@ export class FlatlistPage {
     this.navCtrl.push(OwnerdashboardPage);
     }
 
+    goBack(){
+      this.navCtrl.pop();
+    }
 }

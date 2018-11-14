@@ -50,4 +50,7 @@ export class CheckpointsPage {
     this.navCtrl.push(ParceldetailsPage);
   }
 
+  goBack(){
+    this.navCtrl.pop();
+  }
 }
