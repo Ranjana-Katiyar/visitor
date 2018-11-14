@@ -11,7 +11,6 @@ import {SocietyregistrationPage} from "../societyregistration/societyregistratio
   templateUrl: 'cities.html',
 })
 export class CitiesPage {
-
   cities: any[] = [];
   values: any =[];
   city: any = [];
@@ -20,7 +19,6 @@ export class CitiesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
   }
-
 
   items() {
     
