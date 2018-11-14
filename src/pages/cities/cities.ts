@@ -20,7 +20,7 @@ export class CitiesPage {
 
   items() {
     
-  firebase.firestore().collection("cities").get({
+  firebase.firestore().collection("cities").orderBy("cityName").get({
 
   }).then((docs) => {
     docs.forEach((doc) => {
