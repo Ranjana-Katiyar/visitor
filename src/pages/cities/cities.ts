@@ -27,12 +27,18 @@ export class CitiesPage {
   }).then((docs) => {
     docs.forEach((doc) => {
       this.cities.push(doc);
-      this.list = this.cities;
-        for (let i = 0 ; i<=this.list.length; i++) {
-            this.list[i] = doc.data().cityName;
-            this.list[i]++;
-            this.city = this.list[i];
+      // this.list = this.cities;
+        if(doc){
+          for (let i = 0 ; i<this.cities.length; i++) {
+            console.log("FOr loop start");
+            this.city[i] = doc.data().cityName;
+            console.log("getiing field value");
+            this.city[i]++;
+            this.list = this.city;
+         }
         }
+          
+        
     })
       //console.log(this.city + "this is city list")
     //this.values = this.societyIds(this.city)
@@ -72,7 +78,7 @@ export class CitiesPage {
     // }
   itemSelected() {
       //this.allItems();
-    console.log(this.city);
+    console.log(this.list);
       //this.navCtrl.push(SocietieslistPage);
   }
 
