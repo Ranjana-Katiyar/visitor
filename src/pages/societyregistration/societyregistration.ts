@@ -18,6 +18,8 @@ export class SocietyregistrationPage {
   state : string = "";
   authorities: any={};
   cityList: any = {};
+  myId: string = "";
+  private docRef: firebase.firestore.DocumentReference;
   //owner : boolean;
 
 
@@ -25,10 +27,12 @@ export class SocietyregistrationPage {
   }
 
   postSocietyDetail() {
+    this.docRef = firebase.firestore().collection("societies").doc();
+    this.myId = this.docRef.id;
     this.authorities[firebase.auth().currentUser.uid] = true;
     this.cityList = firebase.firestore().collection("cities").add({
         cityName: this.city,
-       societyId: firebase.firestore().collection("societies").doc().id
+       societyId: this.myId
     }).then((doc) => {
       console.log(doc);
     }).catch((err) => {
