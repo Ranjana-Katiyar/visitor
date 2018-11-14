@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-
 import firebase from 'firebase';
 import { OwnerregistrationPage } from '../ownerregistration/ownerregistration';
 import {CitiesPage} from "../cities/cities";
