@@ -1,25 +1,21 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { OwnerdashboardPage } from "../ownerdashboard/ownerdashboard";
-
-import firebase from 'firebase';
-import { OwnerregistrationPage } from '../ownerregistration/ownerregistration';
+import { CheckpointsPage } from "../checkpoints/checkpoints";
  
+import firebase from 'firebase';
+import { WatchmanregistrationPage } from '../watchmanregistration/watchmanregistration';
+
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-watchmanlogin',
+  templateUrl: 'watchmanlogin.html',
 })
-export class LoginPage {
-	
+export class WatchmanloginPage {
+
   email:string="";
   password:string="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
   }
 
   login(){
@@ -31,7 +27,7 @@ export class LoginPage {
         message: "Login Successful",
         duration: 3000
       }).present();
-      this.navCtrl.setRoot(OwnerdashboardPage);
+      this.navCtrl.setRoot(CheckpointsPage);
 
     })
     .catch((err)=>{
@@ -46,7 +42,7 @@ export class LoginPage {
   }
 
   onsignup(){
-  this.navCtrl.push(OwnerregistrationPage);
-  }
+    this.navCtrl.push(WatchmanregistrationPage);
+    }
 
 }

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-//import { LoginPage } from "../login/login";
-import { OwnerregistrationPage} from '../ownerregistration/ownerregistration';
-import { WatchmanregistrationPage } from '../watchmanregistration/watchmanregistration';
+import { LoginPage } from "../login/login";
+import { WatchmanloginPage } from "../watchmanlogin/watchmanlogin";
+//import { OwnerregistrationPage} from '../ownerregistration/ownerregistration';
+//import { WatchmanregistrationPage } from '../watchmanregistration/watchmanregistration';
 //import { SignupPage } from '../signup/signup';
 
 @Component({
@@ -16,11 +17,11 @@ export class HomePage {
   }
 
   ownerReg(){
-    this.navCtrl.push(OwnerregistrationPage);
+    this.navCtrl.push(LoginPage);
    }
    
   watchmanReg(){
-   this.navCtrl.push(WatchmanregistrationPage);
+   this.navCtrl.push(WatchmanloginPage);
   }
 
 }

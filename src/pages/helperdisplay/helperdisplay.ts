@@ -17,4 +17,8 @@ export class HelperdisplayPage {
     console.log('ionViewDidLoad HelperdisplayPage');
   }
 
+  goBack(){
+    this.navCtrl.pop();
+  }
+
 }

@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
 import {FlatlistPage} from "../flatlist/flatlist";
 
-/**
- * Generated class for the WingslistPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+ 
 
 @IonicPage()
 @Component({
@@ -43,4 +38,7 @@ export class WingslistPage {
     this.navCtrl.push(FlatlistPage);
     }
 
+    goBack(){
+      this.navCtrl.pop();
+    }
 }

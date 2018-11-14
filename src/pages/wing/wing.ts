@@ -39,5 +39,8 @@ export class WingPage {
     this.navCtrl.pop();
   }
 
+  goBack(){
+    this.navCtrl.pop();
+  }
 
 }

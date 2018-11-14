@@ -42,5 +42,7 @@ export class HelperPage {
         })
   }
 
-
+  goBack(){
+    this.navCtrl.pop();
+  }
 }

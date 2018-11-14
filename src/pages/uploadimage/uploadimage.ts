@@ -52,7 +52,7 @@ export class UploadimagePage {
         console.log(base64Image);
 
         this.image = "data:image/jpeg;base64," + base64Image;
-        console.log(this.image.small);
+        console.log(this.image);
         
         }).catch((err) => {
           console.log(err);
@@ -138,5 +138,9 @@ export class UploadimagePage {
         //   this.upload(this.userId);
         // }
      
+  }
+
+  goBack(){
+    this.navCtrl.pop();
   }
 }

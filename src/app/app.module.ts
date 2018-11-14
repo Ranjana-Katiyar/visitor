@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { WatchmanloginPage } from "../pages/watchmanlogin/watchmanlogin";
 import { CheckpointsPage } from "../pages/checkpoints/checkpoints";
 import { FlatownerPage } from '../pages/flatowner/flatowner';
 import { GuestformPage } from "../pages/guestform/guestform";
@@ -79,7 +80,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage, FlatPage, WingPage
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage
   ],
   imports: [
     BrowserModule,
@@ -110,7 +111,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage, FlatPage, WingPage
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage
   ],
   providers: [
     StatusBar,

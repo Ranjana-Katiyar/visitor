@@ -41,6 +41,8 @@ export class CitiesPage {
     this.navCtrl.push(SocietyregistrationPage);
     }
 
-
+    goBack(){
+      this.navCtrl.pop();
+    }
 
 }

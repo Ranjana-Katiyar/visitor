@@ -15,5 +15,8 @@ export class GuestformPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GuestformPage');
   }
-
+ 
+  goBack(){
+    this.navCtrl.pop();
+  }
 }

@@ -3,7 +3,7 @@ page-guestform {
         font-family: Georgia, serif;
         color: #fff;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 1em;
       }
     .s-color {
         font-family: Georgia, serif;
@@ -12,7 +12,7 @@ page-guestform {
       }
 
     .f-text{
-        font-size: 21px;
+        font-size: 2em;
     }
 
     ion-content{
@@ -32,12 +32,18 @@ page-guestform {
     ion-input {
         ::placeholder{
             color:rgb(72, 72, 77) !important;
-            font-size: 15px;
+            font-size: 1em;
             font-family: Georgia, serif;
             
        
              }
         }
+
+        h2{
+            font-family: Georgia, serif;
+            
+        }
+
 
     ion-label {
             color:rgb(72, 72, 77) !important;

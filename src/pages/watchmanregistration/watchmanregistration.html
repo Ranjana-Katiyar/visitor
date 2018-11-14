@@ -14,7 +14,7 @@
         </ion-item>
   
         <ion-item text-center no-lines>
-              <h1><span class="f-text">W</span><span class="w-text">ATCHMAN </span><span class="s-color"><span class="f-text">R</span><span class="w-text">EGISTRATION</span></span></h1>
+              <h2><span class="f-text">W</span><span class="w-text">ATCHMAN </span><span class="s-color"><span class="f-text">R</span><span class="w-text">EGISTRATION</span></span></h2>
               <h6>Fill in the details below</h6>
         </ion-item>
     </ion-grid>
@@ -23,27 +23,27 @@
         <form>
             <ion-row class="rowStyle">
                 <ion-icon name="contact" color="danger"></ion-icon>  
-                <ion-input type="text" placeholder="Name" name="f_name" [(ngModel)]="firstName" required></ion-input>
+                <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name" required></ion-input>
             </ion-row>
-    
-            <!-- <ion-row class="rowStyle">
-                <ion-icon ios="ios-person-add" md="md-person-add" color="danger"></ion-icon>
-                <ion-input type="text" placeholder="Last Name" name="l_name" [(ngModel)]="lastName" required></ion-input>
-            </ion-row> -->
+
+            <ion-row class="rowStyle">
+                    <ion-icon ios="ios-mail" md="md-mail" color="danger"></ion-icon>
+                    <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+            </ion-row>
     
             <ion-row class="rowStyle">
                 <ion-icon ios="ios-call" md="md-call" color="danger"></ion-icon>
-                <ion-input type="text" placeholder="Phone Number" name="p_number" [(ngModel)]="phoneNumber" required></ion-input>
+                <ion-input type="text" placeholder="Phone Number" name="p_number" [(ngModel)]="p_number" required></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <ion-icon ios="ios-podium" md="md-podium" color="danger"></ion-icon>
-                <ion-input type="text" placeholder="Registered Organization" name="r_organization" [(ngModel)]="registeredOrganization" required></ion-input>
+                <ion-input type="text" placeholder="Registered Organization" name="r_organization" [(ngModel)]="r_organization" required></ion-input>
             </ion-row>
     
             <ion-row class="rowStyle">
                 <ion-icon ios="ios-barcode" md="md-barcode" color="danger"></ion-icon>
-                <ion-input type="text" placeholder="Organization Id" name="a_number" [(ngModel)]="aadharNumber" required></ion-input>
+                <ion-input type="text" placeholder="Organization Id" name="a_number" [(ngModel)]="a_number" required></ion-input>
             </ion-row>
 
             <ion-row class="rowStyle">
@@ -52,7 +52,7 @@
                   </ion-row>
     
             <ion-row text-center>
-                <button ion-button block round color="danger" class="btnsubmit" (click)="postWatchmanDetail()">Submit</button>
+                <button ion-button block round color="danger" class="btnsubmit" (click)="watchmanRegister()">Submit</button>
             </ion-row>
         </form>
       </ion-grid>
