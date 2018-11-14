@@ -29,11 +29,12 @@ export class CitiesPage {
   }).then((docs) => {
     docs.forEach((doc) => {
       this.cities.push(doc);
-        // for (let i = 0 ; i<=this.cities.length; i++) {
-        //     //this.cities = doc.data().cityName;
-        //     this.city = this.cities[i];
-        //     this.city++;
-        // }
+      this.list = this.cities;
+        for (let i = 0 ; i<=this.list.length; i++) {
+            this.list[i] = doc.data().cityName;
+            this.list[i]++;
+            this.city = this.list[i];
+        }
     })
       //console.log(this.city + "this is city list")
     //this.values = this.societyIds(this.city)
@@ -45,13 +46,16 @@ export class CitiesPage {
 
 
     // allItems () {
-    //   firebase.firestore().collection("cities").get().then((results) => {
-    //     console.log(results);
-    //     this.city = results;
+    //   firebase.firestore().collection("cities").get().then((snapshot) => {
+    //     snapshot.docs.forEach((doc) => {
+    //         console.log(doc);
+    //     })
     //   }).catch((err)=> {
     //     console.log(err);
     //   })
     // }
+
+
 
 
     // societyIds (value) {
@@ -69,7 +73,8 @@ export class CitiesPage {
     //
     // }
   itemSelected() {
-    console.log(this.cities);
+      //this.allItems();
+    console.log(this.city);
       //this.navCtrl.push(SocietieslistPage);
   }
 
