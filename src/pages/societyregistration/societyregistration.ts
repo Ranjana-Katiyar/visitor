@@ -18,8 +18,8 @@ export class SocietyregistrationPage {
   state : string = "";
   authorities: any={};
   cityList: any = {};
-  myId: string = "";
-  private docRef: firebase.firestore.DocumentReference;
+  // myId: string = "";
+  // private docRef: firebase.firestore.DocumentReference;
   //owner : boolean;
 
 
@@ -27,17 +27,17 @@ export class SocietyregistrationPage {
   }
 
   postSocietyDetail() {
-    this.docRef = firebase.firestore().collection("societies").doc();
-    this.myId = this.docRef.id;
+    // this.docRef = firebase.firestore().collection("societies").doc();
+    // this.myId = this.docRef.id;
     this.authorities[firebase.auth().currentUser.uid] = true;
-    this.cityList = firebase.firestore().collection("cities").add({
-        cityName: this.city,
-       societyId: this.myId
-    }).then((doc) => {
-      console.log(doc);
-    }).catch((err) => {
-      console.log(err);
-    });
+    // this.cityList = firebase.firestore().collection("cities").add({
+    //     cityName: this.city,
+      //  societyId: this.myId
+    // }).then((doc) => {
+    //   console.log(doc);
+    // }).catch((err) => {
+    //   console.log(err);
+    // });
     firebase.firestore().collection("societies").add({
       //owner_id: firebase.auth().currentUser.uid,
       authorities: this.authorities,
@@ -49,6 +49,15 @@ export class SocietyregistrationPage {
       //city: this.cityList,
       state: this.state
     }).then((doc) => {
+      this.cityList = firebase.firestore().collection("cities").add({
+        cityName: this.city,
+      societyId: doc.id
+    }).then((doc) => {
+      console.log(doc);
+
+    }).catch((err) => {
+      console.log(err);
+    });
       this.navCtrl.push(WingPage);
       console.log(doc);
     }).catch((err) => {
