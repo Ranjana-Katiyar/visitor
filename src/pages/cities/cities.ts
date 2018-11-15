@@ -40,8 +40,6 @@ export class CitiesPage {
 
   }
   
-
-<<<<<<< HEAD
   uniqueCity(){
     firebase.firestore().collection("cities").orderBy("cityName").get().then((snapshot) => {
       snapshot.docs.forEach((doc) => {
@@ -58,43 +56,7 @@ export class CitiesPage {
       console.log(err);
     })
   }
-=======
-<<<<<<< HEAD
-    // allItems (city) {
-    //   firebase.firestore().collection("cities").get().then((snapshot) => {
-    //     snapshot.docs.forEach((doc) => {
-         
-    //         if(city==doc.data().cityName){
-    //           console.log(doc.data().societyId);
-    //         }
 
-    //     })
-    //   }).catch((err)=> {
-    //     console.log(err);
-    //   })
-    // }
-
-  itemSelected() {
-      //this.navCtrl.push(SocietieslistPage);
-=======
-    allItems (city) {
-      firebase.firestore().collection("cities").get().then((snapshot) => {
-        snapshot.docs.forEach((doc) => {
-            this.citylist.push(doc.data().cityName);
-            if(city==doc.data().cityName){
-              
-              console.log(doc.data().societyId);
-            }
-            
-        })
-
-        
-      }).catch((err)=> {
-        console.log(err);
-      })
-    }
-
->>>>>>> 36348bf14ab1fb5ec296be14f7035c9faa7a3393
 
   // function to remove duplicate elements in citylist array
   removeDuplicates(arr){
@@ -112,13 +74,9 @@ export class CitiesPage {
     this.navCtrl.push(SocietieslistPage, {data: city});
    }
     
-<<<<<<< HEAD
-=======
-     //this.navCtrl.push(SocietieslistPage);
->>>>>>> 89c3d26aace344e27dfe72d781bcbdc15bff4525
-  }
 
->>>>>>> 36348bf14ab1fb5ec296be14f7035c9faa7a3393
+
+
   addSocieties() {
     this.navCtrl.push(SocietyregistrationPage);
     
