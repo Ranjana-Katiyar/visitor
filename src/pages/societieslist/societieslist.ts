@@ -17,7 +17,7 @@ export class SocietieslistPage {
   societies : any[] = [];
   newCity : any[] = [];
   socname : any[] = [];
-   
+  s_name : any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
@@ -35,15 +35,11 @@ export class SocietieslistPage {
           snapshot.docs.forEach((doc) => {
               
               if(this.newCity==doc.data().cityname){
-                this.socname.push(doc.data().societyName);
-                
-                console.log(this.socname);
+                this.socname = doc.data().societyName;
+                this.s_name.push(this.socname);
+                console.log(this.s_name);
               }
-
-              
-
-              
-          })
+        })
           
     
         }).catch((err)=> {
