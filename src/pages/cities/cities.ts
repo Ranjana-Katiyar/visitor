@@ -15,7 +15,6 @@ export class CitiesPage {
   cities: any[] = [];
   values: any =[];
   city: any = [];
-  uniquecities: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
@@ -54,12 +53,8 @@ export class CitiesPage {
 
 
  
-  itemSelected(city) {
-     // this.allItems(city);
-    
-    console.log(city);
+  itemSelected() {
       //this.navCtrl.push(SocietieslistPage);
-   
   }
 
   addSocieties() {
