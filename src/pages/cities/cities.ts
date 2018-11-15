@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
 //import { SocietieslistPage } from '../societieslist/societieslist';
 import {SocietyregistrationPage} from "../societyregistration/societyregistration";
+import Observable from 'rxjs';
 
 @IonicPage()
 @Component({
@@ -14,7 +15,7 @@ export class CitiesPage {
   cities: any[] = [];
   values: any =[];
   city: any = [];
-  list: any = [];
+  uniquecities: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
@@ -27,21 +28,17 @@ export class CitiesPage {
   }).then((docs) => {
     docs.forEach((doc) => {
       this.cities.push(doc);
-      // this.list = this.cities;
-        // if(doc){
-        //   for (let i = 0 ; i<this.cities.length; i++) {
-        //     console.log("FOr loop start");
-        //     this.city[i] = doc.data().cityName;
-        //     console.log("getiing field value");
-        //     this.city[i]++;
-        //     this.list = this.city;
-        //  }
-        // }
+      Observable.merge(this.cities)
+      .distinct((x) => x.cityName)
+      .subscribe(y => {
+        this.uniquecities.push(y)
+        console.log(this.uniquecities);
+      });
           
         
     })
-      //console.log(this.city + "this is city list")
-    //this.values = this.societyIds(this.city)
+      
+     
     console.log(this.cities);
   }).catch((err) => {
     console.log(err);
@@ -64,24 +61,10 @@ export class CitiesPage {
 
 
 
-
-    // societyIds (value) {
-    //
-    //     // firebase.firestore().collection("cities").where("cityName", "==", list)
-    //     //     .get()
-    //     //     .then((snapshot) => {
-    //     //   snapshot.docs.forEach((document) => {
-    //     //       console.log("new function");
-    //     //     console.log(document.id, "=>", document.data());
-    //     //   });
-    //     //     }).catch((err) => {
-    //     //   console.log(err);
-    //     // })
-    //
-    // }
+ 
   itemSelected(city) {
       this.allItems(city);
-    //console.log(this.list);
+    
     console.log(city);
       //this.navCtrl.push(SocietieslistPage);
    
