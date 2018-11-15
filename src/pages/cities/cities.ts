@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import firebase from 'firebase';
-//import { SocietieslistPage } from '../societieslist/societieslist';
 import {SocietyregistrationPage} from "../societyregistration/societyregistration";
-import {Observable} from 'rxjs/Rx';
 
 @IonicPage()
 @Component({
@@ -35,7 +32,6 @@ export class CitiesPage {
       })
   }
 
-
     // allItems (city) {
     //   firebase.firestore().collection("cities").get().then((snapshot) => {
     //     snapshot.docs.forEach((doc) => {
@@ -49,10 +45,7 @@ export class CitiesPage {
     //     console.log(err);
     //   })
     // }
-
-
-
- 
+  
   itemSelected() {
       //this.navCtrl.push(SocietieslistPage);
   }
