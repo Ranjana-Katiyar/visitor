@@ -46,7 +46,7 @@ export class SocietyregistrationPage {
       societyName: this.societyName,
       address: this.address,
       postalCode: this.postalCode,
-      //city: this.city,
+      cityname: this.city,
       state: this.state
     }).then((doc) => {
       this.cityList = firebase.firestore().collection("cities").add({

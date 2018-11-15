@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header color="navcolour">
 
     <ion-navbar color="navcolour">
   
@@ -6,16 +6,16 @@
   
           <ion-item color="navcolour" style="margin-bottom: -15px;">
   
-            <button ion-button icon-only clear (click) = "goBack()" item-start>
+            <!-- <button ion-button icon-only clear (click) = "goBack()" item-start>
               <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
-            </button>
+            </button> -->
   
-            <h3><span class="f-text">V</span>ISITORS &nbsp;<span class="s-color"><span class="f-text">C</span>HECK</span></h3>
+            <h3><span class="f-text">S</span>ELECT &nbsp;<span class="s-color"><span class="f-text">F</span>LAT</span></h3>
          
          
-            <button ion-button icon-only clear (click) = "logOut()" item-end >
+            <!-- <button ion-button icon-only clear (click) = "logOut()" item-end >
               <ion-icon name="log-out"></ion-icon>
-            </button>
+            </button> -->
   
           </ion-item>
   
@@ -28,9 +28,9 @@
 
 <ion-content no-padding>
     <ion-grid style="width: 100%; padding-top: 30px;">
-        <h2>Select Your Flat</h2>
+        
           <ion-list>
-            <button ion-item *ngFor="let flat of flats" (click)="itemSelected()">
+            <button ion-item   class="item-background"  *ngFor="let flat of flats" (click)="itemSelected()">
               {{ flat.data().flatNumber }}
             </button>
           </ion-list>
