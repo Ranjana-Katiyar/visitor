@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
 import {SocietyregistrationPage} from "../societyregistration/societyregistration";
+import { SocietieslistPage } from '../societieslist/societieslist';
 
 @IonicPage()
 @Component({
@@ -13,16 +14,13 @@ export class CitiesPage {
   values: any =[];
   city: any = [];
   citylist: any =[];
-  
-  remove: any = [];
+  socId: any = [];
+  uniquecitylist: any = [];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
-   
-  
-   
-    
-  }
+    this.uniqueCity();
+ }
 
   items() {
     
@@ -32,70 +30,56 @@ export class CitiesPage {
         docs.forEach((doc) => {
           this.cities.push(doc);
       })
-      
+        
         console.log(this.cities);
-         
+        
+
       }).catch((err) => {
         console.log(err);
       })
 
   }
+  
 
-    allItems (city) {
-      firebase.firestore().collection("cities").get().then((snapshot) => {
-        snapshot.docs.forEach((doc) => {
-            this.citylist.push(doc.data().cityName);
-            if(city==doc.data().cityName){
-              
-              console.log(doc.data().societyId);
-            }
-            
-        })
+  uniqueCity(){
+    firebase.firestore().collection("cities").orderBy("cityName").get().then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+          this.citylist.push(doc.data().cityName);
+       })
+       // list of all the cityNames in cities array
+      console.log(this.citylist);
+       // list of all the unique elements in citylist array
 
-        
-      }).catch((err)=> {
-        console.log(err);
-      })
-    }
-
+          this.uniquecitylist =  this.removeDuplicates(this.citylist);
+          console.log(this.uniquecitylist);
+      
+    }).catch((err)=> {
+      console.log(err);
+    })
+  }
 
   // function to remove duplicate elements in citylist array
-
-
-   removeDuplicates(arr){
-      let unique_array = []
-      for(let i = 0;i < arr.length; i++){
-          if(unique_array.indexOf(arr[i]) == -1){
-              unique_array.push(arr[i])
-          }
-      }
-      return unique_array;
+  removeDuplicates(arr){
+    let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
+        }
+    }
+    return unique_array;
   }
-  
-  
 
-  
+
   itemSelected(city) {
-    console.log(city);
-    this.allItems (city);
-
-    // list of all the cityNames in cities array
-
-    console.log(this.citylist);
-
-    // list of all the unique elements in citylist array
-
-    this.remove =  this.removeDuplicates(this.citylist);
-    console.log(this.remove);
+    this.navCtrl.push(SocietieslistPage, {data: city});
+   }
     
-     //this.navCtrl.push(SocietieslistPage);
-  }
-
   addSocieties() {
     this.navCtrl.push(SocietyregistrationPage);
-    }
+    
+  }
 
-    goBack(){
+  goBack(){
       this.navCtrl.pop();
     }
 

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
 import { OwnerregistrationPage } from '../ownerregistration/ownerregistration';
-import {CitiesPage} from "../cities/cities";
+
+import { OwnerdashboardPage } from '../ownerdashboard/ownerdashboard';
  
 @IonicPage()
 @Component({
@@ -30,7 +31,7 @@ export class LoginPage {
         message: "Login Successful",
         duration: 3000
       }).present();
-      this.navCtrl.setRoot(CitiesPage);
+      this.navCtrl.setRoot(OwnerdashboardPage);
 
     })
     .catch((err)=>{

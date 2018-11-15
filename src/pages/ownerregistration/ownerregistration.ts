@@ -17,7 +17,7 @@ export class OwnerregistrationPage {
 	myValue:string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
-    this.ownerRegister();
+    
   }
 
   ownerRegister(){

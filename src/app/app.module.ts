@@ -11,16 +11,13 @@ import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { WatchmanloginPage } from "../pages/watchmanlogin/watchmanlogin";
 import { CheckpointsPage } from "../pages/checkpoints/checkpoints";
-import { FlatownerPage } from '../pages/flatowner/flatowner';
 import { GuestformPage } from "../pages/guestform/guestform";
-import { SocietydetailsPage } from "../pages/societydetails/societydetails";
 import { UploadimagePage } from "../pages/uploadimage/uploadimage";
 import { OwnerdashboardPage } from "../pages/ownerdashboard/ownerdashboard";
 
 import firebase from 'firebase';
 import { SocietyregistrationPage } from '../pages/societyregistration/societyregistration';
 import { WatchmanregistrationPage } from '../pages/watchmanregistration/watchmanregistration';
-import { VisitorformPage } from "../pages/visitorform/visitorform";
 import { OwnerregistrationPage } from "../pages/ownerregistration/ownerregistration";
 import { CitiesPage } from "../pages/cities/cities";
 import { FileChooser } from '@ionic-native/file-chooser';
@@ -62,13 +59,10 @@ firebase.firestore().settings({
     SignupPage,
     LoginPage,
     CheckpointsPage,
-    FlatownerPage,
     GuestformPage,
-    SocietydetailsPage,
     UploadimagePage,
     SocietyregistrationPage,
     WatchmanregistrationPage,
-    VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
     OwnerdashboardPage,
@@ -93,13 +87,10 @@ firebase.firestore().settings({
     SignupPage,
     LoginPage,
     CheckpointsPage,
-    FlatownerPage,
     GuestformPage,
-    SocietydetailsPage,
     UploadimagePage,
     SocietyregistrationPage,
     WatchmanregistrationPage,
-    VisitorformPage,
     OwnerregistrationPage,
     CitiesPage,
     OwnerdashboardPage,

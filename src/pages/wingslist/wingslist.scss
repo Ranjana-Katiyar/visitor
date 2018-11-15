@@ -22,9 +22,15 @@ page-wingslist {
     
      }
 
-     h2{
-        font-family: Georgia, serif;
-        padding-bottom: 10px;
+     .item-background{
+        background: transparent;
+        padding-top: 20px;
+        
+    }
+
+    .item-background h3{
+        color: #2E2E26;
+        font-size: 1.2em;
         padding-left: 10px;
     }
 }

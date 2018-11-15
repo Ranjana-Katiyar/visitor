@@ -39,7 +39,7 @@ page-checkpoints {
         margin-left: 8px;
         margin-right: 0%;
         margin-top: 15px;
-        
+        background: linear-gradient(to bottom, rgb(238, 211, 57) 0%, #FF9900 50%, #FF6600 100%);
     }
     .colmclass img{
         height: 60px;
@@ -52,19 +52,26 @@ page-checkpoints {
         font-weight: 500;
         padding: 5px 5px;
         margin: 5px 0px;
-        color: #fff ;
+        //color: #fff ;
 
     }
 
-    .textbg{
-        width: 109%;
-        position: relative;
-        top: 9%;
-        right: 0%;
-        left: -4%;
-        background: linear-gradient(to bottom, #FF9900 0%, #FF6600 100%);
-        opacity: 0.9;
+    .textbg h3{
+        width: 100%;
+        color: #fff;
+        font-weight: 600; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif; 
     }
+
+    // .textbg{
+    //     width: 109%;
+    //     position: relative;
+    //     top: 9%;
+    //     right: 0%;
+    //     left: -4%;
+    //     background: linear-gradient(to bottom, #FF9900 0%, #FF6600 100%);
+    //     opacity: 0.9;
+    // }
 
     .midcolm{
         padding: 10px 10px;

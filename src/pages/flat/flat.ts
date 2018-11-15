@@ -24,11 +24,7 @@ export class FlatPage {
       this.flatList = firebase.firestore().collection("flats").add({
         flatNumber: this.flat,
         owner_id: firebase.auth().currentUser.uid
-
-   
-
-          
-      }).then((doc) => {
+        }).then((doc) => {
         this.flat = "";
         console.log(doc);
         this.toastCtrl.create({
@@ -42,6 +38,7 @@ export class FlatPage {
     }
 
     moveToDashboard(){
+      this.addNewInputField();
       this.navCtrl.push(OwnerdashboardPage);
     }
     
