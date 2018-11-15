@@ -18,10 +18,6 @@ export class CitiesPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
-   
-  
-   
-    
   }
 
   items() {
@@ -41,24 +37,6 @@ export class CitiesPage {
 
   }
 
-<<<<<<< HEAD
-    // allItems (city) {
-    //   firebase.firestore().collection("cities").get().then((snapshot) => {
-    //     snapshot.docs.forEach((doc) => {
-         
-    //         if(city==doc.data().cityName){
-    //           console.log(doc.data().societyId);
-    //         }
-
-    //     })
-    //   }).catch((err)=> {
-    //     console.log(err);
-    //   })
-    // }
-
-  itemSelected() {
-      //this.navCtrl.push(SocietieslistPage);
-=======
     allItems (city) {
       firebase.firestore().collection("cities").get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
@@ -67,18 +45,13 @@ export class CitiesPage {
               
               console.log(doc.data().societyId);
             }
-            
         })
-
-        
       }).catch((err)=> {
         console.log(err);
       })
     }
 
-
   // function to remove duplicate elements in citylist array
-
 
    removeDuplicates(arr){
       let unique_array = []
@@ -96,18 +69,15 @@ export class CitiesPage {
   itemSelected(city) {
     console.log(city);
     this.allItems (city);
-
     // list of all the cityNames in cities array
-
-    console.log(this.citylist);
+      console.log(this.citylist);
 
     // list of all the unique elements in citylist array
-
     this.remove =  this.removeDuplicates(this.citylist);
     console.log(this.remove);
-    
-     //this.navCtrl.push(SocietieslistPage);
->>>>>>> 89c3d26aace344e27dfe72d781bcbdc15bff4525
+
+    //this.navCtrl.push(SocietieslistPage);
+
   }
 
   addSocieties() {
