@@ -36,7 +36,7 @@
                         <ion-icon name="add"></ion-icon>
                     </button>
             </ion-item>
-            <button ion-item *ngFor="let city of cities" (click)="itemSelected()">
+            <button ion-item *ngFor="let city of cities" (click)="itemSelected(city.data().cityName)">
             {{ city.data().cityName }}
             </button> 
     </ion-list>

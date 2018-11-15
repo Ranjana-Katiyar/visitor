@@ -28,15 +28,15 @@ export class CitiesPage {
     docs.forEach((doc) => {
       this.cities.push(doc);
       // this.list = this.cities;
-        if(doc){
-          for (let i = 0 ; i<this.cities.length; i++) {
-            console.log("FOr loop start");
-            this.city[i] = doc.data().cityName;
-            console.log("getiing field value");
-            this.city[i]++;
-            this.list = this.city;
-         }
-        }
+        // if(doc){
+        //   for (let i = 0 ; i<this.cities.length; i++) {
+        //     console.log("FOr loop start");
+        //     this.city[i] = doc.data().cityName;
+        //     console.log("getiing field value");
+        //     this.city[i]++;
+        //     this.list = this.city;
+        //  }
+        // }
           
         
     })
@@ -49,15 +49,18 @@ export class CitiesPage {
   }
 
 
-    // allItems () {
-    //   firebase.firestore().collection("cities").get().then((snapshot) => {
-    //     snapshot.docs.forEach((doc) => {
-    //         console.log(doc);
-    //     })
-    //   }).catch((err)=> {
-    //     console.log(err);
-    //   })
-    // }
+    allItems (city) {
+      firebase.firestore().collection("cities").get().then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+         
+            if(city==doc.data().cityName){
+              console.log(doc.data().societyId);
+            }
+        })
+      }).catch((err)=> {
+        console.log(err);
+      })
+    }
 
 
 
@@ -76,10 +79,12 @@ export class CitiesPage {
     //     // })
     //
     // }
-  itemSelected() {
-      //this.allItems();
-    console.log(this.list);
+  itemSelected(city) {
+      this.allItems(city);
+    //console.log(this.list);
+    console.log(city);
       //this.navCtrl.push(SocietieslistPage);
+   
   }
 
   addSocieties() {
