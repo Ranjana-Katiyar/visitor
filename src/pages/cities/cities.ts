@@ -12,9 +12,16 @@ export class CitiesPage {
   cities: any[] = [];
   values: any =[];
   city: any = [];
-
+  citylist: any =[];
+  
+  remove: any = [];
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
+   
+  
+   
+    
   }
 
   items() {
@@ -27,27 +34,61 @@ export class CitiesPage {
       })
       
         console.log(this.cities);
+         
       }).catch((err) => {
         console.log(err);
       })
+
   }
 
-    // allItems (city) {
-    //   firebase.firestore().collection("cities").get().then((snapshot) => {
-    //     snapshot.docs.forEach((doc) => {
-         
-    //         if(city==doc.data().cityName){
-    //           console.log(doc.data().societyId);
-    //         }
+    allItems (city) {
+      firebase.firestore().collection("cities").get().then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+            this.citylist.push(doc.data().cityName);
+            if(city==doc.data().cityName){
+              
+              console.log(doc.data().societyId);
+            }
+            
+        })
 
-    //     })
-    //   }).catch((err)=> {
-    //     console.log(err);
-    //   })
-    // }
+        
+      }).catch((err)=> {
+        console.log(err);
+      })
+    }
+
+
+  // function to remove duplicate elements in citylist array
+
+
+   removeDuplicates(arr){
+      let unique_array = []
+      for(let i = 0;i < arr.length; i++){
+          if(unique_array.indexOf(arr[i]) == -1){
+              unique_array.push(arr[i])
+          }
+      }
+      return unique_array;
+  }
   
-  itemSelected() {
-      //this.navCtrl.push(SocietieslistPage);
+  
+
+  
+  itemSelected(city) {
+    console.log(city);
+    this.allItems (city);
+
+    // list of all the cityNames in cities array
+
+    console.log(this.citylist);
+
+    // list of all the unique elements in citylist array
+
+    this.remove =  this.removeDuplicates(this.citylist);
+    console.log(this.remove);
+    
+     //this.navCtrl.push(SocietieslistPage);
   }
 
   addSocieties() {
