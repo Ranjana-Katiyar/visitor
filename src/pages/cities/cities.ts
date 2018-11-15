@@ -23,47 +23,39 @@ export class CitiesPage {
 
   items() {
     
-  firebase.firestore().collection("cities").orderBy("cityName").get({
+      firebase.firestore().collection("cities").orderBy("cityName").get({
 
-  }).then((docs) => {
-    docs.forEach((doc) => {
-      this.cities.push(doc);
-      Observable.merge(this.cities)
-      .distinct((x) => x.cityName)
-      .subscribe(y => {
-        this.uniquecities.push(y)
-        console.log(this.uniquecities);
-      });
-          
-        
-    })
+      }).then((docs) => {
+        docs.forEach((doc) => {
+          this.cities.push(doc);
+      })
       
-     
-    console.log(this.cities);
-  }).catch((err) => {
-    console.log(err);
-  })
+        console.log(this.cities);
+      }).catch((err) => {
+        console.log(err);
+      })
   }
 
 
-    allItems (city) {
-      firebase.firestore().collection("cities").get().then((snapshot) => {
-        snapshot.docs.forEach((doc) => {
+    // allItems (city) {
+    //   firebase.firestore().collection("cities").get().then((snapshot) => {
+    //     snapshot.docs.forEach((doc) => {
          
-            if(city==doc.data().cityName){
-              console.log(doc.data().societyId);
-            }
-        })
-      }).catch((err)=> {
-        console.log(err);
-      })
-    }
+    //         if(city==doc.data().cityName){
+    //           console.log(doc.data().societyId);
+    //         }
+
+    //     })
+    //   }).catch((err)=> {
+    //     console.log(err);
+    //   })
+    // }
 
 
 
  
   itemSelected(city) {
-      this.allItems(city);
+     // this.allItems(city);
     
     console.log(city);
       //this.navCtrl.push(SocietieslistPage);
