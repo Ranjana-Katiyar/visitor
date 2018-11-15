@@ -45,7 +45,7 @@ export class CitiesPage {
     //     console.log(err);
     //   })
     // }
-  
+
   itemSelected() {
       //this.navCtrl.push(SocietieslistPage);
   }
