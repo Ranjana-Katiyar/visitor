@@ -1,8 +1,9 @@
 page-login {
  h1 {
         font-family: Georgia, serif;
-        color: #fff;
-        font-weight: 600;
+        //color: #fff;
+        color: #0C7262;
+        font-weight: 800;
         padding-bottom: 20px;
         margin-top: -10px;
       }
@@ -18,16 +19,17 @@ page-login {
     }
 
     h6{
-        color: #fff;
+       // color: #fff;
+       color: #0C7262;
         font-family: Georgia, serif;
     }
 
-    ion-content{
-        .scroll-content{
-          background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
-        }
+    // ion-content{
+    //     .scroll-content{
+    //       background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
+    //     }
     
-      }
+    //   }
     
     .item{
       background: transparent;
@@ -44,17 +46,20 @@ page-login {
         padding-left: 10px;
         border-radius: 30px;
         margin-top: 12px;
+        border: 2px solid #000;
     
         ion-icon {
           margin-top: 12px;
           margin-right: 10px;
           font-size: 18px;
+          color: #0C7262;
         }
       }
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+            //color:rgb(72, 72, 77) !important;
+            color:#0C7262 !important;
             font-size: 1em;
             font-family: Georgia, serif;
             
@@ -65,7 +70,8 @@ page-login {
 
     #bottomtext{
       padding-left:5px;
-      color:#fff !important;
+     // color:#fff !important;
+     color: #0C7262 !important;
       font-size: 1em;
       }
 

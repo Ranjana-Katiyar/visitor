@@ -15,16 +15,17 @@ page-dailyupdates {
         font-size: 2em;
     }
 
-    ion-content{
-        .scroll-content{
-            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
-        }
+    // ion-content{
+    //     .scroll-content{
+    //         background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+    //     }
     
-     }
+    //  }
 
      h2{
         font-family: Georgia, serif;
         padding-bottom: 10px;
+        color: #0C7262;
     }
     
     .input-background{
@@ -38,5 +39,6 @@ page-dailyupdates {
 
     .icon-size{
         font-size: 2em;
+        color:#fff;
     }
 }

@@ -30,8 +30,8 @@
     
         
         <ion-list>
-          <button ion-item   class="item-background"  *ngFor="let wing of wings" (click)="itemSelected()">
-            {{ wing.data().wingName }}
+          <button ion-item   class="item-background"  *ngFor="let wing of wingnames" (click)="itemSelected(wing)">
+            <h3>{{ wing.data().wingName }}</h3>
           </button>
         </ion-list>
 

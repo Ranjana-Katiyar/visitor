@@ -29,8 +29,8 @@
 <ion-content no-padding>
   <ion-list>
     
-    <button ion-item class="item-background" *ngFor="let soc of s_name" (click)="itemSelected(soc)">
-      {{ soc }}
+    <button ion-item class="item-background" *ngFor="let soc of socname" (click)="itemSelected(soc)">
+      <h3>{{ soc.data().societyName }}</h3>
     </button>
 
   </ion-list>

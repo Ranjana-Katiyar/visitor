@@ -1,8 +1,9 @@
 page-ownerregistration {
     h2{
         font-family: Georgia, serif;
-        color: #fff;
-        font-weight: 600;
+        //color: #fff;
+        color: #0C7262;
+        font-weight: 800;
         padding-bottom: 10px;
         margin-top: -30px;
       }
@@ -16,28 +17,29 @@ page-ownerregistration {
 
     .f-text{
         font-size: 2em;
-    }
+     }
 
     .w-text{
       font-size: 20px;
-    }
+     }
 
     h6{
-        color: #fff;
+        //color: #fff;
+        color: #209482;
         font-family: Georgia, serif;
-    }
+     }
 
-    ion-content{
-        .upperbg{
-          background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
-        }
+    // ion-content{
+    //     .upperbg{
+    //       background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
+    //     }
     
-      }
+    //   }
 
     .form-bg{
     	background: #fff;
     	margin-top: 40px;
-    }
+     }
     
     .item{
       background: transparent;
@@ -52,7 +54,7 @@ page-ownerregistration {
     .fileinput{
     	border-bottom: 1px solid #fff !important;
 
-    }
+     }
 
     .textinput{
     	border-radius: 3px;
@@ -62,7 +64,8 @@ page-ownerregistration {
 
     ion-input:focus{
     	 
-    	border-bottom: 1px solid #fff !important;
+      //border-bottom: 1px solid #fff !important;
+      border-bottom: 1px solid #0C7262 !important;
     }
 
     .btnsubmit{
@@ -72,11 +75,12 @@ page-ownerregistration {
     	//background: linear-gradient(to bottom, rgba(247, 87, 69, 1) 0%, rgba(229, 27, 27, 1) 100% );
     }
 
-	ion-label{
-		color: #424242 !important;
-		font-family: Georgia, serif;
-		font-size: 17px;
-	}
+    ion-label{
+      //color: #424242 !important;
+      color: #0C7262 !important;
+      font-family: Georgia, serif;
+      font-size: 17px;
+    }
 
 
 	.rowStyle {
@@ -90,12 +94,14 @@ page-ownerregistration {
           margin-top: 12px;
           margin-right: 10px;
           font-size: 18px;
+          color: #1a7568 !important;
         }
       }
 
       #bottomtext{
       padding-left:5px;
-      color:#424242 !important; 
+     // color:#424242 !important; 
+        color: #0C7262 !important;
       }
 
       .rowStylefile{
@@ -111,7 +117,9 @@ page-ownerregistration {
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+          //color:rgb(72, 72, 77) !important;
+            //color:#209482 !important;
+            color:#0C7262 !important;
             font-size: 15px;
             font-family: Georgia, serif;
             

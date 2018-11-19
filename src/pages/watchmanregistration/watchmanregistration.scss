@@ -23,16 +23,17 @@ page-watchmanregistration {
     }
 
     h6{
-        color: #fff;
+        //color: #fff;
+        color: #0C7262;
         font-family: Georgia, serif;
     }
 
-    ion-content{
-        .upperbg{
-          background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
-        }
+    // ion-content{
+    //     .upperbg{
+    //       background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
+    //     }
     
-      }
+    //   }
 
     .form-bg{
     	background: #fff;
@@ -62,7 +63,8 @@ page-watchmanregistration {
 
     ion-input:focus{
     	 
-    	border-bottom: 1px solid #fff !important;
+      //border-bottom: 1px solid #fff !important;
+      border-bottom: 1px solid #0C7262 !important;
     }
 
     .btnsubmit{
@@ -73,7 +75,8 @@ page-watchmanregistration {
     }
 
 	ion-label{
-		color: #424242 !important;
+    //color: #424242 !important;
+    color: #0C7262 !important;
 		font-family: Georgia, serif;
 		font-size: 17px;
 	}
@@ -95,7 +98,8 @@ page-watchmanregistration {
 
       #bottomtext{
       padding-left:5px;
-      color:#424242 !important; 
+      //color:#424242 !important; 
+      color: #0C7262 !important; 
       }
 
       .rowStylefile{

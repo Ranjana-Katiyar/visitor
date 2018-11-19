@@ -13,9 +13,15 @@ import {FlatlistPage} from "../flatlist/flatlist";
 export class WingslistPage {
 
   wings : any[] = [];
+  selectedsocid : any[] = [];
+  wingnames: any[] = [];
+  wingsel: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items();
+    this.selectedsocid = navParams.get('data');
+    console.log("Selected society:");
+    console.log(this.selectedsocid);
   }
 
   // ionViewDidLoad() {
@@ -27,15 +33,31 @@ export class WingslistPage {
       docs.forEach((doc) => {
         this.wings.push(doc);
       })
-        console.log(this.wings);
+
+                firebase.firestore().collection("wings").orderBy("wingName").get().then((snapshot) => {
+                  snapshot.docs.forEach((doc) => {
+                      
+                      if(this.selectedsocid==doc.data().addedSocietyId){
+                       
+                        this.wingnames.push(doc);
+                        console.log(this.wingnames);
+                      }
+                })
+                  
+            
+                }).catch((err)=> {
+                  console.log(err);
+                })
+
+        //console.log(this.wings);
 
     }).catch((err) => {
       console.log(err);
     })
   }
 
-    itemSelected() {
-    this.navCtrl.push(FlatlistPage);
+    itemSelected(wingsel) {
+    this.navCtrl.push(FlatlistPage, {data: wingsel.id});
     }
 
     goBack(){

@@ -27,12 +27,12 @@
 
 
 <ion-content no-padding>
-    <ion-grid style="width: 100%; padding-top: 30px;">
+    
         
           <ion-list>
-            <button ion-item   class="item-background"  *ngFor="let flat of flats" (click)="itemSelected()">
-              {{ flat.data().flatNumber }}
+            <button ion-item   class="item-background"  *ngFor="let flat of selectedflat" (click)="itemSelected(flat.data().flatNumber)">
+              <h3>{{ flat.data().flatNumber }}</h3>
             </button>
           </ion-list>
-    </ion-grid>
+   
 </ion-content>

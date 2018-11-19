@@ -15,16 +15,17 @@ page-vehicledetails {
         font-size: 2em;
     }
 
-    ion-content{
-        .scroll-content{
-            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
-        }
+    // ion-content{
+    //     .scroll-content{
+    //         background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+    //     }
     
-     }
+    //  }
  
     
     .input-color h3{
-        color: #000;
+        //color: #000;
+        color: #0C7262;
         font-weight: 600;
         font-size: 18px;
     }
@@ -37,6 +38,20 @@ page-vehicledetails {
 
      
 
+    ion-input {
+        ::placeholder{
+          //color:rgb(72, 72, 77) !important;
+            //color:#209482 !important;
+            color:#0C7262 !important;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            
+           
+                 }
+            }
+     
+    
+           
     .radiobg{
         background: transparent;
     }

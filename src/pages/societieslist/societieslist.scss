@@ -15,12 +15,12 @@ page-societieslist {
         font-size: 2em;
     }
 
-    ion-content{
-        .scroll-content{
-            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
-        }
+    // ion-content{
+    //     .scroll-content{
+    //         background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+    //     }
     
-    }
+    // }
     
     .item-background{
         background: transparent;
@@ -29,7 +29,8 @@ page-societieslist {
     }
 
     .item-background h3{
-        color: #2E2E26;
+        //color: #2E2E26;
+        color: #0C7262;
         font-size: 1.2em;
         padding-left: 10px;
     }

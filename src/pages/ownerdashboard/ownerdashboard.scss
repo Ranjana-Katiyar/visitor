@@ -15,20 +15,21 @@ page-ownerdashboard {
         font-size: 2em;
     }
 
-    ion-content{
-        .scroll-content{
-            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
-        }
+    // ion-content{
+    //     .scroll-content{
+    //         background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+    //     }
     
-     }
+    //  }
     
       
     .colmclass{
-        border-left: 5px solid #FF6600;
-        border-style: inset;
+        //border-left: 5px solid #FF6600;
+        border-left: 3px solid #0C7262;
+        border-style: ridge;
         text-align: center;
         border-radius: 4px;
-        box-shadow: 2px 2px fff;
+        box-shadow: 2px 2px #0C7262;
     }
 
     ion-row{
@@ -39,7 +40,7 @@ page-ownerdashboard {
         margin-left: 8px;
         margin-right: 0%;
         margin-top: 15px;
-        background: linear-gradient(to bottom, rgb(238, 211, 57) 0%, #FF9900 50%, #FF6600 100%);
+        //background: linear-gradient(to bottom, rgb(238, 211, 57) 0%, #FF9900 50%, #FF6600 100%);
         
     }
     .colmclass img{
@@ -53,13 +54,15 @@ page-ownerdashboard {
         font-weight: 500;
         padding: 5px 5px;
        
-        
-
     }
 
+    ion-icon{
+        color: #fff;
+    }
     .textbg h3{
         width: 100%;
-        color: #fff;
+        //color: #fff;
+        color: #0C7262;
         font-weight: 600; 
         font-family: Verdana, Geneva, Tahoma, sans-serif; 
     }

@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { CitiesPage } from '../pages/cities/cities';
 import {HomePage} from "../pages/home/home";
  
+ 
 
 
 @Component({

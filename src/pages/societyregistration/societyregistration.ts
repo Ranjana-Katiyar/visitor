@@ -18,6 +18,9 @@ export class SocietyregistrationPage {
   state : string = "";
   authorities: any={};
   cityList: any = {};
+  updatewing: any[] = [];
+  societyname: string = "";
+  societyAddedId: string ="";
   // myId: string = "";
   // private docRef: firebase.firestore.DocumentReference;
   //owner : boolean;
@@ -51,15 +54,19 @@ export class SocietyregistrationPage {
     }).then((doc) => {
       this.cityList = firebase.firestore().collection("cities").add({
         cityName: this.city,
-      societyId: doc.id
+        societyId: doc.id
     }).then((doc) => {
+      
       console.log(doc);
-
+      
     }).catch((err) => {
       console.log(err);
     });
-      this.navCtrl.push(WingPage);
-      console.log(doc);
+      console.log("Society Registered");
+     console.log(doc);
+     this.societyAddedId = doc.id;
+     this.navCtrl.push(WingPage, {data: this.societyAddedId});
+    
     }).catch((err) => {
       console.log(err);
     })

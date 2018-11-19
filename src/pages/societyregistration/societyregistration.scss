@@ -21,14 +21,15 @@ h2{
     h6{
         color: #fff;
         font-family: Georgia, serif;
+        color: #0C7262;
     }
 
-    ion-content{
-        .upperbg{
-          background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
-        }
+    // ion-content{
+    //     .upperbg{
+    //       background: linear-gradient(to bottom, #FFCC66 0%, #FF9900 100%);
+    //     }
     
-      }
+    //   }
 
     .form-bg{
     	background: #fff;
@@ -69,7 +70,8 @@ h2{
     }
 
 	ion-label{
-		color: #424242 !important;
+    //color: #424242 !important;
+    color: #0C7262 !important;
 		font-family: Georgia, serif;
 		font-size: 17px;
 	}
@@ -91,7 +93,8 @@ h2{
 
       #bottomtext{
       padding-left:5px;
-      color:#424242 !important; 
+      //color:#424242 !important; 
+      color: #0C7262 !important;
       }
 
       .rowStylefile{

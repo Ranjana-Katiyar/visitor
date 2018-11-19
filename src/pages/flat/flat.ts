@@ -13,8 +13,13 @@ export class FlatPage {
   authorities: any={};
   flatList: any={}; 
   flat: string="";
+  addwingid: string="";
+  wingId: string="";
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
-    
+     this.addwingid = navParams.get('data');
+     console.log("Added wingy:");
+     console.log(this.addwingid);
   }  
     addNewInputField()
     {
@@ -23,7 +28,9 @@ export class FlatPage {
       this.authorities[firebase.auth().currentUser.uid] = true;
       this.flatList = firebase.firestore().collection("flats").add({
         flatNumber: this.flat,
-        owner_id: firebase.auth().currentUser.uid
+        owner_id: firebase.auth().currentUser.uid,
+        wingId: this.addwingid
+
         }).then((doc) => {
         this.flat = "";
         console.log(doc);
@@ -40,6 +47,10 @@ export class FlatPage {
     moveToDashboard(){
       this.addNewInputField();
       this.navCtrl.push(OwnerdashboardPage);
+    }
+    
+    addNewWing(){
+      this.navCtrl.pop();
     }
     
     goBack(){

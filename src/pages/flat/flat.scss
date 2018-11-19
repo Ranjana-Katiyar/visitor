@@ -15,16 +15,17 @@ page-flat {
         font-size: 2em;
     }
 
-    ion-content{
-        .scroll-content{
-            background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
-        }
+    // ion-content{
+    //     .scroll-content{
+    //         background: linear-gradient(to bottom right, rgb(238, 211, 57) 0%, rgba(238, 227, 126, 0.938) 30%, #FF9900 100% );
+    //     }
     
-     }
+    //  }
 
     h2{
         font-family: Georgia, serif;
         text-align: center;
+        color: #0C7262;
     }
 
     .rowStyle {
@@ -46,7 +47,8 @@ page-flat {
 
     .inputStyle{
         background: transparent !important;
-        border-bottom: 1px solid #fff;
+        //border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #0C7262;
     }
    
 }

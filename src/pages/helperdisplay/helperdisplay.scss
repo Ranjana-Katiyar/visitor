@@ -30,7 +30,7 @@ page-helperdisplay {
           right: 0;
           bottom: 0;
           left: 0;
-          background-image: linear-gradient(to bottom right,#FFCC66,#FF9900);
+          background-image: linear-gradient(to bottom right, rgb(68, 129, 120),#0C7262);
           opacity: .6; 
         }
     }
@@ -41,6 +41,7 @@ page-helperdisplay {
         padding-top: 20px;
         font-size: 2em !important;
         text-align: center;
+        color: #0C7262;
     }
 
     h4{
