@@ -1,27 +1,28 @@
 page-watchmanlogin {
-    h1 {
-        font-family: Georgia, serif;
-        color: #fff;
-        font-weight: 600;
-        padding-bottom: 20px;
-        margin-top: -10px;
-      }
-    .s-color {
-        font-family: Georgia, serif;
-        color: #2E2E26;
-        font-weight: 600;
-        
-      }
+  h1 {
+    font-family: Georgia, serif;
+    //color: #fff;
+    color: #0C7262;
+    font-weight: 800;
+    //padding-bottom: 20px;
+    margin-top: -20px;
+  }
+.s-color {
+    font-family: Georgia, serif;
+    color: #2E2E26;
+    font-weight: 600;
+    
+  }
 
-    .f-text{
-        font-size: 2em;
-    }
+.f-text{
+    font-size: 2em;
+}
 
-    h6{
-       // color: #fff;
-        color: #0C7262;
-        font-family: Georgia, serif;
-    }
+h6{
+   // color: #fff;
+   color: #0C7262;
+    font-family: Georgia, serif;
+}
 
     // ion-content{
     //     .scroll-content{
@@ -37,7 +38,7 @@ page-watchmanlogin {
     .logo{
         font-size: 25vh;
         margin-top: 25px;
-        
+        margin-bottom: -10px;
       }
     
     .rowStyle {
@@ -45,6 +46,7 @@ page-watchmanlogin {
         padding-left: 10px;
         border-radius: 30px;
         margin-top: 12px;
+        border: 2px solid #000;
     
         ion-icon {
           margin-top: 12px;
@@ -56,7 +58,8 @@ page-watchmanlogin {
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+            //color:rgb(72, 72, 77) !important;
+            color:#0C7262 !important;
             font-size: 1em;
             font-family: Georgia, serif;
             
@@ -67,7 +70,7 @@ page-watchmanlogin {
 
     #bottomtext{
       padding-left:5px;
-      //color:#fff !important;
+      // color:#fff !important;
       color: #0C7262 !important;
       font-size: 1em;
       }
@@ -81,4 +84,9 @@ page-watchmanlogin {
     h6{
       text-align: center;
     }
+
+    .logo-img{
+      height: 200px;
+      width: 180px;
+     }
 }

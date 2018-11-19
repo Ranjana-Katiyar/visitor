@@ -38,7 +38,7 @@ page-ownerregistration {
 
     .form-bg{
     	background: #fff;
-    	margin-top: 40px;
+    	//margin-top: 40px;
      }
     
     .item{
@@ -115,6 +115,11 @@ page-ownerregistration {
       color: blue;
       }
 
+      .logo-img{
+        height: 180px;
+        width: 180px;
+       }
+
     ion-input {
         ::placeholder{
           //color:rgb(72, 72, 77) !important;
@@ -126,4 +131,6 @@ page-ownerregistration {
            
                  }
             }
+
+            
 }

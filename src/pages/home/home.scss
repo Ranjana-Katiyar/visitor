@@ -1,5 +1,5 @@
 page-home {
-.hero-bkg-animated {
+    .hero-bkg-animated {
         background: url('../../assets/imgs/bg3.png') repeat 0 0;
         width: 100%;
         margin: 0;
@@ -14,12 +14,14 @@ page-home {
       .hero-bkg-animated h1 {
         font-family: Georgia, serif;
         color: #2E2E26;
+        //color: #0C7262;
         font-weight: 600;
         padding-bottom: 20px;
       }
       .hero-bkg-animated .s-color {
         font-family: Georgia, serif;
-        color: #585856;
+        //color: #585856;
+        color: #0C7262;
         font-weight: 600;
       }
       
@@ -48,13 +50,16 @@ page-home {
         bottom: 0px;
    }
 
-    
+   .logo-img{
+        height: 350px;
+        width: 200px;
+   }
 
     .f-text{
         font-size: 2em;
     }
 
-    .hero-bkg-animated .guard-img{
+    .hero-bkg-animated .logo-img{
         padding-top: 40%;
         padding-bottom: 20px;
     }
