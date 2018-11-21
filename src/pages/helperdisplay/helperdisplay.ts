@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
+import firebase from 'firebase';
 
 
 @IonicPage()
@@ -10,11 +10,48 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HelperdisplayPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  helpers : any[] = [];
+  name: string="";
+  helpername : any[] = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public modalCtrl: ModalController) {
+    this.helperdetails();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HelperdisplayPage');
+  helperdetails(){
+    firebase.firestore().collection("helpers").orderBy("helperName").get().then((docs) => {
+      docs.forEach((doc) => {
+        this.helpers.push(doc);
+      })  
+      console.log("Helpers List")
+      console.log(this.helpers);
+       
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
+  createAlert(){
+    this.alertCtrl.create({
+      title: 'Are you sure?',
+      buttons: [
+        {
+          text: "Confirm",
+          // cssClass: 'stylealert',
+          handler: () => {
+             
+          }
+        },
+        {
+          text: "Cancel",
+          role: 'cancel',
+          // cssClass: 'stylealert',
+          handler: () => {
+             
+          }
+        }  
+      ]
+    }).present();
   }
 
   goBack(){

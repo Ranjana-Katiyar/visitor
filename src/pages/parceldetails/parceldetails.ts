@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
- 
+import firebase from 'firebase'; 
 
 @IonicPage()
 @Component({
@@ -12,17 +12,43 @@ export class ParceldetailsPage {
 
   // testRadioOpen: boolean;
   // testRadioResult;
-  image: string;
-    imageSrc: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  image: string;
+  name: string="";
+  vehicle_number: string="";
+  mobile_number: string="";
+  company: string="";
+  intime: string="";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController,
     private camera: Camera,) {
    
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ParceldetailsPage');
+  submit_parcel_details(){
+    firebase.firestore().collection("parcels").add({
+     
+      owner_name: firebase.auth().currentUser.displayName,
+      created: firebase.firestore.FieldValue.serverTimestamp(),
+      parcelMenName: this.name,
+      mobileNumber: this.mobile_number,
+      vehicleNumber: this.vehicle_number,
+      company: this.company,
+      inTime: this.intime
+  
+      }).then((doc) => {
+      
+        this.toastCtrl.create({
+          message: "Details Registered",
+          duration: 1000
+        }).present();
+      
+        
+      }).catch((err) => {
+        console.log(err);
+      })
   }
+
 
   takePhoto() {
     this.launchCamera();

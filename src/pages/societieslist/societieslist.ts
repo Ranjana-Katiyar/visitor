@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import firebase from 'firebase';
 import {WingslistPage} from "../wingslist/wingslist";
  
@@ -34,7 +33,7 @@ export class SocietieslistPage {
       
       firebase.firestore().collection("societies").orderBy("societyName").get().then((snapshot) => {
           snapshot.docs.forEach((doc) => {
-              
+                          
               if(this.newCity==doc.data().cityname){
                // this.socname = doc.data().societyName;
                 //this.s_name.push(this.socname);

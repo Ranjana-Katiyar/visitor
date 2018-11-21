@@ -44,11 +44,11 @@
             </ion-row>
   
             <ion-row class="rowStyle">
-                <ion-input type="text" placeholder="Bookie name" name="b_name" [(ngModel)]="b_name"></ion-input>
+                <ion-input type="text" placeholder="Bookie name" name="bookie_name" [(ngModel)]="bookie_name"></ion-input>
             </ion-row>
   
             <ion-row text-center>
-                <button ion-button block round color="subbtn" class="btnsubmit">Submit</button>
+                <button ion-button block round color="subbtn" class="btnsubmit" (click) = "submit_cab_details()">Submit</button>
             </ion-row>
         </form>
       </ion-grid>

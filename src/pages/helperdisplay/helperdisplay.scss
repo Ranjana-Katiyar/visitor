@@ -20,7 +20,7 @@ page-helperdisplay {
         position: relative;
         width: 100%;
         height: 100%;
-        background: url('../../assets/imgs/flat3.jpeg') center center no-repeat;
+        //background: url('../../assets/imgs/flat3.jpeg') center center no-repeat;
         background-size: cover;
         
         &:before {
@@ -30,7 +30,7 @@ page-helperdisplay {
           right: 0;
           bottom: 0;
           left: 0;
-          background-image: linear-gradient(to bottom right, rgb(68, 129, 120),#0C7262);
+          //background-image: linear-gradient(to bottom right, rgb(137, 169, 177),#0C7262);
           opacity: .6; 
         }
     }
@@ -66,4 +66,17 @@ page-helperdisplay {
         //color: #000 !important;
         color: #0C7262 !important;
     }
+
+    .logout{
+        color: #fff;
+    }
+
+    .name_style{
+        color: #0C7262 !important;
+        padding: 5px;
+    }
+
+    // .stylealert title{
+    //     color: #0C7262 !important;
+    // }
 }

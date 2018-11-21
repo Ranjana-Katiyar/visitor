@@ -21,11 +21,6 @@ export class UploadimagePage {
       private camera: Camera, public toastCtrl: ToastController) {
     }
 
-
-    ionViewDidLoad() {
-      console.log('ionViewDidLoad UploadimagePage');
-    }
-
     takePhoto() {
       this.launchCamera();
     }
@@ -53,6 +48,7 @@ export class UploadimagePage {
 
         this.image = "data:image/jpeg;base64," + base64Image;
         console.log(this.image);
+        
         
         }).catch((err) => {
           console.log(err);
