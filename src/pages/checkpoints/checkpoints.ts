@@ -6,6 +6,7 @@ import { LoginPage } from "../login/login";
 import { GuestformPage } from "../guestform/guestform";
 import { CabdetailsPage } from "../cabdetails/cabdetails";
 import { ParceldetailsPage } from "../parceldetails/parceldetails";
+import { HelperdisplayPage } from '../helperdisplay/helperdisplay';
  
 
 @IonicPage()
@@ -48,6 +49,10 @@ export class CheckpointsPage {
 
   parcelDetails(){
     this.navCtrl.push(ParceldetailsPage);
+  }
+
+  goToHelper(){
+    this.navCtrl.push(HelperdisplayPage);
   }
 
   goBack(){

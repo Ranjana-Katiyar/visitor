@@ -2,7 +2,8 @@ page-helper {
     h3 {
         font-family: Georgia, serif;
         color: #fff;
-        font-weight: 600;
+        
+        font-weight: 800;
         font-size: 1em;
       }
     .s-color {
@@ -33,11 +34,21 @@ page-helper {
         padding-left: 10px;
         border-radius: 30px;
         margin: 12px 0px;
+        border: 2px solid #000;
+    }
+
+    ion-icon {
+        color: #fff;
+    }
+  
+    button p{
+        color: #fff;
     }
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+             //color:rgb(72, 72, 77) !important;
+             color:#0C7262 !important;
             font-size: 1em;
             font-family: Georgia, serif;
             

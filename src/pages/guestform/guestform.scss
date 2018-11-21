@@ -27,11 +27,13 @@ page-guestform {
         padding-left: 10px;
         border-radius: 30px;
         margin: 12px 0px;
+        border: 2px solid #000;
     }
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+            //color:rgb(72, 72, 77) !important;
+            color:#0C7262 !important;
             font-size: 1em;
             font-family: Georgia, serif;
             
@@ -44,9 +46,17 @@ page-guestform {
             color: #0C7262;
         }
 
+    ion-datetime{
+        color:#0C7262 !important;
+            font-size: 1em;
+            font-family: Georgia, serif;
+            
+    }
+
 
     ion-label {
-            color:rgb(72, 72, 77) !important;
+            //color:rgb(72, 72, 77) !important;
+            color:#0C7262 !important;
             font-size: 15px !important;
             font-family: Georgia, serif !important;
             padding-left: 7px;

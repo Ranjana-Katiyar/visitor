@@ -28,45 +28,54 @@
 
 
 <ion-content no-padding>
-  <ion-grid>
+    <ion-grid style="padding-top:20px;">
     <ion-row>
       <ion-col col-5 class = "colmclass" (click) = "guestDetails()">
-          <img src="../../assets/imgs/guest--in.png">
+          <img src="../../assets/imgs/guestin.png">
           <div class = "textbg"><h3>GUEST IN</h3></div>
       </ion-col>
       <ion-col col-1 class="midcolm">
       </ion-col>
       <ion-col col-5 class = "colmclass">
-          <img src="../../assets/imgs/guest--out.png">
+          <img src="../../assets/imgs/guestout.png">
           <div class = "textbg"><h3>GUEST OUT</h3></div>
         </ion-col>
     </ion-row>
 
     <ion-row>
-        <ion-col col-5 class = "colmclass" (click) = "goToVisitor()">
-          <img src="../../assets/imgs/helper--in.png">
+        <ion-col col-5 class = "colmclass" (click) = "goToHelper()">
+          <img src="../../assets/imgs/helperin.png">
           <div class = "textbg"><h3>HELPER IN</h3></div>
         </ion-col>
         <ion-col col-1 class="midcolm">
           </ion-col>
         <ion-col col-5 class = "colmclass">
-            <img src="../../assets/imgs/helper--out.png">
+            <img src="../../assets/imgs/helperout.png">
             <div class = "textbg"><h3>HELPER OUT</h3></div>
           </ion-col>
       </ion-row>
 
       <ion-row>
           <ion-col col-5 class = "colmclass" (click) = "cabDetails()">
-            <img src="../../assets/imgs/cab-.png">
+            <img src="../../assets/imgs/cab.png">
             <div class = "textbg"><h3>CAB DRIVER</h3></div>
           </ion-col>
           <ion-col col-1 class="midcolm">
             </ion-col>
           <ion-col col-5 class = "colmclass" (click) = "parcelDetails()">
-              <img src="../../assets/imgs/parcel-.png">
+              <img src="../../assets/imgs/parcel.png">
               <div class = "textbg"><h3>YOUR PARCEL</h3></div>
             </ion-col>
         </ion-row>
+
+        <!-- <ion-row>
+            <ion-col col-5 class = "colmclass">
+          <button ion-button>
+            <img src="../../assets/imgs/parcel.png" style="padding: 10px 15px; height: 60px;
+            width: 60px;">
+          </button>
+          </ion-col>
+        </ion-row> -->
   </ion-grid>
 
 </ion-content>

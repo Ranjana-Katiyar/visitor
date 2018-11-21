@@ -33,11 +33,13 @@ page-parceldetails {
         padding-left: 10px;
         border-radius: 30px;
         margin: 12px 0px;
+        border: 2px solid #000;
     }
 
     ion-input {
         ::placeholder{
-            color:rgb(72, 72, 77) !important;
+            //color:rgb(72, 72, 77) !important;
+            color: #0C7262 !important;
             font-size: 1em;
             font-family: Georgia, serif;
             
@@ -51,6 +53,10 @@ page-parceldetails {
              font-size: 1em !important;
              font-family: Georgia, serif !important;
              padding-left: 7px;
+    } 
+
+    ion-datetime{
+        color: #0C7262 !important;
     }
 
     .itemStyle{
