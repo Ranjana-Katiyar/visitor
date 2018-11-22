@@ -18,13 +18,11 @@ export class FlatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
      this.addwingid = navParams.get('data');
-     console.log("Added wingy:");
+     console.log("Added wings:");
      console.log(this.addwingid);
   }  
     addNewInputField()
     {
-
-
       this.authorities[firebase.auth().currentUser.uid] = true;
       this.flatList = firebase.firestore().collection("flats").add({
         flatNumber: this.flat,

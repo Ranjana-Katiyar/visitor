@@ -14,7 +14,7 @@ export class OwnerregistrationPage {
   p_number:string = "";
   email:string ="";
   password:string = "";
-	myValue:string = "";
+  myValue:string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     
@@ -88,7 +88,7 @@ export class OwnerregistrationPage {
   getMyValue() {
     return this.myValue;
   }
-  
 
+ 
 }
 

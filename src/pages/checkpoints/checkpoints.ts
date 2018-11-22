@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 
 import firebase from 'firebase';
 import { LoginPage } from "../login/login";
@@ -7,6 +7,7 @@ import { GuestformPage } from "../guestform/guestform";
 import { CabdetailsPage } from "../cabdetails/cabdetails";
 import { ParceldetailsPage } from "../parceldetails/parceldetails";
 import { HelperdisplayPage } from '../helperdisplay/helperdisplay';
+import { GuestdisplayPage } from '../guestdisplay/guestdisplay';
  
 
 @IonicPage()
@@ -16,16 +17,8 @@ import { HelperdisplayPage } from '../helperdisplay/helperdisplay';
 })
 export class CheckpointsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public alertCtrl: AlertController) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckpointsPage');
-  }
-
-  // goToFlat(){
-  //   this.navCtrl.push(FlatnoPage);
-  // }
 
   logOut(){
     firebase.auth().signOut().then(()=>{
@@ -40,7 +33,27 @@ export class CheckpointsPage {
   }
 
   guestDetails(){
-    this.navCtrl.push(GuestformPage);
+     this.alertCtrl.create({
+        title: "Select the category",
+        buttons: [
+          {
+            text: "New Guest",
+            cssClass: 'buttonClass',
+            handler: () => {
+              this.navCtrl.push(GuestformPage);
+            }
+          },
+          {
+            text: "Old Guest",
+            cssClass: 'buttonClass',
+            handler: () => {
+              this.navCtrl.push(GuestdisplayPage);
+            }
+          }  
+        ]
+      }).present();
+   
+   
   }
 
   cabDetails(){

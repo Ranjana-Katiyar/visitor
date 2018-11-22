@@ -17,14 +17,6 @@ export class OwnerdashboardPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OwnerdashboardPage');
-  }
-
-  // goToVisitor(){
-  //   this.navCtrl.push(VisitorformPage);
-  // }
-
   logOut(){
     firebase.auth().signOut().then(()=>{
       let toast = this.toastCtrl.create({

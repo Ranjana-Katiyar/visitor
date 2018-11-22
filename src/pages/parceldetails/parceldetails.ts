@@ -83,6 +83,8 @@ export class ParceldetailsPage {
     this.navCtrl.pop();
   }
 
+ 
+
   // doRadio() {
   //   let alert = this.alertCtrl.create();
   //   alert.setTitle('Lightsaber color');

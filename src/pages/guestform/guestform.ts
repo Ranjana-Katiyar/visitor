@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import firebase from 'firebase';
+import { GuestdisplayPage } from '../guestdisplay/guestdisplay';
 
 @IonicPage()
 @Component({
@@ -38,6 +39,7 @@ export class GuestformPage {
         message: "Details Registered",
         duration: 1000
       }).present();
+      this.navCtrl.push(GuestdisplayPage);
     
       
     }).catch((err) => {

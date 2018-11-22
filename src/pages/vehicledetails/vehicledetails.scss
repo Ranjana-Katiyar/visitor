@@ -33,7 +33,7 @@ page-vehicledetails {
     .inputbg{
         margin-top: 10px;
         border-radius: 6px;
-        
+       
     }
 
      
@@ -55,4 +55,14 @@ page-vehicledetails {
     .radiobg{
         background: transparent;
     }
+
+    ion-icon{
+        color: #fff;
+    }
+
+    .btnstyle{
+        padding: 25px 45px !important;
+        font-size: 1.1em !important;
+    }
+     
 }

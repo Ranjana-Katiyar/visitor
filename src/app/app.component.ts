@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { VehicledetailsPage } from '../pages/vehicledetails/vehicledetails';
 //import { HomePage } from "../pages/home/home";
-import { CheckpointsPage } from '../pages/checkpoints/checkpoints';
+
 
  
 
@@ -13,7 +14,7 @@ import { CheckpointsPage } from '../pages/checkpoints/checkpoints';
 })
 export class MyApp {
 
-  rootPage:any = CheckpointsPage;
+  rootPage:any = VehicledetailsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

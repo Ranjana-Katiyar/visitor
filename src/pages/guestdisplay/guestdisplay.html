@@ -1,0 +1,50 @@
+ 
+<ion-header>
+
+  <ion-navbar color="navcolour">
+
+    <ion-list no-lines color="navcolour">
+
+        <ion-item color="navcolour" style="margin-bottom: -15px;">
+
+          <!-- <button ion-button icon-only clear (click) = "goBack()" item-start>
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+          </button> -->
+
+          <h3><span class="f-text">G</span>UEST &nbsp;<span class="s-color"><span class="f-text">D</span>ETAIL</span></h3>
+       
+       
+          <button ion-button icon-only clear (click) = "logOut()" item-end >
+            <ion-icon name="log-out" class="logout"></ion-icon>
+          </button>
+
+        </ion-item>
+
+    </ion-list>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-img">
+  <ion-grid no-padding  style="padding-top: 30px; text-align: left;">
+    
+       <ion-card *ngFor="let guest of guests">
+      
+          <ion-list>
+            <ion-item>
+              <button ion-item  (click) = "createAlert()">
+                  <ion-avatar item-start>
+                      <img src="../../assets/imgs/guestin.png" style="height: 60px; width: 60px;">
+                    </ion-avatar>
+                    <h3 class = "name_style">{{ guest.data().guestName }}</h3>
+                    <ion-icon ios="ios-arrow-dropright" md="ios-arrow-dropright-outline" item-end></ion-icon>
+              </button>
+            </ion-item>
+          </ion-list>
+          
+       
+       </ion-card>
+  </ion-grid>
+</ion-content>
