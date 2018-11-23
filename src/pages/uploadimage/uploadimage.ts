@@ -14,8 +14,10 @@ import firebase from 'firebase';
 export class UploadimagePage {
 
     image: string="";
-    imageSrc: string="";
+    //imageSrc: string="";
     userId: string="";
+    owner_id: string="";
+    documentId: string="";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
       private camera: Camera, public toastCtrl: ToastController) {
@@ -57,20 +59,22 @@ export class UploadimagePage {
 
     //Function to open gallery
     openGallery() {
-      let CameraOptions: CameraOptions = {
+     // let CameraOptions: CameraOptions = {
+        const options: CameraOptions = {
         quality: 100,
         sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-        destinationType: this.camera.DestinationType.FILE_URI,
+        destinationType: this.camera.DestinationType.DATA_URL,
         encodingType: this.camera.EncodingType.JPEG,
         correctOrientation: true,
-        targetHeight: 512,
-        targetWidth: 512
+        allowEdit: true,
+        targetHeight: 312,
+        targetWidth: 312
       }
 
-      this.camera.getPicture(CameraOptions).then((file_uri) => {
+      this.camera.getPicture(options).then((file_uri) => {
         console.log(file_uri);
         
-        this.imageSrc = file_uri;
+        this.image = "data:image/jpeg;base64," + file_uri;
  
       }).catch((err) => {
         console.log(err);
@@ -113,8 +117,13 @@ export class UploadimagePage {
           })
         })
       })
-  }
- 
+    }
+
+
+  
+  
+
+  
 
     goToNextpage(){
       
@@ -127,16 +136,27 @@ export class UploadimagePage {
       if(this.image){
           this.userId = firebase.auth().currentUser.uid;
           console.log(this.userId);
-          this.upload(this.userId);
-      }
-        // else if(this.imageSrc){
-        //   let this.userId = firebase.auth().currentUser.uid;
-        //   this.upload(this.userId);
-        // }
-     
-  }
+          firebase.firestore().collection("owners").orderBy("Name").get().then((snapshot) => {
+            snapshot.docs.forEach((doc) => {
+                
+                if(this.userId==doc.data().owner_id){
+                  this.documentId = doc.id;
+                  
+                }
+           })
+            // end of foreach
+            console.log(this.documentId);
+            this.upload(this.documentId);
+          }).catch((err)=> {
+            console.log(err);
+          })
+       }
+    }
 
   goBack(){
     this.navCtrl.pop();
-  }
+    }
+
+   
+ 
 }

@@ -14,17 +14,18 @@ export class VehicledetailsPage {
   owner_id: string="";
   vehfunc: any;
   documentId: string="";
-  btn2: any;
-  btn4: any;
+  // btn2: any;
+  // btn4: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-    this.btn2 = document.getElementById("2w");
-    this.btn2.addEventListener("click", (e:Event) => this.showPrompt(2));
-    this.btn4 = document.getElementById("4w");
-    this.btn4.addEventListener("click", (e:Event) => this.showPrompt(4));
+    // this.btn2 = document.getElementById('2w');
+    // this.btn2.addEventListener("click", (e:Event) => this.showPrompt(2));
+
+    // this.btn4 = document.getElementById("4w");
+    // this.btn4.addEventListener("click", (e:Event) => this.showPrompt(4));
   }
  
-  showPrompt(n:number) {
+  showPrompt() {
     const prompt = this.alertCtrl.create({
       title: 'Vehicle Number',
       inputs: [
@@ -47,7 +48,7 @@ export class VehicledetailsPage {
             console.log('Vehicle no saved');
             console.log(data.title);
             this.v_number = data.title;
-            this.vehfunc =  this.update_owner(n);   
+            this.vehfunc =  this.update_owner();   
             console.log("Function call");
           }
         }
@@ -60,16 +61,15 @@ export class VehicledetailsPage {
     this.navCtrl.pop();
   }
 
-  update_owner(n:number){
+  update_owner(){
     this.owner_id = firebase.auth().currentUser.uid;
     firebase.firestore().collection("owners").orderBy("Name").get().then((snapshot) => {
       snapshot.docs.forEach((doc) => {
           
           if(this.owner_id==doc.data().owner_id){
             this.documentId = doc.id;
-            if(n==2){
               firebase.firestore().collection("owners").doc(this.documentId).update({
-                "vehicleNumber.twowheeler": this.v_number
+                vehicleNumber: this.v_number
               }).then(() =>{
                
                 console.log("vehicle added to owner");
@@ -78,23 +78,10 @@ export class VehicledetailsPage {
                 console.log("error");
               })
             }
-            else if(n==4){
-              firebase.firestore().collection("owners").doc(this.documentId).update({
-                "vehicleNumber.fourwheeler": this.v_number
-              }).then(() =>{
-               
-                console.log("vehicle added to owner");
-                
-              }).catch((err) =>{
-                console.log("error");
-              })
-            }
-            
-          }
           
      
     })
-      
+      // end of foreach
 
     }).catch((err)=> {
       console.log(err);

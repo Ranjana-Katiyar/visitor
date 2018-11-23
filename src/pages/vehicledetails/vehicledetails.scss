@@ -63,6 +63,14 @@ page-vehicledetails {
     .btnstyle{
         padding: 25px 45px !important;
         font-size: 1.1em !important;
+        border: 2px solid #4A9185  ;
+        border-style: double;
+        background: linear-gradient(to bottom right, #9fd4cc 0%, #0C7262 100% );
     }
-     
+    
+    .substyle{
+        padding: 0px 0px !important;
+        font-size: 1.2em !important;
+        margin: 0px !important;
+    }
 }

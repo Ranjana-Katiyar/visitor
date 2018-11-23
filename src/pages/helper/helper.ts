@@ -36,12 +36,17 @@ export class HelperPage {
       flatNumber: this.flat
 
     }).then((doc) => {
-     
-      this.toastCtrl.create({
+      if(this.image){
+         
+        this.upload(doc.id);
+      }
+        
+        this.toastCtrl.create({
         message: "Details Registered",
         duration: 1000
       }).present();
-     
+
+      
       
     }).catch((err) => {
       console.log(err);
@@ -67,11 +72,7 @@ export class HelperPage {
       console.log(base64Image);
 
       this.image = "data:image/jpeg;base64," + base64Image;
-      if(this.image){
-        this.userId = firebase.auth().currentUser.uid;
-        console.log(this.userId);
-        this.upload(this.userId);
-    }
+      
 
       }).catch((err) => {
         console.log(err);
