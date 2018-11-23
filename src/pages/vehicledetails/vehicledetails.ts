@@ -20,8 +20,8 @@ export class VehicledetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.btn2 = document.getElementById("2w");
     this.btn2.addEventListener("click", (e:Event) => this.showPrompt(2));
-    let btn4 = document.getElementById("4w");
-    btn4.addEventListener("click", (e:Event) => this.showPrompt(4));
+    this.btn4 = document.getElementById("4w");
+    this.btn4.addEventListener("click", (e:Event) => this.showPrompt(4));
   }
  
   showPrompt(n:number) {
