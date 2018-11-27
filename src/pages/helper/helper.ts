@@ -36,10 +36,10 @@ export class HelperPage {
       flatNumber: this.flat
 
     }).then((doc) => {
-      if(this.image){
-         
-        this.upload(doc.id);
-      }
+        if(this.image){
+          
+          this.upload(doc.id);
+        }
         
         this.toastCtrl.create({
         message: "Details Registered",
