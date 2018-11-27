@@ -41,8 +41,6 @@ export class FlatlistPage {
                 }).catch((err)=> {
                   console.log(err);
                 })
-      
-      // console.log(this.flats);
 
     }).catch((err) => {
       console.log(err);

@@ -54,7 +54,6 @@ export class HelperPage {
 
   }
 
-  //Function to launch Camera
   takePhoto() {
     let options: CameraOptions = {
       quality: 100,
@@ -79,7 +78,6 @@ export class HelperPage {
         })
   }
 
-  // Upload Image in Fire Storage for launchCamera() function
   upload(name:string) {
 
     return new Promise((resolve, reject) =>{

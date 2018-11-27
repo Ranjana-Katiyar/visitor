@@ -37,7 +37,6 @@ export class HelperdisplayPage {
       buttons: [
         {
           text: "Confirm",
-          // cssClass: 'stylealert',
           handler: () => {
              
           }
@@ -45,7 +44,6 @@ export class HelperdisplayPage {
         {
           text: "Cancel",
           role: 'cancel',
-          // cssClass: 'stylealert',
           handler: () => {
              
           }

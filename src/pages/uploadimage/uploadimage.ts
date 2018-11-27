@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { CitiesPage } from '../cities/cities';
-// import {OwnerregistrationPage} from "../ownerregistration/ownerregistration";
 import firebase from 'firebase';
  
 @IonicPage()
@@ -14,7 +13,6 @@ import firebase from 'firebase';
 export class UploadimagePage {
 
     image: string="";
-    //imageSrc: string="";
     userId: string="";
     owner_id: string="";
     documentId: string="";
@@ -31,7 +29,6 @@ export class UploadimagePage {
       this.openGallery();
     }
 
-    //Function to launch Camera
     launchCamera() {
       let options: CameraOptions = {
         quality: 100,
@@ -56,10 +53,7 @@ export class UploadimagePage {
           console.log(err);
           })
     }
-
-    //Function to open gallery
     openGallery() {
-     // let CameraOptions: CameraOptions = {
         const options: CameraOptions = {
         quality: 100,
         sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
@@ -83,8 +77,6 @@ export class UploadimagePage {
       
     }
 
-
-    // Upload Image in Fire Storage for launchCamera() function
     upload(name:string) {
 
       return new Promise((resolve, reject) =>{
@@ -144,7 +136,6 @@ export class UploadimagePage {
                   
                 }
            })
-            // end of foreach
             console.log(this.documentId);
             this.upload(this.documentId);
           }).catch((err)=> {

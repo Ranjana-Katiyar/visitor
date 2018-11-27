@@ -37,7 +37,6 @@ export class GuestdisplayPage {
         buttons: [
           {
             text: "Confirm",
-            // cssClass: 'stylealert',
             handler: () => {
                
             }
@@ -45,7 +44,6 @@ export class GuestdisplayPage {
           {
             text: "Cancel",
             role: 'cancel',
-            // cssClass: 'stylealert',
             handler: () => {
                
             }
