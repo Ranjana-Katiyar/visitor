@@ -14,16 +14,8 @@ export class VehicledetailsPage {
   owner_id: string="";
   vehfunc: any;
   documentId: string="";
-  // btn2: any;
-  // btn4: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-    // this.btn2 = document.getElementById('2w');
-    // this.btn2.addEventListener("click", (e:Event) => this.showPrompt(2));
-
-    // this.btn4 = document.getElementById("4w");
-    // this.btn4.addEventListener("click", (e:Event) => this.showPrompt(4));
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
  
   showPrompt() {
     const prompt = this.alertCtrl.create({

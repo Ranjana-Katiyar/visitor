@@ -21,28 +21,15 @@ export class SocietyregistrationPage {
   updatewing: any[] = [];
   societyname: string = "";
   societyAddedId: string ="";
-  // myId: string = "";
-  // private docRef: firebase.firestore.DocumentReference;
-  //owner : boolean;
-
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   postSocietyDetail() {
-    // this.docRef = firebase.firestore().collection("societies").doc();
-    // this.myId = this.docRef.id;
+
     this.authorities[firebase.auth().currentUser.uid] = true;
-    // this.cityList = firebase.firestore().collection("cities").add({
-    //     cityName: this.city,
-      //  societyId: this.myId
-    // }).then((doc) => {
-    //   console.log(doc);
-    // }).catch((err) => {
-    //   console.log(err);
-    // });
+
     firebase.firestore().collection("societies").add({
-      //owner_id: firebase.auth().currentUser.uid,
       authorities: this.authorities,
       owner_name: firebase.auth().currentUser.displayName,
       created: firebase.firestore.FieldValue.serverTimestamp(),

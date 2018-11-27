@@ -24,10 +24,6 @@ export class WingslistPage {
     console.log(this.selectedsocid);
   }
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad WingslistPage');
-  // }
-
   items() {
     firebase.firestore().collection("wings").get().then((docs) => {
       docs.forEach((doc) => {
@@ -48,9 +44,6 @@ export class WingslistPage {
                 }).catch((err)=> {
                   console.log(err);
                 })
-
-        //console.log(this.wings);
-
     }).catch((err) => {
       console.log(err);
     })

@@ -46,10 +46,7 @@ export class CitiesPage {
       snapshot.docs.forEach((doc) => {
           this.citylist.push(doc.data().cityName);
        })
-       // list of all the cityNames in cities array
       console.log(this.citylist);
-       // list of all the unique elements in citylist array
-
           this.uniquecitylist =  this.removeDuplicates(this.citylist);
           console.log(this.uniquecitylist);
       
@@ -58,7 +55,6 @@ export class CitiesPage {
     })
   }
 
-  // function to remove duplicate elements in citylist array
   removeDuplicates(arr){
     let unique_array = []
     for(let i = 0;i < arr.length; i++){
@@ -72,12 +68,7 @@ export class CitiesPage {
 
   itemSelected(city) {
     this.navCtrl.push(SocietieslistPage, {data: city});
-
-     //this.navCtrl.push(SocietieslistPage);
-
   }
-
-
 
   addSocieties() {
     this.navCtrl.push(SocietyregistrationPage);
