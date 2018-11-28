@@ -10,10 +10,11 @@ import firebase from 'firebase';
 })
 export class VehicledetailsPage {
 
-  v_number: string="";
+  v_number: any={};
   owner_id: string="";
   vehfunc: any;
   documentId: string="";
+  //data: string = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
  
@@ -39,7 +40,8 @@ export class VehicledetailsPage {
           handler: data => {
             console.log('Vehicle no saved');
             console.log(data.title);
-            this.v_number = data.title;
+            //this.data = data.title
+            this.v_number["Number"] = data.title;
             this.vehfunc =  this.update_owner();   
             console.log("Function call");
           }
