@@ -15,6 +15,7 @@ export class VehicledetailsPage {
   vehfunc: any;
   documentId: string="";
   //data: string = "";
+  count: number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
  
@@ -39,9 +40,9 @@ export class VehicledetailsPage {
           text: 'Save',
           handler: data => {
             console.log('Vehicle no saved');
-            console.log(data.title);
-            //this.data = data.title
-            this.v_number["Number"] = data.title;
+           //this.data = data.title
+              console.log(data.title);
+            this.v_number[this.count++] = data.title;
             this.vehfunc =  this.update_owner();   
             console.log("Function call");
           }
