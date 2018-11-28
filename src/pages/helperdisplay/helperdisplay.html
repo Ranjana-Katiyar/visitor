@@ -27,14 +27,19 @@
   <ion-grid no-padding  style="padding-top: 30px; text-align: left;">
     
        <ion-card *ngFor="let helper of helpers">
-      
+          <!-- <ion-card>
+       -->
           <ion-list>
             <ion-item>
               <button ion-item  (click) = "createAlert()">
                   <ion-avatar item-start>
-                      <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;">
+                      
+                      <img  *ngIf="helper.data().image!=null" [src]="helper.data().image" style="height: 60px; width: 60px;">
+                      <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helper.data().image==null">
                     </ion-avatar>
+                    <!-- <h3 class = "name_style">abdsfbfhb</h3> -->
                     <h3 class = "name_style">{{ helper.data().helperName }}</h3>
+                    <h4 class="type_style">{{ helper.data().helperType }}</h4>
                     <ion-icon ios="ios-arrow-dropright" md="ios-arrow-dropright-outline" item-end></ion-icon>
               </button>
             </ion-item>

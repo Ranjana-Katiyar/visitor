@@ -11,13 +11,14 @@ import firebase from 'firebase';
 })
 export class HelperPage {
 
-  image: string;
+  image: any = {};
   userId: string="";
   name: string="";
   mobile_number: string="";
   helper_type: string="";
   wing: string="";
   flat: string="";
+  count: number=1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,
     private camera: Camera) {
@@ -36,6 +37,8 @@ export class HelperPage {
       flatNumber: this.flat
 
     }).then((doc) => {
+      console.log("Helper Document id is:");
+      console.log(doc.id);
         if(this.image){
           
           this.upload(doc.id);
@@ -79,7 +82,8 @@ export class HelperPage {
   }
 
   upload(name:string) {
-
+    console.log("Document id is:");
+    console.log(name);
     return new Promise((resolve, reject) =>{
       let ref = firebase.storage().ref("Helpers/" + name);
       let uploadTask = ref.putString(this.image.split(',')[1], "base64");
