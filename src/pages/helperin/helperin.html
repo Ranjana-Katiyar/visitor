@@ -1,0 +1,50 @@
+<ion-header>
+
+    <ion-navbar color="navcolour">
+  
+      <ion-list no-lines color="navcolour">
+  
+          <ion-item color="navcolour" style="margin-bottom: -15px;">
+  
+            <h3><span class="f-text">H</span>ELPERS &nbsp;<span class="s-color"><span class="f-text">I</span>N</span></h3>
+         
+         
+            <button ion-button icon-only clear (click) = "logOut()" item-end >
+              <ion-icon name="log-out" class="logout"></ion-icon>
+            </button>
+  
+          </ion-item>
+  
+      </ion-list>
+       
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding class="bg-img">
+    <ion-grid no-padding  style="padding-top: 30px; text-align: left;">
+      
+         <ion-card>
+         
+            <ion-list>
+              <ion-item>
+                <button ion-item  (click) = "createAlert(helpernew)">
+                    <ion-avatar item-start>
+                      
+                        <img  *ngIf="helpernew.data().picImage!=null" [src]="helpernew.data().picImage" style="height: 60px; width: 60px;">
+                        <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helpernew.data().picImage==null">
+                      </ion-avatar>
+                      
+                      <h3 class = "name_style">{{ helpernew.data().helperName }}</h3>
+                      <h4 class="type_style">{{ helpernew.data().helperType }}</h4>
+                      <ion-icon ios="ios-arrow-dropright" md="ios-arrow-dropright-outline" item-end></ion-icon>
+
+                </button>
+              </ion-item>
+            </ion-list>
+            
+         
+         </ion-card>
+    </ion-grid>
+  </ion-content>

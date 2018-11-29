@@ -31,11 +31,11 @@
        -->
           <ion-list>
             <ion-item>
-              <button ion-item  (click) = "createAlert()">
+              <button ion-item  (click) = "createAlert(helper)">
                   <ion-avatar item-start>
                       
-                      <img  *ngIf="helper.data().image!=null" [src]="helper.data().image" style="height: 60px; width: 60px;">
-                      <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helper.data().image==null">
+                      <img  *ngIf="helper.data().picImage!=null" [src]="helper.data().picImage" style="height: 60px; width: 60px;">
+                      <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helper.data().picImage==null">
                     </ion-avatar>
                     <!-- <h3 class = "name_style">abdsfbfhb</h3> -->
                     <h3 class = "name_style">{{ helper.data().helperName }}</h3>

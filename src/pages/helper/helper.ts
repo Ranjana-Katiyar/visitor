@@ -12,6 +12,8 @@ import firebase from 'firebase';
 export class HelperPage {
 
   image: any = {};
+  picimage: string="";
+  idimage: string="";
   userId: string="";
   name: string="";
   mobile_number: string="";
@@ -19,6 +21,8 @@ export class HelperPage {
   wing: string="";
   flat: string="";
   count: number=1;
+  imageUrl: any;
+  documentId: string="";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,
     private camera: Camera) {
@@ -39,11 +43,19 @@ export class HelperPage {
     }).then((doc) => {
       console.log("Helper Document id is:");
       console.log(doc.id);
-        if(this.image){
+      this.documentId = doc.id;
+      console.log(this.documentId);
+     
+      if(this.idimage){
           
-          this.upload(doc.id);
-        }
+        this.idupload(this.documentId);
         
+      } 
+      if(this.picimage){
+          
+        
+        this.picupload(this.documentId);
+      } 
         this.toastCtrl.create({
         message: "Details Registered",
         duration: 1000
@@ -55,6 +67,30 @@ export class HelperPage {
       console.log(err);
     })
 
+  }
+
+  takeid(){
+    let options: CameraOptions = {
+      quality: 100,
+      sourceType: this.camera.PictureSourceType.CAMERA,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      correctOrientation: true,
+      targetHeight: 512,
+      targetWidth: 512,
+      allowEdit: true
+    }
+
+    this.camera.getPicture(options).then((base64Image) => {
+      console.log(base64Image);
+
+      this.idimage = "data:image/jpeg;base64," + base64Image;
+      
+
+      }).catch((err) => {
+        console.log(err);
+        })
   }
 
   takePhoto() {
@@ -73,7 +109,7 @@ export class HelperPage {
     this.camera.getPicture(options).then((base64Image) => {
       console.log(base64Image);
 
-      this.image = "data:image/jpeg;base64," + base64Image;
+      this.picimage = "data:image/jpeg;base64," + base64Image;
       
 
       }).catch((err) => {
@@ -81,14 +117,15 @@ export class HelperPage {
         })
   }
 
-  upload(name:string) {
+  idupload(name:string) {
     console.log("Document id is:");
     console.log(name);
     return new Promise((resolve, reject) =>{
-      let ref = firebase.storage().ref("Helpers/" + name);
-      let uploadTask = ref.putString(this.image.split(',')[1], "base64");
+      let ref = firebase.storage().ref("Helpers/id/" + name);
+      let uploadTask = ref.putString(this.idimage.split(',')[1], "base64");
       uploadTask.on("state_changed", (taskSnapshot) => {
         console.log(taskSnapshot)
+        
       }, (error) => {
         console.log(error)
       }, () => {
@@ -99,8 +136,9 @@ export class HelperPage {
         console.log("The upload is completed");
         uploadTask.snapshot.ref.getDownloadURL().then((url) => {
           console.log(url);
+          this.imageUrl = url;
           firebase.firestore().collection("helpers").doc(name).update({
-            image: url
+            idImage: this.imageUrl
           }).then(() =>{
            
             resolve()
@@ -113,6 +151,42 @@ export class HelperPage {
         })
       })
     })
+}
+
+picupload(name:string) {
+  console.log("Document id is:");
+  console.log(name);
+  return new Promise((resolve, reject) =>{
+    let ref = firebase.storage().ref("Helpers/pic/" + name);
+    let uploadTask = ref.putString(this.picimage.split(',')[1], "base64");
+    uploadTask.on("state_changed", (taskSnapshot) => {
+      console.log(taskSnapshot)
+      
+    }, (error) => {
+      console.log(error)
+    }, () => {
+      this.toastCtrl.create({
+        message: "Photo Uploaded",
+        duration: 1000
+      }).present();
+      console.log("The upload is completed");
+      uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+        console.log(url);
+        this.imageUrl = url;
+        firebase.firestore().collection("helpers").doc(name).update({
+          picImage: this.imageUrl
+        }).then(() =>{
+         
+          resolve()
+          
+        }).catch((err) =>{
+          reject()
+        })
+      }).catch((err) =>{
+        reject()
+      })
+    })
+  })
 }
 
   goBack(){

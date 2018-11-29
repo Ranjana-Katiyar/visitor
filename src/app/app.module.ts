@@ -35,6 +35,8 @@ import { HelperdisplayPage } from "../pages/helperdisplay/helperdisplay";
 import { GuestdisplayPage } from "../pages/guestdisplay/guestdisplay";
 import { FlatPage } from "../pages/flat/flat";
 import { WingPage } from "../pages/wing/wing";
+import { HelperinPage } from '../pages/helperin/helperin';
+import { HelperoutPage } from '../pages/helperout/helperout';
  
 
 var config = {
@@ -75,7 +77,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage, GuestdisplayPage
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage, GuestdisplayPage, HelperinPage, HelperoutPage
   ],
   imports: [
     BrowserModule,
@@ -103,8 +105,7 @@ firebase.firestore().settings({
     ParceldetailsPage,
     HelperPage,
       WingslistPage,
-      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage, GuestdisplayPage
-  ],
+      FlatlistPage,HelperdisplayPage, FlatPage, WingPage, WatchmanloginPage, GuestdisplayPage, HelperinPage, HelperoutPage  ],
   providers: [
     StatusBar,
     SplashScreen,

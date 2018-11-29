@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
 import firebase from 'firebase';
+import { HelperinPage } from '../helperin/helperin';
 
 
 @IonicPage()
@@ -12,7 +13,8 @@ export class HelperdisplayPage {
 
   helpers : any[] = [];
   name: string="";
-  helpername : any[] = [];
+  
+   
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public modalCtrl: ModalController) {
     this.helperdetails();
@@ -31,14 +33,14 @@ export class HelperdisplayPage {
     })
   }
 
-  createAlert(){
+  createAlert(helperin: any){
     this.alertCtrl.create({
-      title: 'Are you sure?',
+      title: 'Are you sure to In?',
       buttons: [
         {
           text: "Confirm",
           handler: () => {
-             
+            this.navCtrl.push(HelperinPage, {data: helperin});
           }
         },
         {
