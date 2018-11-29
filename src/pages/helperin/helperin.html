@@ -25,19 +25,19 @@
 <ion-content padding class="bg-img">
     <ion-grid no-padding  style="padding-top: 30px; text-align: left;">
       
-         <ion-card>
+         <ion-card *ngFor="let helper of helpernew">
          
             <ion-list>
               <ion-item>
-                <button ion-item  (click) = "createAlert(helpernew)">
+                <button ion-item  (click) = "createAlert(helper)">
                     <ion-avatar item-start>
                       
-                        <img  *ngIf="helpernew.data().picImage!=null" [src]="helpernew.data().picImage" style="height: 60px; width: 60px;">
-                        <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helpernew.data().picImage==null">
+                        <img  *ngIf="helper.data().picImage!=null" [src]="helper.data().picImage" style="height: 60px; width: 60px;">
+                        <img src="../../assets/imgs/helperin.png" style="height: 60px; width: 60px;" *ngIf="helper.data().picImage==null">
                       </ion-avatar>
                       
-                      <h3 class = "name_style">{{ helpernew.data().helperName }}</h3>
-                      <h4 class="type_style">{{ helpernew.data().helperType }}</h4>
+                      <h3 class = "name_style">{{ helper.data().helperName }}</h3>
+                      <h4 class="type_style">{{ helper.data().helperType }}</h4>
                       <ion-icon ios="ios-arrow-dropright" md="ios-arrow-dropright-outline" item-end></ion-icon>
 
                 </button>
