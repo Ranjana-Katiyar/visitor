@@ -11,8 +11,9 @@ import { HelperinPage } from '../helperin/helperin';
 })
 export class HelperdisplayPage {
 
-  helpers : any[] = [];
+  helpers : any = [];
   name: string="";
+  helperInList: any = [];
   
    
 
@@ -34,13 +35,15 @@ export class HelperdisplayPage {
   }
 
   createAlert(helperin: any){
+    this.helperInList.push(helperin);
+    console.log("HelperInList Array", this.helperInList);
     this.alertCtrl.create({
       title: 'Are you sure to In?',
       buttons: [
         {
           text: "Confirm",
           handler: () => {
-            this.navCtrl.push(HelperinPage, {data: helperin});
+            this.navCtrl.push(HelperinPage, {data: this.helperInList});
           }
         },
         {

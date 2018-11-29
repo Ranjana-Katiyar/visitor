@@ -10,7 +10,7 @@ import { HelperoutPage } from '../helperout/helperout';
 })
 export class HelperinPage {
 
-  helpernew: any = {};
+  helpernew: any = [];
    
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
