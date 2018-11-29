@@ -7,6 +7,7 @@ import { HelperdisplayPage } from '../pages/helperdisplay/helperdisplay';
 
 
 
+
  
 
 
@@ -25,5 +26,7 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  
 }
 
