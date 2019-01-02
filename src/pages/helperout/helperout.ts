@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HelperoutPage {
 
-  helperout: any = {};
+  helperout: any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.helperout = navParams.get('data');
